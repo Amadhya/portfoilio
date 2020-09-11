@@ -42,23 +42,23 @@ const RowWapper = styled(Row)`
 
 const Home = () => (
     <Wrapper>
-        <Avatar size={140} src={Self} />
+        <Avatar size={140} src={Self} alt="Avatar" />
         <Separator height={4} />
         <TitleWrapper level={1}>Amadhya Anand</TitleWrapper>
         <TitleWrapper level={4}>SOFTWARE DEVELOPMENT ENGINEER</TitleWrapper>
         <Separator height={6} />
         <RowWapper justify="space-between">
             <a href="mailto:eshuanand07@gmail.com">
-                <AvatarWrapper size={45} src={MailIcon} />
+                <AvatarWrapper size={45} src={MailIcon} alt="mail" />
             </a>
             <a href="https://github.com/Amadhya">
-                <AvatarWrapper size={45} src={GithubIcon} />
+                <AvatarWrapper size={45} src={GithubIcon} alt="github" />
             </a>
             <a href="https://www.linkedin.com/in/amadhya-anand-1761b8169/">
-                <AvatarWrapper size={45} src={LinkedInIcon} />
+                <AvatarWrapper size={45} src={LinkedInIcon} alt="linkedIn" />
             </a>
             <a href="https://www.hackerrank.com/eshuanand07">
-                <AvatarWrapper size={45} src={HackerRankIcon} />
+                <AvatarWrapper size={45} src={HackerRankIcon} alt="hackerrank" />
             </a>
         </RowWapper>
     </Wrapper>
