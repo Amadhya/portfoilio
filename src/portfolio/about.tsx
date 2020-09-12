@@ -13,7 +13,6 @@ type Props = {
 
 const Wrapper = styled(Container)`
     background: black;
-    padding: 4rem;
 `;
 const TitleWrapper = styled(Title)`
     color: white !important;
@@ -40,7 +39,7 @@ const About = () => (
     <Wrapper>
         <Row justify="center" gutter={[18, 24]}>
             <Col sm={{ span: 9, offset: 3 }}>
-                <TitleWrapper level={4}>About</TitleWrapper>
+                <TitleWrapper level={3}>About</TitleWrapper>
                 <Separator />
                 <TextWrapper>
                     Young, energetic and passionate engineer, who wants to pursue a challenging and
@@ -51,7 +50,7 @@ const About = () => (
                     series in my leisure time.
                 </TextWrapper>
                 <Separator height={4} />
-                <TitleWrapper level={4}>Quote of my life</TitleWrapper>
+                <TitleWrapper level={3}>Quote of my life</TitleWrapper>
                 <Separator />
                 <TextWrapper>
                     Life is not a game to be won, but a game to be played with zeal and enjoyment in
@@ -59,7 +58,7 @@ const About = () => (
                 </TextWrapper>
             </Col>
             <Col sm={{ span: 10, offset: 2 }}>
-                <TitleWrapper level={4}>General Information</TitleWrapper>
+                <TitleWrapper level={3}>General Information</TitleWrapper>
                 <KeyValueRow _key="Experience" value="10 months ( 6 months internship )" />
                 <KeyValueRow _key="Email" value="eshuanand07@gmail.com" />
                 <KeyValueRow _key="Address" value="Chandigarh, India" />

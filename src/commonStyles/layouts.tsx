@@ -1,4 +1,4 @@
-import { Row as AntdRow, Col as AntdCol } from 'antd';
+import { Card as AntdCard, Row as AntdRow, Col as AntdCol } from 'antd';
 import styled, { css } from 'styled-components';
 
 type RowProps = {
@@ -30,7 +30,7 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0.5rem 2rem;
+    padding: 4rem;
     @media (max-width: 767px) {
         padding: 0.5rem 1rem;
     }
@@ -65,6 +65,29 @@ export const Col = styled(AntdCol)<ColProps>`
         css`
             text-align: ${textalign};
         `};
+`;
+
+export const Card = styled(AntdCard)`
+    width: 75%;
+    margin: 12px 0px;
+    .ant-card-head {
+        padding: 0px;
+    }
+    .ant-card-body {
+        padding: 0px;
+    }
+    .ant-card-extra {
+        padding: 0;
+    }
+    .ant-card-head-title {
+        padding: 0;
+    }
+    .ant-card-actions {
+        li {
+            margin: 5px 0;
+        }
+    }
+    border: 1px solid #bfbfbf;
 `;
 
 Row.defaultProps = defaultRowProps;
