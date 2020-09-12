@@ -26,6 +26,10 @@ export const Separator = styled.div<SeparatorProps>`
 `;
 
 export const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 0.5rem 2rem;
     @media (max-width: 767px) {
         padding: 0.5rem 1rem;
