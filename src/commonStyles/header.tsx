@@ -5,12 +5,18 @@ import styled, { css } from 'styled-components';
 type Props = {
     border?: number;
     white?: number;
+    align?: string;
     fontWeight?: number;
 };
 
 const HeaderWrapper = styled(Typography.Title)<Props>`
     color: ${({ white }) => (white ? 'white' : Colors.DARK_BLUE)} !important;
     margin-bottom: 4px !important;
+    ${({ align }) =>
+        align &&
+        css`
+            text-align: ${align};
+        `};
     ${({ fontWeight }) =>
         fontWeight &&
         css`
