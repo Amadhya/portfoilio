@@ -4,16 +4,23 @@ import styled, { css } from 'styled-components';
 
 type Props = {
     border?: number;
+    white?: number;
+    fontWeight?: number;
 };
 
 const HeaderWrapper = styled(Typography.Title)<Props>`
-    color: ${Colors.DARK_BLUE};
+    color: ${({ white }) => (white ? 'white' : Colors.DARK_BLUE)} !important;
     margin-bottom: 4px !important;
-    ${({ border }) =>
+    ${({ fontWeight }) =>
+        fontWeight &&
+        css`
+            font-weight: 700 !important;
+        `};
+    ${({ border, white }) =>
         border &&
         css`
             padding-bottom: 4px;
-            border-bottom: 3px solid #434343;
+            border-bottom: 3px solid ${white ? 'white' : '#434343'} !important;
         `};
 `;
 

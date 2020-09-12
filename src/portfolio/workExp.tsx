@@ -44,7 +44,7 @@ const education = [
 
 const WorkExp = () => (
     <Container>
-        <HeaderWrapper level={3} border={1}>
+        <HeaderWrapper level={3} border={1} fontWeight={1}>
             <ExperimentFilled />
             &nbsp; Work Experience
         </HeaderWrapper>

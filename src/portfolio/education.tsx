@@ -36,7 +36,7 @@ const education = [
 
 const Education = () => (
     <Container>
-        <HeaderWrapper level={3} border={1}>
+        <HeaderWrapper level={3} border={1} fontWeight={1}>
             <BookFilled />
             &nbsp; Education
         </HeaderWrapper>
