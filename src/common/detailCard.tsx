@@ -55,11 +55,11 @@ const DetailCard = (props: Props) => {
     return (
         <Card>
             <Row>
-                <ColWrapper sm={{ span: 6 }} bg={1}>
+                <ColWrapper sm={{ span: 6 }} xs={{ span: 24 }} bg={1}>
                     {period && <TextWrapper>{period}</TextWrapper>}
                     <TitleWrapper level={4}>{title}</TitleWrapper>
                 </ColWrapper>
-                <ColWrapper sm={{ span: 18 }} pb={1}>
+                <ColWrapper sm={{ span: 18 }} xs={{ span: 24 }} pb={1}>
                     {children}
                 </ColWrapper>
             </Row>

@@ -5,12 +5,11 @@ import MailIcon from 'assets/email_icon.png';
 import GithubIcon from 'assets/github_icon.png';
 import HackerRankIcon from 'assets/hackerrank_icon.png';
 import LinkedInIcon from 'assets/linkedIn_icon.png';
-import Self from 'assets/self.jpg';
 import { Separator, Container } from 'commonStyles/layouts';
 import Colors from 'constants/colors';
 import styled from 'styled-components';
 
-const { Title } = Typography;
+const { Title, Text } = Typography;
 
 const Wrapper = styled(Container)`
     text-align: center;
@@ -35,13 +34,20 @@ const TitleWrapper = styled(Title)`
 const RowWapper = styled(Row)`
     width: 300px;
 `;
+const TextWrapper = styled(Text)`
+    color: white !important;
+    font-size: 16px;
+`;
 
 const Home = () => (
     <Wrapper>
-        <Avatar size={140} src={Self} alt="Avatar" />
-        <Separator height={4} />
         <TitleWrapper level={1}>Amadhya Anand</TitleWrapper>
         <TitleWrapper level={4}>SOFTWARE DEVELOPMENT ENGINEER</TitleWrapper>
+        <Separator height={3} />
+        <TextWrapper>
+            &quot;Life is not a game to be won, but a game to be played with zeal and enjoyment in
+            every moment till the end.&quot;
+        </TextWrapper>
         <Separator height={6} />
         <RowWapper justify="space-between">
             <a href="mailto:eshuanand07@gmail.com">

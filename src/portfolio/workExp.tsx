@@ -3,14 +3,10 @@ import React from 'react';
 import { ExperimentFilled, EnvironmentFilled } from '@ant-design/icons';
 import { Typography } from 'antd';
 import DetailCard from 'common/detailCard';
+import HeaderWrapper from 'commonStyles/header';
 import { Separator, Container } from 'commonStyles/layouts';
-import styled from 'styled-components';
 
-const { Title, Text } = Typography;
-
-const TitleWrapper = styled(Title)`
-    margin-bottom: 4px !important;
-`;
+const { Text } = Typography;
 
 const education = [
     {
@@ -19,7 +15,7 @@ const education = [
         subTitle: 'Software Developer',
         location: 'Bangalore, India',
         desc:
-            'Develop and maintain features for the online leap platform for teachers and students.',
+            'Develop and maintain features for the online teaching platform for teachers and students.',
     },
     {
         period: 'April, 2020 - PRESENT',
@@ -48,14 +44,15 @@ const education = [
 
 const WorkExp = () => (
     <Container>
-        <Title level={3}>
+        <HeaderWrapper level={3} border={1}>
             <ExperimentFilled />
             &nbsp; Work Experience
-        </Title>
+        </HeaderWrapper>
+        <Separator />
         {education.map(({ title, subTitle, period, location, desc }) => (
             <DetailCard title={title} period={period} key={period}>
                 <div>
-                    <TitleWrapper level={4}>{subTitle}</TitleWrapper>
+                    <HeaderWrapper level={4}>{subTitle}</HeaderWrapper>
                     <Text>
                         <EnvironmentFilled />
                         &nbsp; {location}

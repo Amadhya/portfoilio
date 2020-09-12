@@ -30,7 +30,7 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 4rem;
+    padding: 2rem 4rem;
     @media (max-width: 767px) {
         padding: 0.5rem 1rem;
     }
@@ -87,7 +87,10 @@ export const Card = styled(AntdCard)`
             margin: 5px 0;
         }
     }
-    border: 1px solid #bfbfbf;
+    @media (max-width: 1024px) {
+        width: 100%;
+    }
+    box-shadow: 5px 5px 5px #f0f0f0;
 `;
 
 Row.defaultProps = defaultRowProps;

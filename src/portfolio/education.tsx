@@ -3,9 +3,10 @@ import React from 'react';
 import { BookFilled, EnvironmentFilled, ReadFilled, SignalFilled } from '@ant-design/icons';
 import { Typography } from 'antd';
 import DetailCard from 'common/detailCard';
+import HeaderWrapper from 'commonStyles/header';
 import { Separator, Container } from 'commonStyles/layouts';
 
-const { Title, Text } = Typography;
+const { Text } = Typography;
 
 const education = [
     {
@@ -15,7 +16,7 @@ const education = [
         location: 'Chandigarh, India',
         result: 'CGPA: 8.1',
         extra:
-            'Member of NSS, Rotract Club and Robotics society. Was part of the publicity and discipline team of Pecfest',
+            'Member of NSS, Rotract Club and Robotics society. Was part of the publicity and discipline team of Pecfest.',
     },
     {
         title: 'Senior Secondary',
@@ -35,14 +36,15 @@ const education = [
 
 const Education = () => (
     <Container>
-        <Title level={3}>
+        <HeaderWrapper level={3} border={1}>
             <BookFilled />
             &nbsp; Education
-        </Title>
+        </HeaderWrapper>
+        <Separator />
         {education.map(({ title, subTitle, name, location, result, extra }) => (
             <DetailCard title={title} key={name}>
                 <div>
-                    <Title level={4}>{subTitle}</Title>
+                    <HeaderWrapper level={4}>{subTitle}</HeaderWrapper>
                     <Text strong>
                         <ReadFilled />
                         &nbsp; {name}
