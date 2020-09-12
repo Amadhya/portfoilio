@@ -40,7 +40,7 @@ const Education = () => (
             &nbsp; Education
         </Title>
         {education.map(({ title, subTitle, name, location, result, extra }) => (
-            <DetailCard title={title}>
+            <DetailCard title={title} key={name}>
                 <div>
                     <Title level={4}>{subTitle}</Title>
                     <Text strong>
@@ -48,7 +48,7 @@ const Education = () => (
                         &nbsp; {name}
                     </Text>
                     <Separator />
-                    <Text strong>
+                    <Text>
                         <EnvironmentFilled />
                         &nbsp; {location}
                     </Text>
