@@ -1,8 +1,11 @@
 import React from 'react';
 
+import { BackTop } from 'antd';
+
 import About from './about';
 import ContactMe from './contactMe';
 import Education from './education';
+import Footer from './footer';
 import Home from './home';
 import Projects from './projects';
 import Skills from './skills';
@@ -18,6 +21,8 @@ const Portfolio = () => {
             <Projects />
             <Skills />
             <ContactMe />
+            <Footer />
+            <BackTop />
         </div>
     );
 };

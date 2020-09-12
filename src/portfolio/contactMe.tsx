@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { MailOutlined } from '@ant-design/icons';
+import { MailOutlined, UserOutlined } from '@ant-design/icons';
 import { Card, Col, Typography, Form, message, Input, Button } from 'antd';
 import MapIcon from 'assets/map.png';
 import HeaderWrapper from 'commonStyles/header';
@@ -13,7 +13,7 @@ const { Text } = Typography;
 const Wrapper = styled(Container)`
     background: url(${MapIcon}) no-repeat;
     background-size: cover;
-    padding: 5rem;
+    padding: 6rem;
 `;
 const TextWrapper = styled(Text)`
     colors: ${Colors.DARK_BLUE};
@@ -31,6 +31,7 @@ type FormProp = {
 
 const ContactMe = () => {
     const [loading, setLoading] = useState(false);
+    const [form] = Form.useForm();
 
     const submitForm = (values: FormProp) => {
         setLoading(true);
@@ -52,6 +53,7 @@ const ContactMe = () => {
             .then(res => {
                 setLoading(false);
                 if (res.ok) {
+                    form.resetFields();
                     message.success('Email successful...');
                 } else {
                     throw new Error('There was some error...');
@@ -74,7 +76,18 @@ const ContactMe = () => {
                     <Col sm={{ span: 12 }}>
                         <TextWrapper>Feel free to contact me</TextWrapper>
                         <Separator height={3} />
-                        <Form onFinish={submitForm}>
+                        <Form onFinish={submitForm} form={form}>
+                            <Form.Item
+                                name="name"
+                                rules={[
+                                    {
+                                        required: true,
+                                        message: 'Enter valid name',
+                                    },
+                                ]}
+                            >
+                                <Input placeholder="Enter Name" prefix={<UserOutlined />} />
+                            </Form.Item>
                             <Form.Item
                                 name="_replyto"
                                 rules={[
@@ -89,6 +102,17 @@ const ContactMe = () => {
                                     placeholder="Enter email"
                                     prefix={<MailOutlined />}
                                 />
+                            </Form.Item>
+                            <Form.Item
+                                name="_subject"
+                                rules={[
+                                    {
+                                        required: true,
+                                        message: 'Enter valid subject',
+                                    },
+                                ]}
+                            >
+                                <Input placeholder="Enter Subject" />
                             </Form.Item>
                             <Form.Item
                                 name="message"
