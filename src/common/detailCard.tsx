@@ -1,8 +1,10 @@
 import React from 'react';
 
+import { ExportOutlined } from '@ant-design/icons';
 import { Typography, Col } from 'antd';
 import { Row, Card } from 'commonStyles/layouts';
 import Colors from 'constants/colors';
+import { Link } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 
 type ColProps = {
@@ -45,19 +47,27 @@ const TitleWrapper = styled(Title)`
 
 type Props = {
     period?: string;
+    link?: string;
     title: string;
     children: React.ReactNode;
 };
 
 const DetailCard = (props: Props) => {
-    const { period, title, children } = props;
+    const { period, title, children, link } = props;
 
     return (
         <Card>
             <Row>
                 <ColWrapper sm={{ span: 6 }} xs={{ span: 24 }} bg={1}>
                     {period && <TextWrapper>{period}</TextWrapper>}
-                    <TitleWrapper level={4}>{title}</TitleWrapper>
+                    <TitleWrapper level={4}>
+                        {title}{' '}
+                        {link && (
+                            <Link to={link} style={{ color: 'white' }}>
+                                <ExportOutlined />
+                            </Link>
+                        )}
+                    </TitleWrapper>
                 </ColWrapper>
                 <ColWrapper sm={{ span: 18 }} xs={{ span: 24 }} pb={1}>
                     {children}

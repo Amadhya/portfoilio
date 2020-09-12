@@ -3,7 +3,7 @@ import React from 'react';
 import { ToolOutlined } from '@ant-design/icons';
 import { Typography, Col } from 'antd';
 import HeaderWrapper from 'commonStyles/header';
-import { Row , Separator, Container } from 'commonStyles/layouts';
+import { Row, Separator, Container } from 'commonStyles/layouts';
 import styled from 'styled-components';
 
 const { Text } = Typography;
@@ -20,9 +20,9 @@ const UlWrapper = styled.ul`
 `;
 
 const skills = {
-    languages: ['Cpp', 'C', 'Python', 'OOP', 'Data Structures', 'Antd'],
+    languages: ['Cpp', 'C', 'Python'],
     frontend: ['ReactJS', 'HTML', 'CSS', 'Javascript', 'Material-UI', 'Antd'],
-    backend: ['DJango', 'Express.js', 'Firebase', 'PostgreSQL'],
+    backend: ['DJango', 'Node.js', 'Express.js', 'Firebase', 'PostgreSQL'],
     tools_used: ['Git', 'npm', 'Nivo.rocks', 'ESlint'],
 };
 
@@ -33,7 +33,7 @@ const Skills = () => (
             &nbsp; Skill Set
         </HeaderWrapper>
         <Separator height={4} />
-        <Row gutter={12}>
+        <Row gutter={[24, 12]}>
             <Col sm={{ span: 4, offset: 4 }}>
                 <HeaderWrapper level={4} white={1}>
                     Languages
@@ -41,7 +41,7 @@ const Skills = () => (
                 <Separator />
                 <UlWrapper>
                     {skills.languages.map((skill: string) => (
-                        <li>
+                        <li key={skill}>
                             <TextWrapper strong>{skill}</TextWrapper>
                         </li>
                     ))}
@@ -54,7 +54,7 @@ const Skills = () => (
                 <Separator />
                 <UlWrapper>
                     {skills.frontend.map((skill: string) => (
-                        <li>
+                        <li key={skill}>
                             <TextWrapper strong>{skill}</TextWrapper>
                         </li>
                     ))}
@@ -67,7 +67,7 @@ const Skills = () => (
                 <Separator />
                 <UlWrapper>
                     {skills.backend.map((skill: string) => (
-                        <li>
+                        <li key={skill}>
                             <TextWrapper strong>{skill}</TextWrapper>
                         </li>
                     ))}
@@ -80,7 +80,7 @@ const Skills = () => (
                 <Separator />
                 <UlWrapper>
                     {skills.tools_used.map((skill: string) => (
-                        <li>
+                        <li key={skill}>
                             <TextWrapper strong>{skill}</TextWrapper>
                         </li>
                     ))}
