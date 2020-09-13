@@ -43,7 +43,7 @@ const education = [
 ];
 
 const WorkExp = () => (
-    <Container>
+    <Container id="work_exp">
         <HeaderWrapper level={3} border={1} fontWeight={1}>
             <ExperimentFilled />
             &nbsp; Work Experience
@@ -52,7 +52,9 @@ const WorkExp = () => (
         {education.map(({ title, subTitle, period, location, desc }) => (
             <DetailCard title={title} period={period} key={period}>
                 <div>
-                    <HeaderWrapper level={4}>{subTitle}</HeaderWrapper>
+                    <HeaderWrapper level={4} color="black">
+                        {subTitle}
+                    </HeaderWrapper>
                     <Text>
                         <EnvironmentFilled />
                         &nbsp; {location}

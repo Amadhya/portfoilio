@@ -61,7 +61,7 @@ const projects = [
 ];
 
 const Projects = () => (
-    <Container>
+    <Container id="projects">
         <HeaderWrapper level={3} border={1} fontWeight={1}>
             <BulbFilled />
             &nbsp; Projects
@@ -70,7 +70,9 @@ const Projects = () => (
         {projects.map(({ title, under, period, desc, link }) => (
             <DetailCard title={title} period={period} key={title} link={link}>
                 <div>
-                    <HeaderWrapper level={4}>{under}</HeaderWrapper>
+                    <HeaderWrapper level={4} color="black">
+                        {under}
+                    </HeaderWrapper>
                     <Separator />
                     <UlWrapper>
                         {desc.map((d: string) => (

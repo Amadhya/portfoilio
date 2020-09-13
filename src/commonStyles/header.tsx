@@ -4,13 +4,13 @@ import styled, { css } from 'styled-components';
 
 type Props = {
     border?: number;
-    white?: number;
+    color?: string;
     align?: string;
     fontWeight?: number;
 };
 
 const HeaderWrapper = styled(Typography.Title)<Props>`
-    color: ${({ white }) => (white ? 'white' : Colors.DARK_BLUE)} !important;
+    color: ${({ color }) => color || Colors.DARK_BLUE} !important;
     margin-bottom: 4px !important;
     ${({ align }) =>
         align &&
@@ -22,11 +22,11 @@ const HeaderWrapper = styled(Typography.Title)<Props>`
         css`
             font-weight: 700 !important;
         `};
-    ${({ border, white }) =>
+    ${({ border, color }) =>
         border &&
         css`
             padding-bottom: 4px;
-            border-bottom: 3px solid ${white ? 'white' : '#434343'} !important;
+            border-bottom: 3px solid ${color === 'white' ? 'white' : '#434343'} !important;
         `};
 `;
 

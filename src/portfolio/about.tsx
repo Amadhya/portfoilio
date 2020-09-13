@@ -51,7 +51,7 @@ const KeyValueRow = (props: Props) => {
 };
 
 const About = () => (
-    <Wrapper>
+    <Wrapper id="about">
         <Row justify="center" gutter={[18, 24]}>
             <Col xl={{ span: 5 }} sm={{ span: 6 }}>
                 <Avatar size={140} src={Self} alt="Avatar" />
@@ -98,7 +98,21 @@ const About = () => (
                                 md={{ span: 10 }}
                                 xs={{ span: 24 }}
                             >
-                                <ButtonWrapper type="primary" block>
+                                <ButtonWrapper
+                                    type="primary"
+                                    block
+                                    onClick={() => {
+                                        const scrollY = document.getElementById('contact_me')
+                                            ?.offsetTop;
+
+                                        if (typeof scrollY !== 'undefined') {
+                                            window.scroll({
+                                                top: scrollY - 50,
+                                                behavior: 'smooth',
+                                            });
+                                        }
+                                    }}
+                                >
                                     Hire Me
                                 </ButtonWrapper>
                             </Col>

@@ -7,6 +7,7 @@ import ContactMe from './contactMe';
 import Education from './education';
 import Footer from './footer';
 import Home from './home';
+import NavBar from './navBar';
 import Projects from './projects';
 import Skills from './skills';
 import WorkExp from './workExp';
@@ -14,6 +15,7 @@ import WorkExp from './workExp';
 const Portfolio = () => {
     return (
         <div>
+            <NavBar />
             <Home />
             <About />
             <WorkExp />

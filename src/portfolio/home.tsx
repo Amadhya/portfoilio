@@ -40,7 +40,7 @@ const TextWrapper = styled(Text)`
 `;
 
 const Home = () => (
-    <Wrapper>
+    <Wrapper id="home">
         <TitleWrapper level={1}>Amadhya Anand</TitleWrapper>
         <TitleWrapper level={4}>SOFTWARE DEVELOPMENT ENGINEER</TitleWrapper>
         <Separator height={3} />

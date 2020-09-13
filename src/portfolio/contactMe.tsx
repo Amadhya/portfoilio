@@ -23,6 +23,15 @@ const TextWrapper = styled(Text)`
 const CardWrapper = styled(Card)`
     width: 700px;
 `;
+const ButtonWrapper = styled(Button)`
+    background: ${Colors.DARK_BLUE} !important;
+    border-color: ${Colors.DARK_BLUE} !important;
+    &: hover {
+        background: ${Colors.DARK_BLUE};
+        border-color: ${Colors.DARK_BLUE};
+    }
+    padding: 4px 28px;
+`;
 
 type FormProp = {
     _replyto: string;
@@ -66,7 +75,7 @@ const ContactMe = () => {
     };
 
     return (
-        <Wrapper>
+        <Wrapper id="contact_me">
             <CardWrapper>
                 <HeaderWrapper level={3} fontWeight={1} align="center">
                     Contact Me
@@ -126,14 +135,14 @@ const ContactMe = () => {
                                 <Input.TextArea placeholder="Enter message" rows={4} />
                             </Form.Item>
                             <Form.Item>
-                                <Button
+                                <ButtonWrapper
                                     type="primary"
                                     htmlType="submit"
                                     className="form-button"
                                     loading={loading}
                                 >
                                     Send
-                                </Button>
+                                </ButtonWrapper>
                             </Form.Item>
                         </Form>
                     </Col>

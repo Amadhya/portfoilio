@@ -35,7 +35,7 @@ const education = [
 ];
 
 const Education = () => (
-    <Container>
+    <Container id="education">
         <HeaderWrapper level={3} border={1} fontWeight={1}>
             <BookFilled />
             &nbsp; Education
@@ -44,7 +44,9 @@ const Education = () => (
         {education.map(({ title, subTitle, name, location, result, extra }) => (
             <DetailCard title={title} key={name}>
                 <div>
-                    <HeaderWrapper level={4}>{subTitle}</HeaderWrapper>
+                    <HeaderWrapper level={4} color="black">
+                        {subTitle}
+                    </HeaderWrapper>
                     <Text strong>
                         <ReadFilled />
                         &nbsp; {name}
