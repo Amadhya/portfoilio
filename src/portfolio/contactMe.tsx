@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { MailOutlined, UserOutlined } from '@ant-design/icons';
 import { Card, Col, Typography, Form, message, Input, Button } from 'antd';
 import MapIcon from 'assets/map.png';
+import FadeInBox from 'common/framerMotion/fadeInBox';
 import HeaderWrapper from 'commonStyles/header';
 import { Separator, Container, Row } from 'commonStyles/layouts';
 import Colors from 'constants/colors';
@@ -22,6 +23,9 @@ const TextWrapper = styled(Text)`
 `;
 const CardWrapper = styled(Card)`
     width: 700px;
+    @media (max-width: 767px) {
+        width: 100%;
+    }
 `;
 const ButtonWrapper = styled(Button)`
     background: ${Colors.DARK_BLUE} !important;
@@ -76,87 +80,89 @@ const ContactMe = () => {
 
     return (
         <Wrapper id="contact_me">
-            <CardWrapper>
-                <HeaderWrapper level={3} fontWeight={1} align="center">
-                    Contact Me
-                </HeaderWrapper>
-                <Separator height={3} />
-                <Row gutter={[24, 12]}>
-                    <Col sm={{ span: 12 }}>
-                        <TextWrapper>Feel free to contact me</TextWrapper>
-                        <Separator height={3} />
-                        <Form onFinish={submitForm} form={form}>
-                            <Form.Item
-                                name="name"
-                                rules={[
-                                    {
-                                        required: true,
-                                        message: 'Enter valid name',
-                                    },
-                                ]}
-                            >
-                                <Input placeholder="Enter Name" prefix={<UserOutlined />} />
-                            </Form.Item>
-                            <Form.Item
-                                name="_replyto"
-                                rules={[
-                                    {
-                                        required: true,
-                                        message: 'Enter valid email',
-                                    },
-                                ]}
-                            >
-                                <Input
-                                    type="email"
-                                    placeholder="Enter email"
-                                    prefix={<MailOutlined />}
-                                />
-                            </Form.Item>
-                            <Form.Item
-                                name="_subject"
-                                rules={[
-                                    {
-                                        required: true,
-                                        message: 'Enter valid subject',
-                                    },
-                                ]}
-                            >
-                                <Input placeholder="Enter Subject" />
-                            </Form.Item>
-                            <Form.Item
-                                name="message"
-                                rules={[
-                                    {
-                                        required: true,
-                                        message: 'Enter valid message',
-                                    },
-                                ]}
-                            >
-                                <Input.TextArea placeholder="Enter message" rows={4} />
-                            </Form.Item>
-                            <Form.Item>
-                                <ButtonWrapper
-                                    type="primary"
-                                    htmlType="submit"
-                                    className="form-button"
-                                    loading={loading}
+            <FadeInBox>
+                <CardWrapper>
+                    <HeaderWrapper level={3} fontWeight={1} align="center">
+                        Contact Me
+                    </HeaderWrapper>
+                    <Separator height={3} />
+                    <Row gutter={[24, 12]}>
+                        <Col sm={{ span: 12 }}>
+                            <TextWrapper>Feel free to contact me</TextWrapper>
+                            <Separator height={3} />
+                            <Form onFinish={submitForm} form={form}>
+                                <Form.Item
+                                    name="name"
+                                    rules={[
+                                        {
+                                            required: true,
+                                            message: 'Enter valid name',
+                                        },
+                                    ]}
                                 >
-                                    Send
-                                </ButtonWrapper>
-                            </Form.Item>
-                        </Form>
-                    </Col>
-                    <Col sm={{ span: 8, offset: 2 }}>
-                        <TextWrapper>Address</TextWrapper>
-                        <Separator height={0.5} />
-                        <Text strong>Chandigarh, Inda</Text>
-                        <Separator height={3} />
-                        <TextWrapper>Email</TextWrapper>
-                        <Separator height={0.5} />
-                        <Text strong>eshuanand07@gmail.com</Text>
-                    </Col>
-                </Row>
-            </CardWrapper>
+                                    <Input placeholder="Enter Name" prefix={<UserOutlined />} />
+                                </Form.Item>
+                                <Form.Item
+                                    name="_replyto"
+                                    rules={[
+                                        {
+                                            required: true,
+                                            message: 'Enter valid email',
+                                        },
+                                    ]}
+                                >
+                                    <Input
+                                        type="email"
+                                        placeholder="Enter email"
+                                        prefix={<MailOutlined />}
+                                    />
+                                </Form.Item>
+                                <Form.Item
+                                    name="_subject"
+                                    rules={[
+                                        {
+                                            required: true,
+                                            message: 'Enter valid subject',
+                                        },
+                                    ]}
+                                >
+                                    <Input placeholder="Enter Subject" />
+                                </Form.Item>
+                                <Form.Item
+                                    name="message"
+                                    rules={[
+                                        {
+                                            required: true,
+                                            message: 'Enter valid message',
+                                        },
+                                    ]}
+                                >
+                                    <Input.TextArea placeholder="Enter message" rows={4} />
+                                </Form.Item>
+                                <Form.Item>
+                                    <ButtonWrapper
+                                        type="primary"
+                                        htmlType="submit"
+                                        className="form-button"
+                                        loading={loading}
+                                    >
+                                        Send
+                                    </ButtonWrapper>
+                                </Form.Item>
+                            </Form>
+                        </Col>
+                        <Col sm={{ span: 8, offset: 2 }}>
+                            <TextWrapper>Address</TextWrapper>
+                            <Separator height={0.5} />
+                            <Text strong>Chandigarh, Inda</Text>
+                            <Separator height={3} />
+                            <TextWrapper>Email</TextWrapper>
+                            <Separator height={0.5} />
+                            <Text strong>eshuanand07@gmail.com</Text>
+                        </Col>
+                    </Row>
+                </CardWrapper>
+            </FadeInBox>
         </Wrapper>
     );
 };

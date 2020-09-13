@@ -2,6 +2,9 @@ import React from 'react';
 
 import { ToolOutlined } from '@ant-design/icons';
 import { Typography, Col } from 'antd';
+import SlideInBottomBox from 'common/framerMotion/slideInBottomBox';
+import SlideInLeftBox from 'common/framerMotion/slideInLeftBox';
+import SlideInRightBox from 'common/framerMotion/slideInRightBox';
 import HeaderWrapper from 'commonStyles/header';
 import { Row, Separator, Container } from 'commonStyles/layouts';
 import styled from 'styled-components';
@@ -34,57 +37,65 @@ const Skills = () => (
         </HeaderWrapper>
         <Separator height={4} />
         <Row gutter={[24, 12]}>
-            <Col sm={{ span: 4, offset: 4 }}>
-                <HeaderWrapper level={4} color="white">
-                    Languages
-                </HeaderWrapper>
-                <Separator />
-                <UlWrapper>
-                    {skills.languages.map((skill: string) => (
-                        <li key={skill}>
-                            <TextWrapper strong>{skill}</TextWrapper>
-                        </li>
-                    ))}
-                </UlWrapper>
+            <Col lg={{ span: 4, offset: 4 }} sm={{ span: 6 }} xs={{ span: 12 }}>
+                <SlideInLeftBox>
+                    <HeaderWrapper level={4} color="white">
+                        Languages
+                    </HeaderWrapper>
+                    <Separator />
+                    <UlWrapper>
+                        {skills.languages.map((skill: string) => (
+                            <li key={skill}>
+                                <TextWrapper strong>{skill}</TextWrapper>
+                            </li>
+                        ))}
+                    </UlWrapper>
+                </SlideInLeftBox>
             </Col>
-            <Col sm={{ span: 4 }}>
-                <HeaderWrapper level={4} color="white">
-                    Frontend
-                </HeaderWrapper>
-                <Separator />
-                <UlWrapper>
-                    {skills.frontend.map((skill: string) => (
-                        <li key={skill}>
-                            <TextWrapper strong>{skill}</TextWrapper>
-                        </li>
-                    ))}
-                </UlWrapper>
+            <Col lg={{ span: 4 }} sm={{ span: 6 }} xs={{ span: 12 }}>
+                <SlideInBottomBox>
+                    <HeaderWrapper level={4} color="white">
+                        Frontend
+                    </HeaderWrapper>
+                    <Separator />
+                    <UlWrapper>
+                        {skills.frontend.map((skill: string) => (
+                            <li key={skill}>
+                                <TextWrapper strong>{skill}</TextWrapper>
+                            </li>
+                        ))}
+                    </UlWrapper>
+                </SlideInBottomBox>
             </Col>
-            <Col sm={{ span: 4 }}>
-                <HeaderWrapper level={4} color="white">
-                    Backend
-                </HeaderWrapper>
-                <Separator />
-                <UlWrapper>
-                    {skills.backend.map((skill: string) => (
-                        <li key={skill}>
-                            <TextWrapper strong>{skill}</TextWrapper>
-                        </li>
-                    ))}
-                </UlWrapper>
+            <Col lg={{ span: 4 }} sm={{ span: 6 }} xs={{ span: 12 }}>
+                <SlideInBottomBox>
+                    <HeaderWrapper level={4} color="white">
+                        Backend
+                    </HeaderWrapper>
+                    <Separator />
+                    <UlWrapper>
+                        {skills.backend.map((skill: string) => (
+                            <li key={skill}>
+                                <TextWrapper strong>{skill}</TextWrapper>
+                            </li>
+                        ))}
+                    </UlWrapper>
+                </SlideInBottomBox>
             </Col>
-            <Col sm={{ span: 4 }}>
-                <HeaderWrapper level={4} color="white">
-                    Tools Used
-                </HeaderWrapper>
-                <Separator />
-                <UlWrapper>
-                    {skills.tools_used.map((skill: string) => (
-                        <li key={skill}>
-                            <TextWrapper strong>{skill}</TextWrapper>
-                        </li>
-                    ))}
-                </UlWrapper>
+            <Col lg={{ span: 4 }} sm={{ span: 6 }} xs={{ span: 12 }}>
+                <SlideInRightBox xOffset={100}>
+                    <HeaderWrapper level={4} color="white">
+                        Tools Used
+                    </HeaderWrapper>
+                    <Separator />
+                    <UlWrapper>
+                        {skills.tools_used.map((skill: string) => (
+                            <li key={skill}>
+                                <TextWrapper strong>{skill}</TextWrapper>
+                            </li>
+                        ))}
+                    </UlWrapper>
+                </SlideInRightBox>
             </Col>
         </Row>
     </Wrapper>

@@ -2,9 +2,10 @@ import React from 'react';
 
 import { ExportOutlined } from '@ant-design/icons';
 import { Typography, Col } from 'antd';
+import SlideInLeftBox from 'common/framerMotion/slideInLeftBox';
+import SlideInRightBox from 'common/framerMotion/slideInRightBox';
 import { Row, Card } from 'commonStyles/layouts';
 import Colors from 'constants/colors';
-import { Link } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 
 type ColProps = {
@@ -59,18 +60,20 @@ const DetailCard = (props: Props) => {
         <Card>
             <Row>
                 <ColWrapper sm={{ span: 6 }} xs={{ span: 24 }} bg={1}>
-                    {period && <TextWrapper>{period}</TextWrapper>}
-                    <TitleWrapper level={4}>
-                        {title}{' '}
-                        {link && (
-                            <Link to={link} style={{ color: 'white' }}>
-                                <ExportOutlined />
-                            </Link>
-                        )}
-                    </TitleWrapper>
+                    <SlideInLeftBox>
+                        {period && <TextWrapper>{period}</TextWrapper>}
+                        <TitleWrapper level={4}>
+                            {title}{' '}
+                            {link && (
+                                <a href={link} style={{ color: 'white' }}>
+                                    <ExportOutlined />
+                                </a>
+                            )}
+                        </TitleWrapper>
+                    </SlideInLeftBox>
                 </ColWrapper>
                 <ColWrapper sm={{ span: 18 }} xs={{ span: 24 }} pb={1}>
-                    {children}
+                    <SlideInRightBox xOffset={15}>{children}</SlideInRightBox>
                 </ColWrapper>
             </Row>
         </Card>

@@ -23,8 +23,8 @@ const Wrapper = styled.div<WrapperProps>`
         css`
             background: linear-gradient(
                 0deg,
-                ${Colors.DEEP_SPACE_GRADIENT.PRIMARY_COLOR},
-                ${Colors.DEEP_SPACE_GRADIENT.SECONDARY_COLOR}
+                ${Colors.DARK_OCEAN_GRADIENT.PRIMARY_COLOR},
+                ${Colors.DARK_OCEAN_GRADIENT.SECONDARY_COLOR}
             );
             box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
         `};

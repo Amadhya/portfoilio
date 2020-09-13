@@ -1,0 +1,66 @@
+import React, { useMemo } from 'react';
+
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+
+type Props = {
+    children: React.ReactNode;
+    easing?:
+        | [number, number, number, number]
+        | 'linear'
+        | 'easeIn'
+        | 'easeOut'
+        | 'easeInOut'
+        | 'circIn'
+        | 'circOut'
+        | 'circInOut'
+        | 'backIn'
+        | 'backOut'
+        | 'backInOut'
+        | 'anticipate';
+};
+
+const SlideInBottomBox = (props: Props) => {
+    const { children, easing = [0.42, 0, 0.58, 1] } = props;
+
+    const [ref, inView] = useInView({
+        threshold: 0,
+        triggerOnce: false,
+    });
+
+    const transition = useMemo(
+        () => ({
+            duration: 0.6,
+            ease: easing,
+            delay: 0.15,
+        }),
+        [easing],
+    );
+
+    const variants = {
+        hidden: {
+            y: '100%',
+            opacity: 0,
+            transition,
+        },
+        show: {
+            y: 0,
+            opacity: 1,
+            transition,
+        },
+    };
+
+    return (
+        <motion.div
+            initial="hidden"
+            animate={inView ? 'show' : 'hidden'}
+            exit="hidden"
+            variants={variants}
+            ref={ref}
+        >
+            {children}
+        </motion.div>
+    );
+};
+
+export default SlideInBottomBox;
