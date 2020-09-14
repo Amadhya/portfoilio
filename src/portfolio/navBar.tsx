@@ -12,7 +12,7 @@ type WrapperProps = {
 const ButtonWrapper = styled(Button)`
     color: white !important;
     &: hover {
-        color: cyan !important;
+        color: #fa8c16 !important;
     }
 `;
 const Wrapper = styled.div<WrapperProps>`

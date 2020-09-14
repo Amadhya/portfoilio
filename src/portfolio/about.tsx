@@ -37,6 +37,12 @@ const ButtonWrapper = styled(Button)`
     }
     padding: 4px 28px;
 `;
+const AvatarWrapper = styled(Avatar)`
+    transition: all 0.25s linear;
+    &: hover {
+        transform: scale(1.15);
+    }
+`;
 
 const KeyValueRow = (props: Props) => {
     const { _key, value } = props;
@@ -57,7 +63,7 @@ const About = () => (
         <Row justify="center" gutter={[18, 24]}>
             <Col xl={{ span: 5 }} sm={{ span: 6 }}>
                 <FadeInBox>
-                    <Avatar size={140} src={Self} alt="Avatar" />
+                    <AvatarWrapper size={140} src={Self} alt="Avatar" />
                 </FadeInBox>
             </Col>
             <Col xl={{ span: 14 }} sm={{ span: 16 }}>
@@ -86,7 +92,7 @@ const About = () => (
                             <Separator height={5.5} />
                             <Row gutter={[12, 18]}>
                                 <Col
-                                    xl={{ span: 15 }}
+                                    xl={{ span: 18 }}
                                     lg={{ span: 8 }}
                                     md={{ span: 12 }}
                                     xs={{ span: 24 }}
@@ -105,7 +111,7 @@ const About = () => (
                                     </a>
                                 </Col>
                                 <Col
-                                    xl={{ span: 9 }}
+                                    xl={{ span: 18 }}
                                     lg={{ span: 6 }}
                                     md={{ span: 10 }}
                                     xs={{ span: 24 }}

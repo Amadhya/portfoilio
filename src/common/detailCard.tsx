@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { ExportOutlined } from '@ant-design/icons';
-import { Typography, Col } from 'antd';
+import { Typography, Col, Tooltip } from 'antd';
 import SlideInLeftBox from 'common/framerMotion/slideInLeftBox';
 import SlideInRightBox from 'common/framerMotion/slideInRightBox';
 import { Row, Card } from 'commonStyles/layouts';
@@ -65,9 +65,11 @@ const DetailCard = (props: Props) => {
                         <TitleWrapper level={4}>
                             {title}{' '}
                             {link && (
-                                <a href={link} style={{ color: 'white' }}>
-                                    <ExportOutlined />
-                                </a>
+                                <Tooltip title={`Visit ${  title}`}>
+                                    <a href={link} style={{ color: 'white' }}>
+                                        <ExportOutlined />
+                                    </a>
+                                </Tooltip>
                             )}
                         </TitleWrapper>
                     </SlideInLeftBox>
