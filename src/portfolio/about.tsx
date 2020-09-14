@@ -61,7 +61,7 @@ const About = () => (
                 </FadeInBox>
             </Col>
             <Col xl={{ span: 14 }} sm={{ span: 16 }}>
-                <FadeInUpBox yOffset={30}>
+                <FadeInUpBox yOffset={75}>
                     <TitleWrapper level={3}>About</TitleWrapper>
                     <Separator />
                     <TextWrapper>

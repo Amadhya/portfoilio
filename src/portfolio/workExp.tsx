@@ -21,7 +21,7 @@ const education = [
     {
         period: 'April, 2020 - PRESENT',
         title: 'SwyftCart',
-        subTitle: 'Software Developer',
+        subTitle: 'Freelance Software Developer',
         location: 'Chandigarh, India',
         desc: 'Design, develop and maintain features for the ecommerce and the admin platform.',
     },

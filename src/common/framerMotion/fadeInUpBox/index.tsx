@@ -27,7 +27,7 @@ const FadeInUpBox = (props: Props) => {
 
     const [ref, inView] = useInView({
         threshold: 0,
-        triggerOnce: true,
+        triggerOnce: false,
     });
 
     const transition = useMemo(
