@@ -32,7 +32,7 @@ export const Container = styled.div`
     justify-content: center;
     padding: 2rem 4rem;
     @media (max-width: 767px) {
-        padding: 0.5rem;
+        padding: 2rem 0.5rem;
     }
 `;
 

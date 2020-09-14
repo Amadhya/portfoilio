@@ -49,7 +49,7 @@ const KeyValueRow = (props: Props) => {
     return (
         <Row align="middle" gutter={[0, 16]}>
             <Col sm={{ span: 8 }}>
-                <TextWrapper strong>{_key}:</TextWrapper>
+                <TextWrapper strong>{_key}:&nbsp;</TextWrapper>
             </Col>
             <Col sm={{ span: 16 }}>
                 <TextWrapper>{value}</TextWrapper>
@@ -82,7 +82,7 @@ const About = () => (
                             <TitleWrapper level={3}>General Information</TitleWrapper>
                             <KeyValueRow
                                 _key="Experience"
-                                value="10 months ( 6 months internship )"
+                                value="< 1 year ( 6 months internship )"
                             />
                             <KeyValueRow _key="Email" value="eshuanand07@gmail.com" />
                             <KeyValueRow _key="Address" value="Chandigarh, India" />

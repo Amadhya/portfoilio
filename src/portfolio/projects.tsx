@@ -16,11 +16,11 @@ const UlWrapper = styled.ul`
 const projects = [
     {
         period: 'Apr, 2020 - PRESENT',
-        title: 'SwyftCart Ecomm.',
+        title: 'SwyftCart E-commerce',
         link: 'http://demo.swyftcart.com/',
         under: 'SwyftCart',
         desc: [
-            'SwyftCart Ecomm. is an ecommerce website.',
+            'SwyftCart E-commerce is an ecommerce website.',
             'User can buy products from various shops near them by adding items to cart, pay online or can choose cash on delivery option.',
             "Also, user's can track their orders and cancel them.",
             'Technologies Used: ReactJS, Redux, Node.js, Express.js, Antd, Firebase.',
@@ -32,7 +32,7 @@ const projects = [
         under: 'SwyftCart',
         desc: [
             'SwyftCart admin is an  application for shops to manage their orders and products.',
-            'User can view their statistics, view orders change its status and manage their inventory.',
+            'User can view their statistics, view orders, change its status and manage their inventory.',
             'Technologies Used: ReactJS, Redux, Node.js, Express.js, Antd, Firebase.',
         ],
     },
@@ -54,7 +54,7 @@ const projects = [
         under: 'Punjab Engineering College',
         desc: [
             'Patralaya is a blogging website.',
-            'Users can post blogs, add tags to it and categorise it. Also, users can view other user profiles, filter their feed and share blogs on facebook, reddit and twitter.',
+            'Users can post blogs, add tags to it and categorise it. Also, users can view other user profiles, filter their feed and share blogs on Facebook, Reddit and Twitter.',
             'Technologies used: React, Redux, Django, Material-UI, PostgreSQL.',
         ],
     },

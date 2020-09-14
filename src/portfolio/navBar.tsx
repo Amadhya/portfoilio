@@ -74,7 +74,7 @@ const NavBar = () => {
 
         if (typeof scrollY !== 'undefined') {
             window.scroll({
-                top: scrollY - 45,
+                top: scrollY - 60,
                 behavior: 'smooth',
             });
         }

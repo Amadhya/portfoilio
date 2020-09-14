@@ -16,7 +16,7 @@ const Wrapper = styled(Container)`
     background-size: cover;
     padding: 6rem;
     @media (max-width: 767px) {
-        padding: 1.5rem;
+        padding: 3rem;
     }
 `;
 const TextWrapper = styled(Text)`

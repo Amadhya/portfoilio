@@ -17,7 +17,7 @@ const education = [
         location: 'Chandigarh, India',
         result: 'CGPA: 8.1',
         extra:
-            'Member of NSS, Rotract Club and Robotics society. Was part of the publicity and discipline team of Pecfest.',
+            'Member of NSS, Rotaract Club and Robotics society. Was part of the publicity and discipline team of Pecfest.',
     },
     {
         title: 'Senior Secondary',
