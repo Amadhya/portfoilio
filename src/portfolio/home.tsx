@@ -22,6 +22,9 @@ const Wrapper = styled(Container)`
     width: 100%;
     position: absolute;
     text-align: center;
+    @media (max-width: 767px) {
+        padding: 0rem;
+    }
 `;
 const AvatarWrapper = styled(Avatar)`
     background: white;
@@ -40,6 +43,7 @@ const RowWapper = styled(Row)`
 const TextWrapper = styled(Text)`
     color: white !important;
     font-size: 16px;
+    padding: 0 4px;
 `;
 
 const Home = () => (

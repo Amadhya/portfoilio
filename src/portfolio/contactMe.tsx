@@ -15,6 +15,9 @@ const Wrapper = styled(Container)`
     background: url(${MapIcon}) no-repeat;
     background-size: cover;
     padding: 6rem;
+    @media (max-width: 767px) {
+        padding: 1.5rem;
+    }
 `;
 const TextWrapper = styled(Text)`
     colors: ${Colors.DARK_BLUE};

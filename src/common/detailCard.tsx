@@ -73,7 +73,7 @@ const DetailCard = (props: Props) => {
                     </SlideInLeftBox>
                 </ColWrapper>
                 <ColWrapper sm={{ span: 18 }} xs={{ span: 24 }} pb={1}>
-                    <SlideInRightBox xOffset={15}>{children}</SlideInRightBox>
+                    <SlideInRightBox xOffset={5}>{children}</SlideInRightBox>
                 </ColWrapper>
             </Row>
         </Card>

@@ -11,6 +11,9 @@ type WrapperProps = {
 
 const ButtonWrapper = styled(Button)`
     color: white !important;
+    &: hover {
+        color: cyan !important;
+    }
 `;
 const Wrapper = styled.div<WrapperProps>`
     position: fixed;
@@ -30,6 +33,9 @@ const Wrapper = styled.div<WrapperProps>`
         `};
     @media (max-width: 1024px) {
         padding: 0.5rem 4rem;
+    }
+    @media (max-width: 767px) {
+        padding: 0.5rem 2rem;
     }
 `;
 
@@ -68,7 +74,7 @@ const NavBar = () => {
 
         if (typeof scrollY !== 'undefined') {
             window.scroll({
-                top: scrollY - 50,
+                top: scrollY - 45,
                 behavior: 'smooth',
             });
         }

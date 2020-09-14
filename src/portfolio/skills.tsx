@@ -37,7 +37,11 @@ const Skills = () => (
         </HeaderWrapper>
         <Separator height={4} />
         <Row gutter={[24, 12]}>
-            <Col lg={{ span: 4, offset: 4 }} sm={{ span: 6 }} xs={{ span: 12 }}>
+            <Col
+                lg={{ span: 3, offset: 5 }}
+                sm={{ span: 6, offset: 0 }}
+                xs={{ span: 11, offset: 1 }}
+            >
                 <SlideInLeftBox>
                     <HeaderWrapper level={4} color="white">
                         Languages
@@ -52,7 +56,11 @@ const Skills = () => (
                     </UlWrapper>
                 </SlideInLeftBox>
             </Col>
-            <Col lg={{ span: 4 }} sm={{ span: 6 }} xs={{ span: 12 }}>
+            <Col
+                lg={{ span: 3, offset: 1 }}
+                sm={{ span: 6, offset: 0 }}
+                xs={{ span: 11, offset: 1 }}
+            >
                 <SlideInBottomBox>
                     <HeaderWrapper level={4} color="white">
                         Frontend
@@ -67,7 +75,11 @@ const Skills = () => (
                     </UlWrapper>
                 </SlideInBottomBox>
             </Col>
-            <Col lg={{ span: 4 }} sm={{ span: 6 }} xs={{ span: 12 }}>
+            <Col
+                lg={{ span: 4, offset: 1 }}
+                sm={{ span: 6, offset: 0 }}
+                xs={{ span: 11, offset: 1 }}
+            >
                 <SlideInBottomBox>
                     <HeaderWrapper level={4} color="white">
                         Backend
@@ -82,8 +94,12 @@ const Skills = () => (
                     </UlWrapper>
                 </SlideInBottomBox>
             </Col>
-            <Col lg={{ span: 4 }} sm={{ span: 6 }} xs={{ span: 12 }}>
-                <SlideInRightBox xOffset={100}>
+            <Col
+                lg={{ span: 3, offset: 0 }}
+                sm={{ span: 6, offset: 0 }}
+                xs={{ span: 11, offset: 1 }}
+            >
+                <SlideInRightBox xOffset={10}>
                     <HeaderWrapper level={4} color="white">
                         Tools Used
                     </HeaderWrapper>
