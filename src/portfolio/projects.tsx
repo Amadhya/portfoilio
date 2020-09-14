@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { BulbFilled } from '@ant-design/icons';
 import { Typography } from 'antd';
+import ProjectIcon from 'assets/project_icon.png';
 import DetailCard from 'common/detailCard';
 import HeaderWrapper from 'commonStyles/header';
 import { Separator, Container } from 'commonStyles/layouts';
@@ -63,7 +63,7 @@ const projects = [
 const Projects = () => (
     <Container id="projects">
         <HeaderWrapper level={3} border={1} fontWeight={1}>
-            <BulbFilled />
+            <img src={ProjectIcon} alt="icon" />
             &nbsp; Projects
         </HeaderWrapper>
         <Separator />

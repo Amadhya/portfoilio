@@ -13,7 +13,6 @@ import styled from 'styled-components';
 const { Title, Text } = Typography;
 
 const DivWrapper = styled.div`
-    display: relative;
     height: 100vh;
 `;
 const Wrapper = styled(Container)`

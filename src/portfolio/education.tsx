@@ -1,7 +1,8 @@
 import React from 'react';
 
-import { BookFilled, EnvironmentFilled, ReadFilled, SignalFilled } from '@ant-design/icons';
+import { EnvironmentFilled, ReadFilled, SignalFilled } from '@ant-design/icons';
 import { Typography } from 'antd';
+import EduIcon from 'assets/edu_icon.png';
 import DetailCard from 'common/detailCard';
 import HeaderWrapper from 'commonStyles/header';
 import { Separator, Container } from 'commonStyles/layouts';
@@ -37,7 +38,7 @@ const education = [
 const Education = () => (
     <Container id="education">
         <HeaderWrapper level={3} border={1} fontWeight={1}>
-            <BookFilled />
+            <img src={EduIcon} alt="icon" />
             &nbsp; Education
         </HeaderWrapper>
         <Separator />

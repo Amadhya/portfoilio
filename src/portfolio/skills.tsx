@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { ToolOutlined } from '@ant-design/icons';
 import { Typography, Col } from 'antd';
+import SkillIcon from 'assets/skill_icon.png';
 import SlideInBottomBox from 'common/framerMotion/slideInBottomBox';
 import SlideInLeftBox from 'common/framerMotion/slideInLeftBox';
 import SlideInRightBox from 'common/framerMotion/slideInRightBox';
@@ -32,7 +32,7 @@ const skills = {
 const Skills = () => (
     <Wrapper id="skill_set">
         <HeaderWrapper level={3} border={1} color="white" fontWeight={1}>
-            <ToolOutlined />
+            <img src={SkillIcon} alt="icon" />
             &nbsp; Skill Set
         </HeaderWrapper>
         <Separator height={4} />

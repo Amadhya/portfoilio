@@ -1,7 +1,8 @@
 import React from 'react';
 
-import { ExperimentFilled, EnvironmentFilled } from '@ant-design/icons';
+import { EnvironmentFilled } from '@ant-design/icons';
 import { Typography } from 'antd';
+import WorkIcon from 'assets/work_icon.png';
 import DetailCard from 'common/detailCard';
 import HeaderWrapper from 'commonStyles/header';
 import { Separator, Container } from 'commonStyles/layouts';
@@ -45,7 +46,7 @@ const education = [
 const WorkExp = () => (
     <Container id="work_exp">
         <HeaderWrapper level={3} border={1} fontWeight={1}>
-            <ExperimentFilled />
+            <img src={WorkIcon} alt="icon" />
             &nbsp; Work Experience
         </HeaderWrapper>
         <Separator />
