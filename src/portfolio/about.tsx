@@ -99,7 +99,7 @@ const About = () => (
                                 >
                                     <a
                                         rel="drive"
-                                        href="https://drive.google.com/file/d/16ovrS_iV-GRtXIswfKO-Rkp91ZZGyvlv/view?usp=sharing"
+                                        href="https://drive.google.com/file/d/1VKwWI25GWJ_P4ydzkve48hZxQoD-BW1U/view?usp=sharing"
                                     >
                                         <ButtonWrapper
                                             type="primary"
