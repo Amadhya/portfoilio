@@ -58,6 +58,22 @@ const KeyValueRow = (props: Props) => {
     );
 };
 
+const getExp = () => {
+    const date1 = new Date(2020, 3, 28);
+    const date2 = new Date();
+    const year1 = date1.getFullYear();
+    const year2 = date2.getFullYear();
+    const month1 = date1.getMonth();
+    const month2 = date2.getMonth();
+    const internship = 6;
+    const totalExpMonth = (month2 - month1 + internship + 1) % 12;
+    const totalExpYear = year2 - year1 + Math.floor((month2 - month1 + internship + 1) / 12);
+
+    return `${totalExpYear} year${totalExpYear > 1 ? 's' : ''}, ${totalExpMonth} month${
+        totalExpMonth > 1 ? 's' : ''
+    } (${internship} months internship)`;
+};
+
 const About = () => (
     <Wrapper id="about">
         <Row justify="center" gutter={[18, 24]}>
@@ -80,10 +96,7 @@ const About = () => (
                     <Row>
                         <Col xl={{ span: 14 }} sm={{ span: 24 }}>
                             <TitleWrapper level={3}>General Information</TitleWrapper>
-                            <KeyValueRow
-                                _key="Experience"
-                                value="< 1 year ( 6 months internship )"
-                            />
+                            <KeyValueRow _key="Experience" value={getExp()} />
                             <KeyValueRow _key="Email" value="eshuanand07@gmail.com" />
                             <KeyValueRow _key="Address" value="Chandigarh, India" />
                             <KeyValueRow _key="Languages" value="English, Hindi and Punjabi" />

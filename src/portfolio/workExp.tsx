@@ -11,7 +11,7 @@ const { Text } = Typography;
 
 const education = [
     {
-        period: 'Aug, 2020 - PRESENT',
+        period: 'July, 2020 - PRESENT',
         title: 'Cuemath',
         subTitle: 'Software Developer',
         location: 'Bangalore, India',
