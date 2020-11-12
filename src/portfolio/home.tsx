@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Typography, Avatar, Row } from 'antd';
+import { Typography, Avatar, Row, Tooltip } from 'antd';
 import MailIcon from 'assets/email_icon.png';
 import GithubIcon from 'assets/github_icon.png';
 import HackerRankIcon from 'assets/hackerrank_icon.png';
@@ -23,7 +23,7 @@ const Wrapper = styled(Container)`
     position: absolute;
     text-align: center;
     @media (max-width: 767px) {
-        padding: 0rem;
+        padding: 0rem 1rem;
     }
 `;
 const AvatarWrapper = styled(Avatar)`
@@ -45,6 +45,33 @@ const TextWrapper = styled(Text)`
     font-size: 16px;
     padding: 0 4px;
 `;
+
+const links = [
+    {
+        title: 'Mail',
+        src: MailIcon,
+        alt: 'mail',
+        href: 'mailto:eshuanand07@gmail.com',
+    },
+    {
+        title: 'Github',
+        src: GithubIcon,
+        alt: 'github',
+        href: 'https://github.com/Amadhya',
+    },
+    {
+        title: 'LinkedIn',
+        src: LinkedInIcon,
+        alt: 'linkedin',
+        href: 'https://www.linkedin.com/in/amadhya-anand-1761b8169/',
+    },
+    {
+        title: 'HackerRank',
+        src: HackerRankIcon,
+        alt: 'hackerrank',
+        href: 'https://www.hackerrank.com/eshuanand07',
+    },
+];
 
 const Home = () => (
     <DivWrapper>
@@ -111,18 +138,13 @@ const Home = () => (
             </TextWrapper>
             <Separator height={6} />
             <RowWapper justify="space-between">
-                <a href="mailto:eshuanand07@gmail.com">
-                    <AvatarWrapper size={45} src={MailIcon} alt="mail" />
-                </a>
-                <a href="https://github.com/Amadhya">
-                    <AvatarWrapper size={45} src={GithubIcon} alt="github" />
-                </a>
-                <a href="https://www.linkedin.com/in/amadhya-anand-1761b8169/">
-                    <AvatarWrapper size={45} src={LinkedInIcon} alt="linkedIn" />
-                </a>
-                <a href="https://www.hackerrank.com/eshuanand07">
-                    <AvatarWrapper size={45} src={HackerRankIcon} alt="hackerrank" />
-                </a>
+                {links.map(({ title, href, src, alt }) => (
+                    <Tooltip title={title}>
+                        <a href={href}>
+                            <AvatarWrapper size={45} src={src} alt={alt} />
+                        </a>
+                    </Tooltip>
+                ))}
             </RowWapper>
         </Wrapper>
     </DivWrapper>
