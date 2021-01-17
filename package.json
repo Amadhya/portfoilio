@@ -10,14 +10,17 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "@types/react-router-dom": "^5.1.7",
     "antd": "^4.6.3",
     "framer-motion": "^2.6.13",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-intersection-observer": "^8.28.5",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "react-tsparticles": "^1.17.10",
     "styled-components": "^5.2.0",
+    "styled-icons": "^10.25.0",
     "typescript": "^3.9.7"
   },
   "scripts": {
