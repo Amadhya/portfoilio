@@ -51,7 +51,7 @@ const links = [
         title: 'Mail',
         src: MailIcon,
         alt: 'mail',
-        href: 'mailto:eshuanand07@gmail.com',
+        href: 'mailto:amadhya.anand@gmail.com',
     },
     {
         title: 'Github',
@@ -69,7 +69,7 @@ const links = [
         title: 'HackerRank',
         src: HackerRankIcon,
         alt: 'hackerrank',
-        href: 'https://www.hackerrank.com/eshuanand07',
+        href: 'https://www.hackerrank.com/amadhya.anand',
     },
 ];
 

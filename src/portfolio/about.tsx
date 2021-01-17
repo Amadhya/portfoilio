@@ -59,7 +59,7 @@ const KeyValueRow = (props: Props) => {
 };
 
 const getExp = () => {
-    const date1 = new Date(2020, 3, 28);
+    const date1 = new Date(2020, 7, 13);
     const date2 = new Date();
     const year1 = date1.getFullYear();
     const year2 = date2.getFullYear();
@@ -97,7 +97,7 @@ const About = () => (
                         <Col xl={{ span: 14 }} sm={{ span: 24 }}>
                             <TitleWrapper level={3}>General Information</TitleWrapper>
                             <KeyValueRow _key="Experience" value={getExp()} />
-                            <KeyValueRow _key="Email" value="eshuanand07@gmail.com" />
+                            <KeyValueRow _key="Email" value="amadhya.anand@gmail.com" />
                             <KeyValueRow _key="Address" value="Chandigarh, India" />
                             <KeyValueRow _key="Languages" value="English, Hindi and Punjabi" />
                         </Col>

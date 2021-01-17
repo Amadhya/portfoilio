@@ -19,13 +19,6 @@ const education = [
             'Develop and maintain features for the online teaching platform for teachers and students.',
     },
     {
-        period: 'April, 2020 - PRESENT',
-        title: 'SwyftCart',
-        subTitle: 'Freelance Software Developer',
-        location: 'Chandigarh, India',
-        desc: 'Design, develop and maintain features for the ecommerce and the admin platform.',
-    },
-    {
         period: 'Jan, 2019 - Jun, 2019',
         title: 'Cuemath',
         subTitle: 'Software Developer Intern',

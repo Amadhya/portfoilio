@@ -161,7 +161,7 @@ const ContactMe = () => {
                             <Separator height={3} />
                             <TextWrapper>Email</TextWrapper>
                             <Separator height={0.5} />
-                            <Text strong>eshuanand07@gmail.com</Text>
+                            <Text strong>amadhya.anand@gmail.com</Text>
                         </Col>
                     </Row>
                 </CardWrapper>
