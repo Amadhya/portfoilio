@@ -6,6 +6,7 @@ import Self from 'assets/self.jpg';
 import FadeInBox from 'common/framerMotion/fadeInBox';
 import FadeInUpBox from 'common/framerMotion/fadeInUpBox';
 import { Row, Container, Separator } from 'commonStyles/layouts';
+import Colors from 'constants/colors';
 import styled from 'styled-components';
 
 const { Title, Text } = Typography;
@@ -16,7 +17,11 @@ type Props = {
 };
 
 const Wrapper = styled(Container)`
-  background: black;
+  background: linear-gradient(
+    180deg,
+    ${Colors.DEEP_SPACE_GRADIENT.PRIMARY_COLOR},
+    ${Colors.DEEP_SPACE_GRADIENT.SECONDARY_COLOR}
+  );
   padding: 4rem;
   @media (max-width: 1024px) {
     padding: 2rem;
@@ -32,11 +37,11 @@ const TextWrapper = styled(Text)`
 `;
 
 const ButtonWrapper = styled(Button)`
-  background: #1f1f1f !important;
-  border-color: #1f1f1f !important;
+  background: ${Colors.LIGHT_BLACK} !important;
+  border-color: ${Colors.LIGHT_BLACK} !important;
   &: hover {
-    background: #1f1f1f;
-    border-color: #1f1f1f;
+    background: ${Colors.LIGHT_BLACK};
+    border-color: ${Colors.LIGHT_BLACK};
   }
   border-radius: 4px;
   padding: 4px 28px;

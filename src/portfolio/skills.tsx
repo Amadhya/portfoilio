@@ -7,6 +7,7 @@ import SlideInLeftBox from 'common/framerMotion/slideInLeftBox';
 import SlideInRightBox from 'common/framerMotion/slideInRightBox';
 import HeaderWrapper from 'commonStyles/header';
 import { Row, Separator, Container } from 'commonStyles/layouts';
+import Colors from 'constants/colors';
 import styled from 'styled-components';
 
 const { Text } = Typography;
@@ -15,9 +16,15 @@ const TextWrapper = styled(Text)`
   text-align: center;
   color: white;
 `;
+
 const Wrapper = styled(Container)`
-  background: black;
+  background: linear-gradient(
+    0deg,
+    ${Colors.DEEP_SPACE_GRADIENT.PRIMARY_COLOR},
+    ${Colors.DEEP_SPACE_GRADIENT.SECONDARY_COLOR}
+  );
 `;
+
 const UlWrapper = styled.ul`
   color: #8c8c8c;
 `;
