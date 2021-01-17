@@ -15,7 +15,7 @@ const UlWrapper = styled.ul`
 
 const projects = [
   {
-    period: 'Apr, 2020 - PRESENT',
+    period: 'Apr, 2020 - Sep, 2020',
     title: 'SwyftCart E-commerce',
     link: 'http://demo.swyftcart.com/',
     under: 'SwyftCart',
@@ -27,7 +27,7 @@ const projects = [
     ],
   },
   {
-    period: 'Apr, 2020 - PRESENT',
+    period: 'Jun, 2020 - Oct, 2020',
     title: 'SwyftCart Admin',
     under: 'SwyftCart',
     desc: [
