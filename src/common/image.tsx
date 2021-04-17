@@ -7,6 +7,8 @@ import styled, { keyframes, css } from 'styled-components';
 type ImageProps = {
   width: number;
   height: number;
+  fullWidth: boolean;
+  fullHeight: boolean;
 };
 
 type StyledImageProps = {
@@ -17,6 +19,16 @@ const ImageWrapper = styled.div<ImageProps>`
   position: relative;
   width: ${({ width }) => width}px;
   height: ${({ height }) => height}px;
+  ${({ fullWidth }) =>
+    fullWidth &&
+    css`
+      width: 100%;
+    `};
+  ${({ fullHeight }) =>
+    fullHeight &&
+    css`
+      height: 100vh;
+    `};
 `;
 
 const loadingAnimation = keyframes`
@@ -56,13 +68,15 @@ const StyledImage = styled.img<StyledImageProps>`
 type Props = {
   src: string;
   alt: string;
-  width: number;
-  height: number;
-  circular: boolean;
+  width?: number;
+  height?: number;
+  circular?: boolean;
+  fullWidth?: boolean;
+  fullHeight?: boolean;
 };
 
 const LazyImage = (props: Props) => {
-  const { src, alt, width, height, circular } = props;
+  const { src, alt, width = 0, height = 0, circular, fullWidth, fullHeight } = props;
   const [showPlaceholder, setShowPlaceholder] = useState(true);
 
   const removePlaceholder = useCallback(() => {
@@ -70,7 +84,7 @@ const LazyImage = (props: Props) => {
   }, []);
 
   return (
-    <ImageWrapper height={height} width={width}>
+    <ImageWrapper height={height} width={width} fullWidth={!!fullWidth} fullHeight={!!fullHeight}>
       {showPlaceholder && <Placeholder />}
       <LazyLoad>
         <StyledImage
@@ -78,11 +92,19 @@ const LazyImage = (props: Props) => {
           onError={removePlaceholder}
           src={src}
           alt={alt}
-          circular={circular}
+          circular={!!circular}
         />
       </LazyLoad>
     </ImageWrapper>
   );
+};
+
+LazyImage.defaultProps = {
+  circular: false,
+  fullHeight: false,
+  fullWidth: false,
+  height: 0,
+  width: 0,
 };
 
 export default LazyImage;
