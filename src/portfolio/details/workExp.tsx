@@ -16,7 +16,7 @@ const education = [
     subTitle: 'Software Developer',
     location: 'Bangalore, India',
     desc:
-      'Develop and maintain features for the online teaching platform for teachers and students.',
+      'Develop and maintain features for the online teaching platform for teachers and students. Working on improving the overall demo experience of teachers and students. Worked on improving the classroom experience for teachers.',
   },
   {
     period: 'Jan, 2019 - Jun, 2019',

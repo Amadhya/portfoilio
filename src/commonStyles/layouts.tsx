@@ -46,7 +46,7 @@ export const Row = styled(AntdRow)<RowProps>`
   ${({ border }) =>
     border &&
     css`
-      border: 1px solid ${Colors.GREY};
+      border: 1px solid ${Colors.COLA_LIGHT};
     `};
 `;
 
@@ -77,7 +77,7 @@ export const Col = styled(AntdCol)<ColProps>`
 `;
 
 export const Card = styled(Row)`
-  width: 75%;
+  width: 900px;
   margin: 12px 0px;
   box-shadow: 5px 5px 5px #f0f0f0;
   margin: 12px;

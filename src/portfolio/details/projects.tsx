@@ -5,12 +5,13 @@ import { Typography } from 'antd';
 import DetailCard from 'common/detailCard';
 import HeaderWrapper from 'commonStyles/header';
 import { Separator, Container } from 'commonStyles/layouts';
+import Colors from 'constants/colors';
 import styled from 'styled-components';
 
 const { Text } = Typography;
 
 const UlWrapper = styled.ul`
-  color: #8c8c8c;
+  color: ${Colors.GREY};
 `;
 
 const projects = [

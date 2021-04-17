@@ -10,7 +10,6 @@ import styled, { css } from 'styled-components';
 
 type ColProps = {
   bg?: number;
-  pb?: number;
 };
 
 const { Title, Text } = Typography;
@@ -25,11 +24,6 @@ const ColWrapper = styled(Col)<ColProps>`
         ${Colors.DARK_OCEAN_GRADIENT.PRIMARY_COLOR},
         ${Colors.DARK_OCEAN_GRADIENT.SECONDARY_COLOR}
       );
-    `};
-  ${({ pb }) =>
-    pb === 1 &&
-    css`
-      padding-bottom: 3rem;
     `};
   display: flex;
   flex-direction: column;
@@ -49,6 +43,9 @@ const TitleWrapper = styled(Title)`
   margin-top: 0.5em !important;
   color: white !important;
   text-align: center;
+`;
+const LinkWrapper = styled.a`
+  color: white !important;
 `;
 
 type Props = {
@@ -70,15 +67,15 @@ const DetailCard = (props: Props) => {
             {title}{' '}
             {link && (
               <Tooltip title={`Visit ${title}`}>
-                <a href={link} style={{ color: 'white' }}>
+                <LinkWrapper href={link} aria-label={title}>
                   <ExternalLinkOutline size={20} />
-                </a>
+                </LinkWrapper>
               </Tooltip>
             )}
           </TitleWrapper>
         </SlideInLeftBox>
       </ColWrapper>
-      <ColWrapper sm={{ span: 18 }} xs={{ span: 24 }} pb={1}>
+      <ColWrapper sm={{ span: 18 }} xs={{ span: 24 }}>
         <SlideInRightBox xOffset={5}>{children}</SlideInRightBox>
       </ColWrapper>
     </Card>

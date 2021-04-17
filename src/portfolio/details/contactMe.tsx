@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 
 import { MailOutlined, UserOutlined } from '@ant-design/icons';
 import { Card, Col, Typography, Form, message, Input, Button } from 'antd';
@@ -51,37 +51,40 @@ const ContactMe = () => {
   const [loading, setLoading] = useState(false);
   const [form] = Form.useForm();
 
-  const submitForm = (values: FormProp) => {
-    setLoading(true);
+  const submitForm = useCallback(
+    (values: FormProp) => {
+      setLoading(true);
 
-    const headers = new Headers();
-    headers.append('Content-Type', 'application/json');
+      const headers = new Headers();
+      headers.append('Content-Type', 'application/json');
 
-    const body = JSON.stringify(values);
+      const body = JSON.stringify(values);
 
-    const requestOptions: any = {
-      method: 'POST',
-      headers,
-      body,
-      redirect: 'follow',
-    };
+      const requestOptions: any = {
+        method: 'POST',
+        headers,
+        body,
+        redirect: 'follow',
+      };
 
-    fetch('https://formspree.io/xgepweqk', requestOptions)
-      .then(res => res.json())
-      .then(res => {
-        setLoading(false);
-        if (res.ok) {
-          form.resetFields();
-          message.success('Email successful...');
-        } else {
-          throw new Error('There was some error...');
-        }
-      })
-      .catch(() => {
-        setLoading(false);
-        message.error('There was some error...');
-      });
-  };
+      fetch('https://formspree.io/xgepweqk', requestOptions)
+        .then(res => res.json())
+        .then(res => {
+          setLoading(false);
+          if (res.ok) {
+            form.resetFields();
+            message.success('Email successful...');
+          } else {
+            throw new Error('There was some error...');
+          }
+        })
+        .catch(() => {
+          setLoading(false);
+          message.error('There was some error...');
+        });
+    },
+    [form],
+  );
 
   return (
     <Wrapper id="contact_me">

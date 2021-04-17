@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 
 import { CloseOutline } from '@styled-icons/evaicons-outline/CloseOutline';
 import { Navicon } from '@styled-icons/evil/Navicon';
@@ -44,6 +44,7 @@ const Wrapper = styled.div<WrapperProps>`
 
 const RowWrapper = styled(Row)<{ visible: Number }>`
   @media (max-width: 767px) {
+    transition: all 0.5s ease;
     display: ${({ visible }) => (visible ? 'flex' : 'none')};
   }
 `;
@@ -101,18 +102,18 @@ const NavBar = () => {
   const [changeBg, setChangeBg] = useState(false);
   const [open, setOpen] = useState(false);
 
-  const onClick = (id: string) => {
+  const onClick = useCallback((id: string) => {
     const scrollY = document.getElementById(id)?.offsetTop;
 
-    if (typeof scrollY !== 'undefined') {
+    if (scrollY) {
       window.scroll({
         top: scrollY - 60,
         behavior: 'smooth',
       });
     }
-  };
+  }, []);
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     const aboutOffsetTop = document.getElementById('about')?.offsetTop;
     const offsetY = window.pageYOffset;
 
@@ -121,7 +122,7 @@ const NavBar = () => {
     } else if (aboutOffsetTop && offsetY >= aboutOffsetTop && !changeBg) {
       setChangeBg(true);
     }
-  };
+  }, [changeBg]);
 
   useEffect(() => {
     const doc = document.getElementById('home');

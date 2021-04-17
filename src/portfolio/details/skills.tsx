@@ -33,7 +33,7 @@ const skills = {
   languages: ['Cpp', 'C', 'Python', 'Java'],
   frontend: ['ReactJS', 'D3', 'HTML', 'CSS', 'Javascript', 'Typescript', 'Material-UI', 'Antd'],
   backend: ['DJango', 'Node.js', 'Express.js', 'Firebase', 'PostgreSQL'],
-  tools_used: ['Git', 'npm', 'Nivo.rocks', 'ESlint'],
+  tools_used: ['Git', 'npm', 'Nivo.rocks', 'ESlint', 'Figma'],
 };
 
 const Skills = () => (

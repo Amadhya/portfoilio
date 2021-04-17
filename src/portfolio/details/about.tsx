@@ -1,10 +1,11 @@
 import React from 'react';
 
 import { Download } from '@styled-icons/fa-solid/Download';
-import { Typography, Col, Avatar, Button } from 'antd';
+import { Typography, Col, Button } from 'antd';
 import Self from 'assets/self.jpg';
 import FadeInBox from 'common/framerMotion/fadeInBox';
 import FadeInUpBox from 'common/framerMotion/fadeInUpBox';
+import LazyImage from 'common/image';
 import { Row, Container, Separator } from 'commonStyles/layouts';
 import Colors from 'constants/colors';
 import styled from 'styled-components';
@@ -16,7 +17,7 @@ type Props = {
   value: string;
 };
 
-const Wrapper = styled(Container)`
+const StyledContainer = styled(Container)`
   background: linear-gradient(
     180deg,
     ${Colors.DEEP_SPACE_GRADIENT.PRIMARY_COLOR},
@@ -45,13 +46,6 @@ const ButtonWrapper = styled(Button)`
   }
   border-radius: 4px;
   padding: 4px 28px;
-`;
-
-const AvatarWrapper = styled(Avatar)`
-  transition: all 0.25s linear;
-  &: hover {
-    transform: scale(1.15);
-  }
 `;
 
 const DownloadIcon = styled(Download)`
@@ -89,11 +83,11 @@ const getExp = () => {
 };
 
 const About = () => (
-  <Wrapper id="about">
+  <StyledContainer id="about">
     <Row justify="center" gutter={[18, 24]}>
       <Col xl={{ span: 5 }} sm={{ span: 6 }}>
         <FadeInBox>
-          <AvatarWrapper size={140} src={Self} alt="Avatar" />
+          <LazyImage width={160} height={160} src={Self} alt="Avatar" circular />
         </FadeInBox>
       </Col>
       <Col xl={{ span: 14 }} sm={{ span: 16 }}>
@@ -122,6 +116,7 @@ const About = () => (
                   <a
                     rel="drive"
                     href="https://drive.google.com/file/d/1VKwWI25GWJ_P4ydzkve48hZxQoD-BW1U/view?usp=sharing"
+                    aria-label="resume-link"
                   >
                     <ButtonWrapper type="primary" icon={<DownloadIcon size={14} />} block>
                       Download Resume
@@ -152,7 +147,7 @@ const About = () => (
         </FadeInUpBox>
       </Col>
     </Row>
-  </Wrapper>
+  </StyledContainer>
 );
 
 export default About;
