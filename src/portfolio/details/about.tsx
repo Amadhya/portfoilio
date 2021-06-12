@@ -12,6 +12,8 @@ import styled from 'styled-components';
 
 const { Title, Text } = Typography;
 
+const DRIVE_URLS = "https://drive.google.com/file/d/1480Lmh0mgIYZ0hRA8Fmh_w1ASu-OL7YH/view?usp=sharing";
+
 type Props = {
   _key: string;
   value: string;
@@ -115,7 +117,7 @@ const About = () => (
                 <Col xl={{ span: 18 }} lg={{ span: 8 }} md={{ span: 12 }} xs={{ span: 24 }}>
                   <a
                     rel="drive"
-                    href="https://drive.google.com/file/d/1VKwWI25GWJ_P4ydzkve48hZxQoD-BW1U/view?usp=sharing"
+                    href={DRIVE_URLS}
                     aria-label="resume-link"
                   >
                     <ButtonWrapper type="primary" icon={<DownloadIcon size={14} />} block>
