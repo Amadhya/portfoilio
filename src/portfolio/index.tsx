@@ -5,6 +5,8 @@ import { BackTop } from 'antd';
 import Home from './home';
 import Navbar from './navBar';
 
+const FONT_LINK = "https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap";
+
 const Details = lazy(() => import('./details'));
 
 const Portfolio = () => {
@@ -19,7 +21,7 @@ const Portfolio = () => {
         <BackTop />
       </Suspense>
       <link
-        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        href={FONT_LINK}
         rel="stylesheet"
       />
     </>
