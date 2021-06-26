@@ -8,6 +8,7 @@ import { Typography, Row, Tooltip } from 'antd';
 import styled from 'styled-components';
 
 import { Separator, Container } from 'commonStyles/layouts';
+import ABOUT from 'constants/about';
 import Colors from 'constants/colors';
 
 const { Title, Text } = Typography;
@@ -70,13 +71,10 @@ const links = [
 const Home = () => (
   <DivWrapper>
     <Wrapper id="home">
-      <TitleWrapper level={1}>Amadhya Anand</TitleWrapper>
-      <TitleWrapper level={2}>SOFTWARE DEVELOPMENT ENGINEER</TitleWrapper>
+      <TitleWrapper level={1}>{ABOUT.name}</TitleWrapper>
+      <TitleWrapper level={2}>{ABOUT.profession.toUpperCase()}</TitleWrapper>
       <Separator height={3} />
-      <TextWrapper>
-        &quot;Life is not a game to be won, but a game to be played with zeal and enjoyment in every
-        moment till the end.&quot;
-      </TextWrapper>
+      <TextWrapper>&quot;{ABOUT.quote}&quot;</TextWrapper>
       <Separator height={6} />
       <RowWapper justify="space-between">
         {links.map(({ title, href, Icon }) => (

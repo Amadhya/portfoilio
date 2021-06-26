@@ -9,6 +9,7 @@ import FadeInBox from 'common/framerMotion/fadeInBox';
 import LazyImage from 'common/image';
 import HeaderWrapper from 'commonStyles/header';
 import { Separator, Container, Row } from 'commonStyles/layouts';
+import ABOUT from 'constants/about';
 import Colors from 'constants/colors';
 
 const { Text } = Typography;
@@ -165,11 +166,11 @@ const ContactMe = () => {
               <Col sm={{ span: 8, offset: 2 }}>
                 <TextWrapper>Address</TextWrapper>
                 <Separator height={0.5} />
-                <Text strong>Chandigarh, Inda</Text>
+                <Text strong>{ABOUT.address}</Text>
                 <Separator height={3} />
                 <TextWrapper>Email</TextWrapper>
                 <Separator height={0.5} />
-                <Text strong>amadhya.anand@gmail.com</Text>
+                <Text strong>{ABOUT.email}</Text>
               </Col>
             </Row>
           </CardWrapper>

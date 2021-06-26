@@ -9,12 +9,10 @@ import FadeInBox from 'common/framerMotion/fadeInBox';
 import FadeInUpBox from 'common/framerMotion/fadeInUpBox';
 import LazyImage from 'common/image';
 import { Row, Container, Separator } from 'commonStyles/layouts';
+import ABOUT from 'constants/about';
 import Colors from 'constants/colors';
 
 const { Title, Text } = Typography;
-
-const DRIVE_URLS =
-  'https://drive.google.com/file/d/1480Lmh0mgIYZ0hRA8Fmh_w1ASu-OL7YH/view?usp=sharing';
 
 type Props = {
   _key: string;
@@ -94,26 +92,21 @@ const About = () => (
         <FadeInUpBox yOffset={75}>
           <TitleWrapper level={3}>About</TitleWrapper>
           <Separator />
-          <TextWrapper>
-            Young, energetic and passionate engineer, who wants to pursue a challenging and growing
-            career as a Software Developer with the aim of holistic development and organization’s
-            growth. Btw, helping out people is something that I relish the most and love to watch TV
-            series in my leisure time.
-          </TextWrapper>
+          <TextWrapper>{ABOUT.name}</TextWrapper>
           <Separator height={4} />
           <Row>
             <Col xl={{ span: 14 }} sm={{ span: 24 }}>
               <TitleWrapper level={3}>General Information</TitleWrapper>
               <KeyValueRow _key="Experience" value={getExp()} />
-              <KeyValueRow _key="Email" value="amadhya.anand@gmail.com" />
-              <KeyValueRow _key="Address" value="Chandigarh, India" />
-              <KeyValueRow _key="Languages" value="English, Hindi and Punjabi" />
+              <KeyValueRow _key="Email" value={ABOUT.email} />
+              <KeyValueRow _key="Address" value={ABOUT.address} />
+              <KeyValueRow _key="Languages" value={ABOUT.languages.join(', ')} />
             </Col>
             <Col xl={{ span: 10 }} sm={{ span: 24 }}>
               <Separator height={5.5} />
               <Row gutter={[12, 18]}>
                 <Col xl={{ span: 18 }} lg={{ span: 8 }} md={{ span: 12 }} xs={{ span: 24 }}>
-                  <a rel="drive" href={DRIVE_URLS} aria-label="resume-link">
+                  <a rel="drive" href={ABOUT.resume} aria-label="resume-link">
                     <ButtonWrapper type="primary" icon={<DownloadIcon size={14} />} block>
                       Download Resume
                     </ButtonWrapper>
