@@ -42,7 +42,6 @@ const ButtonWrapper = styled(Button)`
     background: ${Colors.MINE_SHAFT};
     border-color: ${Colors.MINE_SHAFT};
   }
-  border-radius: 4px;
   padding: 4px 28px;
 `;
 
@@ -92,7 +91,7 @@ const About = () => (
         <FadeInUpBox yOffset={75}>
           <TitleWrapper level={3}>About</TitleWrapper>
           <Separator />
-          <TextWrapper>{ABOUT.name}</TextWrapper>
+          <TextWrapper>{ABOUT.info}</TextWrapper>
           <Separator height={4} />
           <Row>
             <Col xl={{ span: 14 }} sm={{ span: 24 }}>
@@ -112,7 +111,12 @@ const About = () => (
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <ButtonWrapper type="primary" icon={<DownloadIcon size={14} />} block>
+                    <ButtonWrapper
+                      type="primary"
+                      shape="round"
+                      icon={<DownloadIcon size={14} />}
+                      block
+                    >
                       Download Resume
                     </ButtonWrapper>
                   </a>
@@ -120,6 +124,7 @@ const About = () => (
                 <Col xl={{ span: 18 }} lg={{ span: 6 }} md={{ span: 10 }} xs={{ span: 24 }}>
                   <ButtonWrapper
                     type="primary"
+                    shape="round"
                     block
                     onClick={() => {
                       const scrollY = document.getElementById('contact_me')?.offsetTop;

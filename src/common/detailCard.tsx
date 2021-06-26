@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { ExternalLinkOutline } from '@styled-icons/evaicons-outline/ExternalLinkOutline';
-import { Typography, Col, Tooltip } from 'antd';
+import { Typography, Col, Button } from 'antd';
 import styled, { css } from 'styled-components';
 
 import SlideInLeftBox from 'common/framerMotion/slideInLeftBox';
@@ -11,6 +10,7 @@ import Colors from 'constants/colors';
 
 type ColProps = {
   bg?: number;
+  textAlign?: string;
 };
 
 const { Title, Text } = Typography;
@@ -26,6 +26,12 @@ const ColWrapper = styled(Col)<ColProps>`
   flex-direction: column;
   justify-content: center;
   border-radius: 8px 0px 0px 8px;
+
+  ${({ textAlign }) =>
+    textAlign &&
+    css`
+      text-align: ${textAlign};
+    `};
 
   @media (max-width: 767px) {
     border-radius: 8px 8px 0px 0px;
@@ -57,19 +63,15 @@ const DetailCard = (props: Props) => {
 
   return (
     <Card border={1}>
-      <ColWrapper sm={{ span: 6 }} xs={{ span: 24 }} bg={1}>
+      <ColWrapper sm={{ span: 6 }} xs={{ span: 24 }} bg={1} textAlign="center">
         <SlideInLeftBox>
           {period && <TextWrapper>{period}</TextWrapper>}
-          <TitleWrapper level={4}>
-            {title}{' '}
-            {link && (
-              <Tooltip title={`Visit ${title}`}>
-                <LinkWrapper href={link} aria-label={title}>
-                  <ExternalLinkOutline size={20} />
-                </LinkWrapper>
-              </Tooltip>
-            )}
-          </TitleWrapper>
+          <TitleWrapper level={4}>{title}</TitleWrapper>
+          {link && (
+            <LinkWrapper href={link} aria-label={title} target="_blank" rel="noopener">
+              <Button shape="round">View</Button>
+            </LinkWrapper>
+          )}
         </SlideInLeftBox>
       </ColWrapper>
       <ColWrapper sm={{ span: 18 }} xs={{ span: 24 }}>

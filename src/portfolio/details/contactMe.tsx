@@ -37,7 +37,6 @@ const ButtonWrapper = styled(Button)`
     background: ${Colors.EBONY_CLAY};
     border-color: ${Colors.EBONY_CLAY};
   }
-  border-radius: 4px;
   padding: 4px 28px;
 `;
 
@@ -157,6 +156,7 @@ const ContactMe = () => {
                       htmlType="submit"
                       className="form-button"
                       loading={loading}
+                      shape="round"
                     >
                       Send
                     </ButtonWrapper>

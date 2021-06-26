@@ -71,7 +71,7 @@ const links = [
 const Home = () => (
   <DivWrapper>
     <Wrapper id="home">
-      <TitleWrapper level={1}>{ABOUT.name}</TitleWrapper>
+      <TitleWrapper level={1}>Hi! I&apos;m {ABOUT.name}</TitleWrapper>
       <TitleWrapper level={2}>{ABOUT.profession.toUpperCase()}</TitleWrapper>
       <Separator height={3} />
       <TextWrapper>&quot;{ABOUT.quote}&quot;</TextWrapper>
