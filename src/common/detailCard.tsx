@@ -2,11 +2,12 @@ import React from 'react';
 
 import { ExternalLinkOutline } from '@styled-icons/evaicons-outline/ExternalLinkOutline';
 import { Typography, Col, Tooltip } from 'antd';
+import styled, { css } from 'styled-components';
+
 import SlideInLeftBox from 'common/framerMotion/slideInLeftBox';
 import SlideInRightBox from 'common/framerMotion/slideInRightBox';
 import { Card } from 'commonStyles/layouts';
 import Colors from 'constants/colors';
-import styled, { css } from 'styled-components';
 
 type ColProps = {
   bg?: number;
@@ -19,11 +20,7 @@ const ColWrapper = styled(Col)<ColProps>`
   ${({ bg }) =>
     bg === 1 &&
     css`
-      background: linear-gradient(
-        0deg,
-        ${Colors.DARK_OCEAN_GRADIENT.PRIMARY_COLOR},
-        ${Colors.DARK_OCEAN_GRADIENT.SECONDARY_COLOR}
-      );
+      background: linear-gradient(0deg, ${Colors.BIG_STONE}, ${Colors.CLOUD_BURST});
     `};
   display: flex;
   flex-direction: column;

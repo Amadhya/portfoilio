@@ -2,17 +2,19 @@ import React from 'react';
 
 import { Download } from '@styled-icons/fa-solid/Download';
 import { Typography, Col, Button } from 'antd';
+import styled from 'styled-components';
+
 import Self from 'assets/self.jpg';
 import FadeInBox from 'common/framerMotion/fadeInBox';
 import FadeInUpBox from 'common/framerMotion/fadeInUpBox';
 import LazyImage from 'common/image';
 import { Row, Container, Separator } from 'commonStyles/layouts';
 import Colors from 'constants/colors';
-import styled from 'styled-components';
 
 const { Title, Text } = Typography;
 
-const DRIVE_URLS = "https://drive.google.com/file/d/1480Lmh0mgIYZ0hRA8Fmh_w1ASu-OL7YH/view?usp=sharing";
+const DRIVE_URLS =
+  'https://drive.google.com/file/d/1480Lmh0mgIYZ0hRA8Fmh_w1ASu-OL7YH/view?usp=sharing';
 
 type Props = {
   _key: string;
@@ -20,11 +22,7 @@ type Props = {
 };
 
 const StyledContainer = styled(Container)`
-  background: linear-gradient(
-    180deg,
-    ${Colors.DEEP_SPACE_GRADIENT.PRIMARY_COLOR},
-    ${Colors.DEEP_SPACE_GRADIENT.SECONDARY_COLOR}
-  );
+  background: linear-gradient(180deg, ${Colors.BLACK}, ${Colors.TUNDORA});
   padding: 4rem;
   @media (max-width: 1024px) {
     padding: 2rem;
@@ -40,11 +38,11 @@ const TextWrapper = styled(Text)`
 `;
 
 const ButtonWrapper = styled(Button)`
-  background: ${Colors.LIGHT_BLACK} !important;
-  border-color: ${Colors.LIGHT_BLACK} !important;
+  background: ${Colors.MINE_SHAFT} !important;
+  border-color: ${Colors.MINE_SHAFT} !important;
   &: hover {
-    background: ${Colors.LIGHT_BLACK};
-    border-color: ${Colors.LIGHT_BLACK};
+    background: ${Colors.MINE_SHAFT};
+    border-color: ${Colors.MINE_SHAFT};
   }
   border-radius: 4px;
   padding: 4px 28px;
@@ -115,11 +113,7 @@ const About = () => (
               <Separator height={5.5} />
               <Row gutter={[12, 18]}>
                 <Col xl={{ span: 18 }} lg={{ span: 8 }} md={{ span: 12 }} xs={{ span: 24 }}>
-                  <a
-                    rel="drive"
-                    href={DRIVE_URLS}
-                    aria-label="resume-link"
-                  >
+                  <a rel="drive" href={DRIVE_URLS} aria-label="resume-link">
                     <ButtonWrapper type="primary" icon={<DownloadIcon size={14} />} block>
                       Download Resume
                     </ButtonWrapper>

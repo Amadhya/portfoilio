@@ -2,16 +2,17 @@ import React from 'react';
 
 import { Laptop } from '@styled-icons/fa-solid/Laptop';
 import { Typography } from 'antd';
+import styled from 'styled-components';
+
 import DetailCard from 'common/detailCard';
 import HeaderWrapper from 'commonStyles/header';
 import { Separator, Container } from 'commonStyles/layouts';
 import Colors from 'constants/colors';
-import styled from 'styled-components';
 
 const { Text } = Typography;
 
 const UlWrapper = styled.ul`
-  color: ${Colors.GREY};
+  color: ${Colors.GRAY};
 `;
 
 const projects = [

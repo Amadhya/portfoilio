@@ -3,9 +3,10 @@ import React, { useEffect, useState, useCallback } from 'react';
 import { CloseOutline } from '@styled-icons/evaicons-outline/CloseOutline';
 import { Navicon } from '@styled-icons/evil/Navicon';
 import { Button } from 'antd';
+import styled, { css } from 'styled-components';
+
 import { Row } from 'commonStyles/layouts';
 import Colors from 'constants/colors';
-import styled, { css } from 'styled-components';
 
 type WrapperProps = {
   changeBg: Number;
@@ -14,7 +15,7 @@ type WrapperProps = {
 const ButtonWrapper = styled(Button)`
   color: white !important;
   &: hover {
-    color: ${Colors.BLUE} !important;
+    color: ${Colors.CERULEAN} !important;
   }
 `;
 
@@ -27,11 +28,7 @@ const Wrapper = styled.div<WrapperProps>`
   ${({ changeBg }) =>
     changeBg &&
     css`
-      background: linear-gradient(
-        0deg,
-        ${Colors.DARK_OCEAN_GRADIENT.PRIMARY_COLOR},
-        ${Colors.DARK_OCEAN_GRADIENT.SECONDARY_COLOR}
-      );
+      background: linear-gradient(0deg, ${Colors.BIG_STONE}, ${Colors.CLOUD_BURST});
       box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
     `};
   @media (max-width: 1024px) {
@@ -50,7 +47,7 @@ const RowWrapper = styled(Row)<{ visible: Number }>`
 `;
 
 const NaviconWrapper = styled(Navicon)`
-  color: ${Colors.WHITE};
+  color: ${Colors.ALABASTER};
   float: right;
 
   @media (min-width: 767px) {
@@ -59,7 +56,7 @@ const NaviconWrapper = styled(Navicon)`
 `;
 
 const CloseOutlineIcon = styled(CloseOutline)`
-  color: ${Colors.WHITE};
+  color: ${Colors.ALABASTER};
   float: right;
 
   @media (min-width: 767px) {

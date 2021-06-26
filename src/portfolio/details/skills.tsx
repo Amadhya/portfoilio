@@ -2,13 +2,14 @@ import React from 'react';
 
 import { Tools } from '@styled-icons/entypo/Tools';
 import { Typography, Col } from 'antd';
+import styled from 'styled-components';
+
 import SlideInBottomBox from 'common/framerMotion/slideInBottomBox';
 import SlideInLeftBox from 'common/framerMotion/slideInLeftBox';
 import SlideInRightBox from 'common/framerMotion/slideInRightBox';
 import HeaderWrapper from 'commonStyles/header';
 import { Row, Separator, Container } from 'commonStyles/layouts';
 import Colors from 'constants/colors';
-import styled from 'styled-components';
 
 const { Text } = Typography;
 
@@ -18,11 +19,7 @@ const TextWrapper = styled(Text)`
 `;
 
 const Wrapper = styled(Container)`
-  background: linear-gradient(
-    0deg,
-    ${Colors.DEEP_SPACE_GRADIENT.PRIMARY_COLOR},
-    ${Colors.DEEP_SPACE_GRADIENT.SECONDARY_COLOR}
-  );
+  background: linear-gradient(0deg, ${Colors.BLACK}, ${Colors.TUNDORA});
 `;
 
 const UlWrapper = styled.ul`

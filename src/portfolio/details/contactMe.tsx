@@ -2,13 +2,14 @@ import React, { useState, useCallback } from 'react';
 
 import { MailOutlined, UserOutlined } from '@ant-design/icons';
 import { Card, Col, Typography, Form, message, Input, Button } from 'antd';
+import styled from 'styled-components';
+
 import MapIcon from 'assets/map.png';
 import FadeInBox from 'common/framerMotion/fadeInBox';
 import LazyImage from 'common/image';
 import HeaderWrapper from 'commonStyles/header';
 import { Separator, Container, Row } from 'commonStyles/layouts';
 import Colors from 'constants/colors';
-import styled from 'styled-components';
 
 const { Text } = Typography;
 
@@ -17,7 +18,7 @@ const Wrapper = styled(Container)`
   position: relative;
 `;
 const TextWrapper = styled(Text)`
-  colors: ${Colors.DARK_BLUE};
+  colors: ${Colors.EBONY_CLAY};
   font-size: 16px;
   font-weight: 700;
 `;
@@ -29,11 +30,11 @@ const CardWrapper = styled(Card)`
   }
 `;
 const ButtonWrapper = styled(Button)`
-  background: ${Colors.DARK_BLUE} !important;
-  border-color: ${Colors.DARK_BLUE} !important;
+  background: ${Colors.EBONY_CLAY} !important;
+  border-color: ${Colors.EBONY_CLAY} !important;
   &: hover {
-    background: ${Colors.DARK_BLUE};
-    border-color: ${Colors.DARK_BLUE};
+    background: ${Colors.EBONY_CLAY};
+    border-color: ${Colors.EBONY_CLAY};
   }
   border-radius: 4px;
   padding: 4px 28px;
