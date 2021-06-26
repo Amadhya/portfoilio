@@ -79,7 +79,7 @@ const Home = () => (
       <RowWapper justify="space-between">
         {links.map(({ title, href, Icon }) => (
           <Tooltip title={title} key={title}>
-            <LinkWrapper href={href} aria-label={title}>
+            <LinkWrapper href={href} aria-label={title} target="_blank" rel="noopener noreferrer">
               {Icon && <Icon size={36} />}
             </LinkWrapper>
           </Tooltip>

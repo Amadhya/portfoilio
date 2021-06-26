@@ -106,7 +106,12 @@ const About = () => (
               <Separator height={5.5} />
               <Row gutter={[12, 18]}>
                 <Col xl={{ span: 18 }} lg={{ span: 8 }} md={{ span: 12 }} xs={{ span: 24 }}>
-                  <a rel="drive" href={ABOUT.resume} aria-label="resume-link">
+                  <a
+                    href={ABOUT.resume}
+                    aria-label="resume-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <ButtonWrapper type="primary" icon={<DownloadIcon size={14} />} block>
                       Download Resume
                     </ButtonWrapper>
