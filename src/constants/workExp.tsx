@@ -13,7 +13,7 @@ const WORKEXP = [
     subTitle: 'Software Developer Intern',
     location: 'Bangalore, India',
     desc:
-      "FullStack developer for the Cuemath website. Developed various landing pages, services and api's.",
+      'Worked as a full-stack developer. Developed various landing pages, services, and APIs for the Cuemath website.',
   },
   {
     period: 'May, 2018 - Sep, 2018',
@@ -21,7 +21,7 @@ const WORKEXP = [
     subTitle: 'Teaching Assistant',
     location: 'New Delhi, India',
     desc:
-      'Mentored a group of fifteen to twenty students in completing their course and other career related queries. Worked over different Data structures and algorithm problems.',
+      'Mentored a group of fifteen to twenty students in completing their course and other career-related queries. Worked over different Data structures and algorithm problems.',
   },
 ];
 

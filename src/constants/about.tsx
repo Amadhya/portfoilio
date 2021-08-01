@@ -4,7 +4,7 @@ const ABOUT = {
   languages: ['English', 'Hindi', 'Punjabi'],
   email: 'amadhya.anand@gmail.com',
   info:
-    'Young, energetic and passionate engineer, who wants to pursue a challenging and growing career as a Software Developer with the aim of holistic development and organization’s growth. Btw, helping out people is something that I relish the most and love to watch TV series in my leisure time.',
+    'Young, energetic, and enthusiastic engineer, who wants to pursue a challenging and growing career as a Software Developer with the aim of holistic development and organizational growth. By the way, helping out people is something that I relish the most. In my leisure time, I like to watch TV series.',
   resume: 'https://drive.google.com/file/d/1480Lmh0mgIYZ0hRA8Fmh_w1ASu-OL7YH/view?usp=sharing',
   profession: 'Software Development Engineer',
   quote:
