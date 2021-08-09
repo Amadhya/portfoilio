@@ -71,8 +71,8 @@ const links = [
 
 const Home = () => (
   <DivWrapper>
-    <Wrapper id="home">
-      <FadeInBox>
+    <FadeInBox>
+      <Wrapper id="home">
         <TitleWrapper level={1}>Hi! I&apos;m {ABOUT.name}</TitleWrapper>
         <TitleWrapper level={2}>{ABOUT.profession.toUpperCase()}</TitleWrapper>
         <Separator height={3} />
@@ -87,8 +87,8 @@ const Home = () => (
             </Tooltip>
           ))}
         </RowWapper>
-      </FadeInBox>
-    </Wrapper>
+      </Wrapper>
+    </FadeInBox>
   </DivWrapper>
 );
 
