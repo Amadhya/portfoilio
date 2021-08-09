@@ -52,7 +52,7 @@ const PROJECTS = [
     under: 'The Developer Community',
     desc: [
       'Worked with in a team to develop chatroom application.',
-      'Features supported by application are emoji, users can join room to chat, last activity of user and timestamp of message',
+      'Features supported by application are emoji, users can join room to chat, last activity of user, and timestamp of message.',
       'Technologies used: React, Redux, Django, Redis.',
     ],
   },
