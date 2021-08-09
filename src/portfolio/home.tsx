@@ -7,7 +7,6 @@ import { Email } from '@styled-icons/material-rounded/Email';
 import { Typography, Row, Tooltip } from 'antd';
 import styled from 'styled-components';
 
-import FadeInBox from 'common/framerMotion/fadeInBox';
 import { Separator, Container } from 'commonStyles/layouts';
 import ABOUT from 'constants/about';
 import Colors from 'constants/colors';
@@ -71,24 +70,22 @@ const links = [
 
 const Home = () => (
   <DivWrapper>
-    <FadeInBox>
-      <Wrapper id="home">
-        <TitleWrapper level={1}>Hi! I&apos;m {ABOUT.name}</TitleWrapper>
-        <TitleWrapper level={2}>{ABOUT.profession.toUpperCase()}</TitleWrapper>
-        <Separator height={3} />
-        <TextWrapper>&quot;{ABOUT.quote}&quot;</TextWrapper>
-        <Separator height={6} />
-        <RowWapper justify="space-between">
-          {links.map(({ title, href, Icon }) => (
-            <Tooltip title={title} key={title}>
-              <LinkWrapper href={href} aria-label={title} target="_blank" rel="noopener noreferrer">
-                {Icon && <Icon size={36} />}
-              </LinkWrapper>
-            </Tooltip>
-          ))}
-        </RowWapper>
-      </Wrapper>
-    </FadeInBox>
+    <Wrapper id="home">
+      <TitleWrapper level={1}>Hi! I&apos;m {ABOUT.name}</TitleWrapper>
+      <TitleWrapper level={2}>{ABOUT.profession.toUpperCase()}</TitleWrapper>
+      <Separator height={3} />
+      <TextWrapper>&quot;{ABOUT.quote}&quot;</TextWrapper>
+      <Separator height={6} />
+      <RowWapper justify="space-between">
+        {links.map(({ title, href, Icon }) => (
+          <Tooltip title={title} key={title}>
+            <LinkWrapper href={href} aria-label={title} target="_blank" rel="noopener noreferrer">
+              {Icon && <Icon size={36} />}
+            </LinkWrapper>
+          </Tooltip>
+        ))}
+      </RowWapper>
+    </Wrapper>
   </DivWrapper>
 );
 
