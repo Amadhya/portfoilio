@@ -45,6 +45,17 @@ const PROJECTS = [
       'Technologies used: React, Redux, Django, Material-UI, PostgreSQL.',
     ],
   },
+  {
+    period: 'Aug, 2019 - Sep, 2019',
+    title: 'Chatroom',
+    link: 'https://github.com/EightBitGod/TheDevCom_ProjectChatroom',
+    under: 'The Developer Community',
+    desc: [
+      'Worked with in a team to develop chatroom application.',
+      'Features supported by application are emoji, users can join room to chat, last activity of user and timestamp of message',
+      'Technologies used: React, Redux, Django, Redis.',
+    ],
+  },
 ];
 
 export default PROJECTS;
