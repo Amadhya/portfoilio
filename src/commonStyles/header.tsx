@@ -10,7 +10,7 @@ type Props = {
   fontWeight?: number;
 };
 
-const HeaderWrapper = styled(Typography.Title)<Props>`
+const StyledTitle = styled(Typography.Title)<Props>`
   color: ${({ color }) => color || Colors.EBONY_CLAY} !important;
   margin-bottom: 4px !important;
   ${({ align }) =>
@@ -31,4 +31,4 @@ const HeaderWrapper = styled(Typography.Title)<Props>`
     `};
 `;
 
-export default HeaderWrapper;
+export default StyledTitle;

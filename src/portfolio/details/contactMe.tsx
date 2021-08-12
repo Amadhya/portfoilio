@@ -7,30 +7,30 @@ import styled from 'styled-components';
 import MapIcon from 'assets/map.png';
 import FadeInBox from 'common/framerMotion/fadeInBox';
 import LazyImage from 'common/image';
-import HeaderWrapper from 'commonStyles/header';
+import StyledTitle from 'commonStyles/header';
 import { Separator, Container, Row } from 'commonStyles/layouts';
 import ABOUT from 'constants/about';
 import Colors from 'constants/colors';
 
 const { Text } = Typography;
 
-const Wrapper = styled(Container)`
+const StyledContainer = styled(Container)`
   padding: 0;
   position: relative;
 `;
-const TextWrapper = styled(Text)`
+const StyledText = styled(Text)`
   colors: ${Colors.EBONY_CLAY};
   font-size: 16px;
   font-weight: 700;
 `;
-const CardWrapper = styled(Card)`
+const StyledCard = styled(Card)`
   width: 700px;
   border-radius: 8px;
   @media (max-width: 767px) {
     width: 100%;
   }
 `;
-const ButtonWrapper = styled(Button)`
+const StyledButton = styled(Button)`
   background: ${Colors.EBONY_CLAY} !important;
   border-color: ${Colors.EBONY_CLAY} !important;
   &: hover {
@@ -92,18 +92,18 @@ const ContactMe = () => {
   );
 
   return (
-    <Wrapper id="contact_me">
+    <StyledContainer id="contact_me">
       <LazyImage fullHeight fullWidth src={MapIcon} alt="Avatar" />
       <CardContainer>
         <FadeInBox>
-          <CardWrapper>
-            <HeaderWrapper level={3} fontWeight={1} align="center">
+          <StyledCard>
+            <StyledTitle level={3} fontWeight={1} align="center">
               Contact Me
-            </HeaderWrapper>
+            </StyledTitle>
             <Separator height={3} />
             <Row gutter={[24, 12]}>
               <Col sm={{ span: 12 }}>
-                <TextWrapper>Feel free to contact me</TextWrapper>
+                <StyledText>Feel free to contact me</StyledText>
                 <Separator height={3} />
                 <Form onFinish={submitForm} form={form}>
                   <Form.Item
@@ -151,7 +151,7 @@ const ContactMe = () => {
                     <Input.TextArea placeholder="Enter message" rows={4} />
                   </Form.Item>
                   <Form.Item>
-                    <ButtonWrapper
+                    <StyledButton
                       type="primary"
                       htmlType="submit"
                       className="form-button"
@@ -159,24 +159,24 @@ const ContactMe = () => {
                       shape="round"
                     >
                       Send
-                    </ButtonWrapper>
+                    </StyledButton>
                   </Form.Item>
                 </Form>
               </Col>
               <Col sm={{ span: 8, offset: 2 }}>
-                <TextWrapper>Address</TextWrapper>
+                <StyledText>Address</StyledText>
                 <Separator height={0.5} />
                 <Text strong>{ABOUT.address}</Text>
                 <Separator height={3} />
-                <TextWrapper>Email</TextWrapper>
+                <StyledText>Email</StyledText>
                 <Separator height={0.5} />
                 <Text strong>{ABOUT.email}</Text>
               </Col>
             </Row>
-          </CardWrapper>
+          </StyledCard>
         </FadeInBox>
       </CardContainer>
-    </Wrapper>
+    </StyledContainer>
   );
 };
 

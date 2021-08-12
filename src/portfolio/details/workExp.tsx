@@ -7,7 +7,7 @@ import styled from 'styled-components';
 
 import SlideInLeftBox from 'common/framerMotion/slideInLeftBox';
 import SlideInRightBox from 'common/framerMotion/slideInRightBox';
-import HeaderWrapper from 'commonStyles/header';
+import StyledTitle from 'commonStyles/header';
 import { Separator, Container } from 'commonStyles/layouts';
 import { Timeline, TimelineItem } from 'commonStyles/timeline';
 import Colors from 'constants/colors';
@@ -24,9 +24,9 @@ const StyledIcon = styled(CodeWorking)`
 
 const WorkExp = () => (
   <Container id="work_exp">
-    <HeaderWrapper level={3} border={1} fontWeight={1}>
+    <StyledTitle level={3} border={1} fontWeight={1}>
       Work Experience
-    </HeaderWrapper>
+    </StyledTitle>
     <Separator height={3} />
     <Timeline mode="left">
       {WORKEXP.map(({ title, subTitle, period, location, desc }, index) => (
@@ -35,18 +35,18 @@ const WorkExp = () => (
           key={`${title}-${period}`}
           label={
             <SlideInLeftBox xOffset={20}>
-              <HeaderWrapper level={4} color="black">
+              <StyledTitle level={4} color="black">
                 {title}
-              </HeaderWrapper>
+              </StyledTitle>
               <Text>{period}</Text>
             </SlideInLeftBox>
           }
           dot={<StyledIcon size={32} />}
         >
           <SlideInRightBox xOffset={10}>
-            <HeaderWrapper level={4} color="black">
+            <StyledTitle level={4} color="black">
               {subTitle}
-            </HeaderWrapper>
+            </StyledTitle>
             <Text>
               <LocationCity size={14} />
               &nbsp; {location}

@@ -4,37 +4,37 @@ import { Typography } from 'antd';
 import styled from 'styled-components';
 
 import DetailCard from 'common/detailCard';
-import HeaderWrapper from 'commonStyles/header';
+import StyledTitle from 'commonStyles/header';
 import { Separator, Container } from 'commonStyles/layouts';
 import Colors from 'constants/colors';
 import PROJECTS from 'constants/projects';
 
 const { Text } = Typography;
 
-const UlWrapper = styled.ul`
+const StyledUl = styled.ul`
   color: ${Colors.GRAY};
 `;
 
 const Projects = () => (
   <Container id="projects">
-    <HeaderWrapper level={3} border={1} fontWeight={1}>
+    <StyledTitle level={3} border={1} fontWeight={1}>
       Projects
-    </HeaderWrapper>
+    </StyledTitle>
     <Separator />
     {PROJECTS.map(({ title, under, period, desc, link }) => (
       <DetailCard title={title} period={period} key={title} link={link}>
         <div>
-          <HeaderWrapper level={4} color="black">
+          <StyledTitle level={4} color="black">
             {under}
-          </HeaderWrapper>
+          </StyledTitle>
           <Separator />
-          <UlWrapper>
+          <StyledUl>
             {desc.map((d: string) => (
               <li key={d}>
                 <Text strong>{d}</Text>
               </li>
             ))}
-          </UlWrapper>
+          </StyledUl>
         </div>
       </DetailCard>
     ))}

@@ -6,22 +6,22 @@ import styled from 'styled-components';
 import SlideInBottomBox from 'common/framerMotion/slideInBottomBox';
 import SlideInLeftBox from 'common/framerMotion/slideInLeftBox';
 import SlideInRightBox from 'common/framerMotion/slideInRightBox';
-import HeaderWrapper from 'commonStyles/header';
+import StyledTitle from 'commonStyles/header';
 import { Row, Separator, Container } from 'commonStyles/layouts';
 import Colors from 'constants/colors';
 
 const { Text } = Typography;
 
-const TextWrapper = styled(Text)`
+const StyledText = styled(Text)`
   text-align: center;
   color: white;
 `;
 
-const Wrapper = styled(Container)`
+const StyledContainer = styled(Container)`
   background: linear-gradient(0deg, ${Colors.BLACK}, ${Colors.TUNDORA});
 `;
 
-const UlWrapper = styled.ul`
+const StyledUl = styled.ul`
   color: #8c8c8c;
 `;
 
@@ -29,78 +29,78 @@ const skills = {
   languages: ['Cpp', 'C', 'Python', 'Java'],
   frontend: ['ReactJS', 'D3', 'HTML', 'CSS', 'Javascript', 'Typescript', 'Material-UI', 'Antd'],
   backend: ['DJango', 'Node.js', 'Express.js', 'Firebase', 'PostgreSQL'],
-  tools_used: ['Git', 'npm', 'Nivo.rocks', 'ESlint', 'Figma'],
+  tools_used: ['Git', 'npm', 'Nivo.rocks', 'ESlint', 'Figma', 'Postman'],
 };
 
 const Skills = () => (
-  <Wrapper id="skill_set">
-    <HeaderWrapper level={3} border={1} color="white" fontWeight={1}>
+  <StyledContainer id="skill_set">
+    <StyledTitle level={3} border={1} color="white" fontWeight={1}>
       Skill Set
-    </HeaderWrapper>
+    </StyledTitle>
     <Separator height={4} />
     <Row gutter={[24, 12]}>
       <Col lg={{ span: 3, offset: 5 }} sm={{ span: 6, offset: 0 }} xs={{ span: 11, offset: 1 }}>
         <SlideInLeftBox>
-          <HeaderWrapper level={4} color="white">
+          <StyledTitle level={4} color="white">
             Languages
-          </HeaderWrapper>
+          </StyledTitle>
           <Separator />
-          <UlWrapper>
+          <StyledUl>
             {skills.languages.map((skill: string) => (
               <li key={skill}>
-                <TextWrapper strong>{skill}</TextWrapper>
+                <StyledText strong>{skill}</StyledText>
               </li>
             ))}
-          </UlWrapper>
+          </StyledUl>
         </SlideInLeftBox>
       </Col>
       <Col lg={{ span: 3, offset: 1 }} sm={{ span: 6, offset: 0 }} xs={{ span: 11, offset: 1 }}>
         <SlideInBottomBox>
-          <HeaderWrapper level={4} color="white">
+          <StyledTitle level={4} color="white">
             Frontend
-          </HeaderWrapper>
+          </StyledTitle>
           <Separator />
-          <UlWrapper>
+          <StyledUl>
             {skills.frontend.map((skill: string) => (
               <li key={skill}>
-                <TextWrapper strong>{skill}</TextWrapper>
+                <StyledText strong>{skill}</StyledText>
               </li>
             ))}
-          </UlWrapper>
+          </StyledUl>
         </SlideInBottomBox>
       </Col>
       <Col lg={{ span: 4, offset: 1 }} sm={{ span: 6, offset: 0 }} xs={{ span: 11, offset: 1 }}>
         <SlideInBottomBox>
-          <HeaderWrapper level={4} color="white">
+          <StyledTitle level={4} color="white">
             Backend
-          </HeaderWrapper>
+          </StyledTitle>
           <Separator />
-          <UlWrapper>
+          <StyledUl>
             {skills.backend.map((skill: string) => (
               <li key={skill}>
-                <TextWrapper strong>{skill}</TextWrapper>
+                <StyledText strong>{skill}</StyledText>
               </li>
             ))}
-          </UlWrapper>
+          </StyledUl>
         </SlideInBottomBox>
       </Col>
       <Col lg={{ span: 3, offset: 0 }} sm={{ span: 6, offset: 0 }} xs={{ span: 11, offset: 1 }}>
         <SlideInRightBox xOffset={10}>
-          <HeaderWrapper level={4} color="white">
+          <StyledTitle level={4} color="white">
             Tools Used
-          </HeaderWrapper>
+          </StyledTitle>
           <Separator />
-          <UlWrapper>
+          <StyledUl>
             {skills.tools_used.map((skill: string) => (
               <li key={skill}>
-                <TextWrapper strong>{skill}</TextWrapper>
+                <StyledText strong>{skill}</StyledText>
               </li>
             ))}
-          </UlWrapper>
+          </StyledUl>
         </SlideInRightBox>
       </Col>
     </Row>
-  </Wrapper>
+  </StyledContainer>
 );
 
 export default Skills;

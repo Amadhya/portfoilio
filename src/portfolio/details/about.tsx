@@ -27,15 +27,15 @@ const StyledContainer = styled(Container)`
   }
 `;
 
-const TitleWrapper = styled(Title)`
+const StyledTitle = styled(Title)`
   color: white !important;
 `;
 
-const TextWrapper = styled(Text)`
+const StyledText = styled(Text)`
   color: white !important;
 `;
 
-const ButtonWrapper = styled(Button)`
+const StyledButton = styled(Button)`
   background: ${Colors.MINE_SHAFT} !important;
   border-color: ${Colors.MINE_SHAFT} !important;
   &: hover {
@@ -54,10 +54,10 @@ const KeyValueRow = (props: Props) => {
   return (
     <Row align="middle" gutter={[0, 16]}>
       <Col sm={{ span: 8 }}>
-        <TextWrapper strong>{_key}:&nbsp;</TextWrapper>
+        <StyledText strong>{_key}:&nbsp;</StyledText>
       </Col>
       <Col sm={{ span: 16 }}>
-        <TextWrapper>{value}</TextWrapper>
+        <StyledText>{value}</StyledText>
       </Col>
     </Row>
   );
@@ -89,13 +89,13 @@ const About = () => (
       </Col>
       <Col xl={{ span: 14 }} sm={{ span: 16 }}>
         <FadeInUpBox yOffset={75}>
-          <TitleWrapper level={3}>About</TitleWrapper>
+          <StyledTitle level={3}>About</StyledTitle>
           <Separator />
-          <TextWrapper>{ABOUT.info}</TextWrapper>
+          <StyledText>{ABOUT.info}</StyledText>
           <Separator height={4} />
           <Row>
             <Col xl={{ span: 14 }} sm={{ span: 24 }}>
-              <TitleWrapper level={3}>General Information</TitleWrapper>
+              <StyledTitle level={3}>General Information</StyledTitle>
               <KeyValueRow _key="Experience" value={getExp()} />
               <KeyValueRow _key="Email" value={ABOUT.email} />
               <KeyValueRow _key="Address" value={ABOUT.address} />
@@ -111,18 +111,18 @@ const About = () => (
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <ButtonWrapper
+                    <StyledButton
                       type="primary"
                       shape="round"
                       icon={<DownloadIcon size={14} />}
                       block
                     >
                       Download Resume
-                    </ButtonWrapper>
+                    </StyledButton>
                   </a>
                 </Col>
                 <Col xl={{ span: 18 }} lg={{ span: 6 }} md={{ span: 10 }} xs={{ span: 24 }}>
-                  <ButtonWrapper
+                  <StyledButton
                     type="primary"
                     shape="round"
                     block
@@ -138,7 +138,7 @@ const About = () => (
                     }}
                   >
                     Hire Me
-                  </ButtonWrapper>
+                  </StyledButton>
                 </Col>
               </Row>
             </Col>

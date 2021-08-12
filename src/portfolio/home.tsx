@@ -13,11 +13,11 @@ import Colors from 'constants/colors';
 
 const { Title, Text } = Typography;
 
-const DivWrapper = styled.div`
+const Background = styled.div`
   height: 100vh;
   background: linear-gradient(0deg, ${Colors.BIG_STONE}, ${Colors.CLOUD_BURST});
 `;
-const Wrapper = styled(Container)`
+const StyledContainer = styled(Container)`
   height: 100%;
   width: 100%;
   text-align: center;
@@ -25,20 +25,20 @@ const Wrapper = styled(Container)`
     padding: 0rem 1rem;
   }
 `;
-const LinkWrapper = styled.a`
+const StyledLink = styled.a`
   color: white;
   &: hover {
     color: ${Colors.CERULEAN};
   }
 `;
-const TitleWrapper = styled(Title)`
+const StyledTitle = styled(Title)`
   color: white !important;
   margin: 12px 0px !important;
 `;
-const RowWapper = styled(Row)`
+const StyledRow = styled(Row)`
   width: 300px;
 `;
-const TextWrapper = styled(Text)`
+const StyledText = styled(Text)`
   color: white !important;
   font-size: 16px;
   padding: 0 4px;
@@ -69,24 +69,24 @@ const links = [
 ];
 
 const Home = () => (
-  <DivWrapper>
-    <Wrapper id="home">
-      <TitleWrapper level={1}>Hi! I&apos;m {ABOUT.name}</TitleWrapper>
-      <TitleWrapper level={2}>{ABOUT.profession.toUpperCase()}</TitleWrapper>
+  <Background>
+    <StyledContainer id="home">
+      <StyledTitle level={1}>Hi! I&apos;m {ABOUT.name}</StyledTitle>
+      <StyledTitle level={2}>{ABOUT.profession.toUpperCase()}</StyledTitle>
       <Separator height={3} />
-      <TextWrapper>&quot;{ABOUT.quote}&quot;</TextWrapper>
+      <StyledText>&quot;{ABOUT.quote}&quot;</StyledText>
       <Separator height={6} />
-      <RowWapper justify="space-between">
+      <StyledRow justify="space-between">
         {links.map(({ title, href, Icon }) => (
           <Tooltip title={title} key={title}>
-            <LinkWrapper href={href} aria-label={title} target="_blank" rel="noopener noreferrer">
+            <StyledLink href={href} aria-label={title} target="_blank" rel="noopener noreferrer">
               {Icon && <Icon size={36} />}
-            </LinkWrapper>
+            </StyledLink>
           </Tooltip>
         ))}
-      </RowWapper>
-    </Wrapper>
-  </DivWrapper>
+      </StyledRow>
+    </StyledContainer>
+  </Background>
 );
 
 export default Home;

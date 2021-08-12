@@ -9,7 +9,7 @@ import styled from 'styled-components';
 
 import SlideInLeftBox from 'common/framerMotion/slideInLeftBox';
 import SlideInRightBox from 'common/framerMotion/slideInRightBox';
-import HeaderWrapper from 'commonStyles/header';
+import StyledTitle from 'commonStyles/header';
 import { Separator, Container } from 'commonStyles/layouts';
 import { Timeline, TimelineItem } from 'commonStyles/timeline';
 import Colors from 'constants/colors';
@@ -30,9 +30,9 @@ const StyledContainer = styled(Container)`
 
 const Education = () => (
   <StyledContainer id="education">
-    <HeaderWrapper level={3} border={1} fontWeight={1}>
+    <StyledTitle level={3} border={1} fontWeight={1}>
       Education
-    </HeaderWrapper>
+    </StyledTitle>
     <Separator height={3} />
     <Timeline mode="left">
       {EDUCATION.map(({ title, subTitle, name, location, result, extra, period }, index) => (
@@ -41,18 +41,18 @@ const Education = () => (
           key={`${title}-${period}`}
           label={
             <SlideInLeftBox xOffset={20}>
-              <HeaderWrapper level={4} color="black">
+              <StyledTitle level={4} color="black">
                 {title}
-              </HeaderWrapper>
+              </StyledTitle>
               <Text>{period}</Text>
             </SlideInLeftBox>
           }
           dot={<StyledIcon size={32} />}
         >
           <SlideInRightBox xOffset={10}>
-            <HeaderWrapper level={4} color="black">
+            <StyledTitle level={4} color="black">
               {subTitle}
-            </HeaderWrapper>
+            </StyledTitle>
             <Text strong>
               <OpenBook size={14} />
               &nbsp; {name}

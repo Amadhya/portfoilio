@@ -9,7 +9,7 @@ import styled, { css } from 'styled-components';
 import { Row } from 'commonStyles/layouts';
 import Colors from 'constants/colors';
 
-type WrapperProps = {
+type ContainerProps = {
   changeBg: number;
 };
 
@@ -17,7 +17,7 @@ type ButtonProps = {
   isactive: string;
 };
 
-const ButtonWrapper = styled(Button)<ButtonProps>`
+const StyledButton = styled(Button)<ButtonProps>`
   color: white !important;
   &: hover {
     color: ${Colors.CERULEAN} !important;
@@ -29,7 +29,7 @@ const ButtonWrapper = styled(Button)<ButtonProps>`
     `};
 `;
 
-const Wrapper = styled.div<WrapperProps>`
+const Container = styled.div<ContainerProps>`
   position: fixed;
   background: transparent;
   z-index: 4;
@@ -49,14 +49,14 @@ const Wrapper = styled.div<WrapperProps>`
   }
 `;
 
-const RowWrapper = styled(Row)<{ visible: Number }>`
+const StyledRow = styled(Row)<{ visible: Number }>`
   @media (max-width: 767px) {
     transition: all 0.5s ease;
     display: ${({ visible }) => (visible ? 'flex' : 'none')};
   }
 `;
 
-const NaviconWrapper = styled(Navicon)`
+const StyledNavicon = styled(Navicon)`
   color: ${Colors.ALABASTER};
   float: right;
 
@@ -187,25 +187,25 @@ const NavBar = () => {
   }, [handleScroll]);
 
   return (
-    <Wrapper changeBg={Number(changeBg)} ref={headerRef}>
+    <Container changeBg={Number(changeBg)} ref={headerRef}>
       {open ? (
         <CloseOutlineIcon size={28} onClick={() => setOpen(false)} />
       ) : (
-        <NaviconWrapper size={28} onClick={() => setOpen(true)} />
+        <StyledNavicon size={28} onClick={() => setOpen(true)} />
       )}
-      <RowWrapper align="middle" justify="space-around" visible={open ? 1 : 0}>
+      <StyledRow align="middle" justify="space-around" visible={open ? 1 : 0}>
         {links.map(({ id, title }) => (
-          <ButtonWrapper
+          <StyledButton
             type="link"
             key={id}
             onClick={() => onClick(id)}
             isactive={(activeTab === id).toString()}
           >
             {title}
-          </ButtonWrapper>
+          </StyledButton>
         ))}
-      </RowWrapper>
-    </Wrapper>
+      </StyledRow>
+    </Container>
   );
 };
 

@@ -16,7 +16,7 @@ type StyledImageProps = {
   circular: boolean;
 };
 
-const ImageWrapper = styled.div<ImageProps>`
+const Container = styled.div<ImageProps>`
   position: relative;
   width: ${({ width }) => width}px;
   height: ${({ height }) => height}px;
@@ -85,7 +85,7 @@ const LazyImage = (props: Props) => {
   }, []);
 
   return (
-    <ImageWrapper height={height} width={width} fullWidth={!!fullWidth} fullHeight={!!fullHeight}>
+    <Container height={height} width={width} fullWidth={!!fullWidth} fullHeight={!!fullHeight}>
       {showPlaceholder && <Placeholder />}
       <LazyLoad>
         <StyledImage
@@ -96,7 +96,7 @@ const LazyImage = (props: Props) => {
           circular={!!circular}
         />
       </LazyLoad>
-    </ImageWrapper>
+    </Container>
   );
 };
 

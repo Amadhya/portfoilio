@@ -15,7 +15,7 @@ type ColProps = {
 
 const { Title, Text } = Typography;
 
-const ColWrapper = styled(Col)<ColProps>`
+const StyledCol = styled(Col)<ColProps>`
   padding: 1rem 2rem;
   ${({ bg }) =>
     bg === 1 &&
@@ -37,17 +37,17 @@ const ColWrapper = styled(Col)<ColProps>`
     border-radius: 8px 8px 0px 0px;
   }
 `;
-const TextWrapper = styled(Text)`
+const StyledText = styled(Text)`
   display: block;
   color: white !important;
   text-align: center;
 `;
-const TitleWrapper = styled(Title)`
+const StyledTitle = styled(Title)`
   margin-top: 0.5em !important;
   color: white !important;
   text-align: center;
 `;
-const LinkWrapper = styled.a`
+const StyledLink = styled.a`
   color: white !important;
 `;
 
@@ -63,20 +63,20 @@ const DetailCard = (props: Props) => {
 
   return (
     <Card border={1}>
-      <ColWrapper sm={{ span: 6 }} xs={{ span: 24 }} bg={1} textalign="center">
+      <StyledCol sm={{ span: 6 }} xs={{ span: 24 }} bg={1} textalign="center">
         <SlideInLeftBox>
-          {period && <TextWrapper>{period}</TextWrapper>}
-          <TitleWrapper level={4}>{title}</TitleWrapper>
+          {period && <StyledText>{period}</StyledText>}
+          <StyledTitle level={4}>{title}</StyledTitle>
           {link && (
-            <LinkWrapper href={link} aria-label={title} target="_blank" rel="noopener">
+            <StyledLink href={link} aria-label={title} target="_blank" rel="noopener">
               <Button shape="round">View</Button>
-            </LinkWrapper>
+            </StyledLink>
           )}
         </SlideInLeftBox>
-      </ColWrapper>
-      <ColWrapper sm={{ span: 18 }} xs={{ span: 24 }}>
+      </StyledCol>
+      <StyledCol sm={{ span: 18 }} xs={{ span: 24 }}>
         <SlideInRightBox xOffset={5}>{children}</SlideInRightBox>
-      </ColWrapper>
+      </StyledCol>
     </Card>
   );
 };
