@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { Tools } from '@styled-icons/entypo/Tools';
 import { Typography, Col } from 'antd';
 import styled from 'styled-components';
 
@@ -36,8 +35,7 @@ const skills = {
 const Skills = () => (
   <Wrapper id="skill_set">
     <HeaderWrapper level={3} border={1} color="white" fontWeight={1}>
-      <Tools size={24} />
-      &nbsp; Skill Set
+      Skill Set
     </HeaderWrapper>
     <Separator height={4} />
     <Row gutter={[24, 12]}>

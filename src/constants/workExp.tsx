@@ -1,6 +1,6 @@
 const WORKEXP = [
   {
-    period: 'July, 2020 - PRESENT',
+    period: 'July, 2020 - Present',
     title: 'Cuemath',
     subTitle: 'Software Developer',
     location: 'Bangalore, India',

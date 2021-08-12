@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { Laptop } from '@styled-icons/fa-solid/Laptop';
 import { Typography } from 'antd';
 import styled from 'styled-components';
 
@@ -19,8 +18,7 @@ const UlWrapper = styled.ul`
 const Projects = () => (
   <Container id="projects">
     <HeaderWrapper level={3} border={1} fontWeight={1}>
-      <Laptop size={24} />
-      &nbsp; Projects
+      Projects
     </HeaderWrapper>
     <Separator />
     {PROJECTS.map(({ title, under, period, desc, link }) => (
