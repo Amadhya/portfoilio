@@ -3,13 +3,14 @@ import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { CloseOutline } from '@styled-icons/evaicons-outline/CloseOutline';
 import { Navicon } from '@styled-icons/evil/Navicon';
 import { Button } from 'antd';
+import { debounce } from 'lodash';
 import styled, { css } from 'styled-components';
 
 import { Row } from 'commonStyles/layouts';
 import Colors from 'constants/colors';
 
 type WrapperProps = {
-  changeBg: Number;
+  changeBg: number;
 };
 
 type ButtonProps = {
@@ -104,12 +105,14 @@ const links = [
   },
 ];
 
+const DEBOUNCE_DURATION = 150;
+
 const getDimensions = (ele: HTMLElement | null) => {
   if (!ele) {
     return {};
   }
   const { height } = ele.getBoundingClientRect();
-  const {offsetTop} = ele;
+  const { offsetTop } = ele;
   const offsetBottom = offsetTop + height;
 
   return {
@@ -136,35 +139,38 @@ const NavBar = () => {
     }
   }, []);
 
-  const handleScroll = useCallback(() => {
-    const { height: headerHeight = 0 } = getDimensions(headerRef.current);
-    const scrollPosition = window.scrollY + headerHeight;
-    const aboutEle = document.getElementById('about');
-    const { offsetTop: aboutOffsetTop } = getDimensions(aboutEle);
+  const handleScroll = useCallback(
+    debounce(() => {
+      const { height: headerHeight = 0 } = getDimensions(headerRef.current);
+      const scrollPosition = window.scrollY + headerHeight;
+      const aboutEle = document.getElementById('about');
+      const { offsetTop: aboutOffsetTop } = getDimensions(aboutEle);
 
-    if (aboutOffsetTop && scrollPosition < aboutOffsetTop) {
-      setChangeBg(false);
-    } else if (aboutOffsetTop && scrollPosition >= aboutOffsetTop && !changeBg) {
-      setChangeBg(true);
-    }
+      if (aboutOffsetTop && scrollPosition < aboutOffsetTop) {
+        setChangeBg(false);
+      } else if (aboutOffsetTop && scrollPosition >= aboutOffsetTop && !changeBg) {
+        setChangeBg(true);
+      }
 
-    const { id: selectedId } =
-      links.find(({ id }) => {
-        const ele = document.getElementById(id);
+      const { id: selectedId } =
+        links.find(({ id }) => {
+          const ele = document.getElementById(id);
 
-        if (ele) {
-          const { offsetBottom = 0, offsetTop = 0 } = getDimensions(ele);
+          if (ele) {
+            const { offsetBottom = 0, offsetTop = 0 } = getDimensions(ele);
 
-          return scrollPosition > offsetTop - 80 && scrollPosition < offsetBottom;
-        }
+            return scrollPosition > offsetTop - 80 && scrollPosition < offsetBottom;
+          }
 
-        return false;
-      }) || {};
+          return false;
+        }) || {};
 
-    if (selectedId && selectedId !== activeTab) {
-      setActiveTab(selectedId);
-    }
-  }, [changeBg, headerRef, setActiveTab, activeTab]);
+      if (selectedId) {
+        setActiveTab(selectedId);
+      }
+    }, DEBOUNCE_DURATION),
+    [changeBg, headerRef, setActiveTab],
+  );
 
   useEffect(() => {
     const doc = document.getElementById('home');
