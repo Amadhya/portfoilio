@@ -4,7 +4,7 @@ import styled, { css } from 'styled-components';
 const TIMELINE_SECTION = 40;
 
 type Props = {
-  isLast?: boolean;
+  islast?: number;
 };
 
 export const Timeline = styled(AntdTimeline)`
@@ -29,8 +29,8 @@ export const TimelineItem = styled(AntdTimeline.Item)<Props>`
   .ant-timeline-item-head {
     background: inherit;
   }
-  ${({ isLast }) =>
-    isLast &&
+  ${({ islast }) =>
+    islast &&
     css`
       padding-bottom: 0 !important;
     `};

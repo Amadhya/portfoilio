@@ -5,6 +5,8 @@ import { LocationCity } from '@styled-icons/material/LocationCity';
 import { Typography } from 'antd';
 import styled from 'styled-components';
 
+import SlideInLeftBox from 'common/framerMotion/slideInLeftBox';
+import SlideInRightBox from 'common/framerMotion/slideInRightBox';
 import HeaderWrapper from 'commonStyles/header';
 import { Separator, Container } from 'commonStyles/layouts';
 import { Timeline, TimelineItem } from 'commonStyles/timeline';
@@ -29,19 +31,19 @@ const WorkExp = () => (
     <Timeline mode="left">
       {WORKEXP.map(({ title, subTitle, period, location, desc }, index) => (
         <TimelineItem
-          isLast={index + 1 === WORKEXP.length}
+          islast={index + 1 === WORKEXP.length ? 1 : 0}
           key={`${title}-${period}`}
           label={
-            <>
+            <SlideInLeftBox xOffset={20}>
               <HeaderWrapper level={4} color="black">
                 {title}
               </HeaderWrapper>
               <Text>{period}</Text>
-            </>
+            </SlideInLeftBox>
           }
           dot={<StyledIcon size={32} />}
         >
-          <div>
+          <SlideInRightBox xOffset={10}>
             <HeaderWrapper level={4} color="black">
               {subTitle}
             </HeaderWrapper>
@@ -51,7 +53,7 @@ const WorkExp = () => (
             </Text>
             <Separator />
             <Text strong> {desc}</Text>
-          </div>
+          </SlideInRightBox>
         </TimelineItem>
       ))}
     </Timeline>

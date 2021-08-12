@@ -10,7 +10,7 @@ import Colors from 'constants/colors';
 
 type ColProps = {
   bg?: number;
-  textAlign?: string;
+  textalign?: string;
 };
 
 const { Title, Text } = Typography;
@@ -27,10 +27,10 @@ const ColWrapper = styled(Col)<ColProps>`
   justify-content: center;
   border-radius: 8px 0px 0px 8px;
 
-  ${({ textAlign }) =>
-    textAlign &&
+  ${({ textalign }) =>
+    textalign &&
     css`
-      text-align: ${textAlign};
+      text-align: ${textalign};
     `};
 
   @media (max-width: 767px) {
@@ -63,7 +63,7 @@ const DetailCard = (props: Props) => {
 
   return (
     <Card border={1}>
-      <ColWrapper sm={{ span: 6 }} xs={{ span: 24 }} bg={1} textAlign="center">
+      <ColWrapper sm={{ span: 6 }} xs={{ span: 24 }} bg={1} textalign="center">
         <SlideInLeftBox>
           {period && <TextWrapper>{period}</TextWrapper>}
           <TitleWrapper level={4}>{title}</TitleWrapper>

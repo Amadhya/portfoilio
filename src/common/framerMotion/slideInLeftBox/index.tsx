@@ -1,10 +1,12 @@
 import React, { useMemo } from 'react';
 
-import AnimatedDiv from 'common/animated-div';
 import { useInView } from 'react-intersection-observer';
+
+import AnimatedDiv from 'common/animated-div';
 
 type Props = {
   children: React.ReactNode;
+  xOffset?: number;
   easing?:
     | [number, number, number, number]
     | 'linear'
@@ -21,7 +23,7 @@ type Props = {
 };
 
 const SlideInLeftBox = (props: Props) => {
-  const { children, easing = [0.42, 0, 0.58, 1] } = props;
+  const { children, easing = [0.42, 0, 0.58, 1], xOffset = 100 } = props;
 
   const [ref, inView] = useInView({
     threshold: 0,
@@ -39,7 +41,7 @@ const SlideInLeftBox = (props: Props) => {
 
   const variants = {
     hidden: {
-      x: '-100%',
+      x: `-${xOffset}%`,
       opacity: 0,
       transition,
     },

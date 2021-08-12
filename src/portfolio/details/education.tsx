@@ -7,6 +7,8 @@ import { LocationCity } from '@styled-icons/material/LocationCity';
 import { Typography } from 'antd';
 import styled from 'styled-components';
 
+import SlideInLeftBox from 'common/framerMotion/slideInLeftBox';
+import SlideInRightBox from 'common/framerMotion/slideInRightBox';
 import HeaderWrapper from 'commonStyles/header';
 import { Separator, Container } from 'commonStyles/layouts';
 import { Timeline, TimelineItem } from 'commonStyles/timeline';
@@ -35,19 +37,19 @@ const Education = () => (
     <Timeline mode="left">
       {EDUCATION.map(({ title, subTitle, name, location, result, extra, period }, index) => (
         <TimelineItem
-          isLast={index + 1 === EDUCATION.length}
+          islast={index + 1 === EDUCATION.length ? 1 : 0}
           key={`${title}-${period}`}
           label={
-            <>
+            <SlideInLeftBox xOffset={20}>
               <HeaderWrapper level={4} color="black">
                 {title}
               </HeaderWrapper>
               <Text>{period}</Text>
-            </>
+            </SlideInLeftBox>
           }
           dot={<StyledIcon size={32} />}
         >
-          <div>
+          <SlideInRightBox xOffset={10}>
             <HeaderWrapper level={4} color="black">
               {subTitle}
             </HeaderWrapper>
@@ -67,7 +69,7 @@ const Education = () => (
             </Text>
             <Separator />
             {extra && <Text strong>{extra}</Text>}
-          </div>
+          </SlideInRightBox>
         </TimelineItem>
       ))}
     </Timeline>
