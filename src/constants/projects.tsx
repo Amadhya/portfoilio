@@ -17,7 +17,7 @@ const PROJECTS = [
     under: 'SwyftCart',
     desc: [
       'SwyftCart admin is an application for shops to manage their orders and products.',
-      'User can view their statistics, view orders, change their status, and manage their inventory',
+      'User can view their statistics, view orders, change their status, and manage their inventory.',
       'Technologies Used: ReactJS, Redux, Node.js, Express.js, Antd, Firebase.',
     ],
   },
@@ -41,7 +41,7 @@ const PROJECTS = [
     under: 'Punjab Engineering College',
     desc: [
       'Patralaya is a blogging website.',
-      'Users can post blogs, add tags to them and categorize them. Further, users can view other user profiles, filter their feed, and share blogs on Facebook, Reddit and Twitter',
+      'Users can post blogs, add tags to them and categorize them. Further, users can view other user profiles, filter their feed, and share blogs on Facebook, Reddit and Twitter.',
       'Technologies used: React, Redux, Django, Material-UI, PostgreSQL.',
     ],
   },
