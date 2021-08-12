@@ -18,11 +18,13 @@ const StyledContainer = styled(Container)`
   padding: 0;
   position: relative;
 `;
+
 const StyledText = styled(Text)`
   colors: ${Colors.EBONY_CLAY};
   font-size: 16px;
   font-weight: 700;
 `;
+
 const StyledCard = styled(Card)`
   width: 700px;
   border-radius: 8px;
@@ -30,6 +32,7 @@ const StyledCard = styled(Card)`
     width: 100%;
   }
 `;
+
 const StyledButton = styled(Button)`
   background: ${Colors.EBONY_CLAY} !important;
   border-color: ${Colors.EBONY_CLAY} !important;

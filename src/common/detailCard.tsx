@@ -37,16 +37,19 @@ const StyledCol = styled(Col)<ColProps>`
     border-radius: 8px 8px 0px 0px;
   }
 `;
+
 const StyledText = styled(Text)`
   display: block;
   color: white !important;
   text-align: center;
 `;
+
 const StyledTitle = styled(Title)`
   margin-top: 0.5em !important;
   color: white !important;
   text-align: center;
 `;
+
 const StyledLink = styled.a`
   color: white !important;
 `;

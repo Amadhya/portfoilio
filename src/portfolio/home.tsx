@@ -17,6 +17,7 @@ const Background = styled.div`
   height: 100vh;
   background: linear-gradient(0deg, ${Colors.BIG_STONE}, ${Colors.CLOUD_BURST});
 `;
+
 const StyledContainer = styled(Container)`
   height: 100%;
   width: 100%;
@@ -25,19 +26,23 @@ const StyledContainer = styled(Container)`
     padding: 0rem 1rem;
   }
 `;
+
 const StyledLink = styled.a`
   color: white;
   &: hover {
     color: ${Colors.CERULEAN};
   }
 `;
+
 const StyledTitle = styled(Title)`
   color: white !important;
   margin: 12px 0px !important;
 `;
+
 const StyledRow = styled(Row)`
   width: 300px;
 `;
+
 const StyledText = styled(Text)`
   color: white !important;
   font-size: 16px;
