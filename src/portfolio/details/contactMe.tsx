@@ -10,7 +10,7 @@ import LazyImage from 'common/image';
 import StyledTitle from 'commonStyles/header';
 import { Separator, Container, Row } from 'commonStyles/layouts';
 import ABOUT from 'constants/about';
-import Colors from 'constants/colors';
+import COLORS from 'constants/colors';
 
 const { Text } = Typography;
 
@@ -20,7 +20,7 @@ const StyledContainer = styled(Container)`
 `;
 
 const StyledText = styled(Text)`
-  colors: ${Colors.EBONY_CLAY};
+  colors: ${COLORS.EBONY_CLAY};
   font-size: 16px;
   font-weight: 700;
 `;
@@ -34,11 +34,11 @@ const StyledCard = styled(Card)`
 `;
 
 const StyledButton = styled(Button)`
-  background: ${Colors.EBONY_CLAY} !important;
-  border-color: ${Colors.EBONY_CLAY} !important;
+  background: ${COLORS.EBONY_CLAY} !important;
+  border-color: ${COLORS.EBONY_CLAY} !important;
   &: hover {
-    background: ${Colors.EBONY_CLAY};
-    border-color: ${Colors.EBONY_CLAY};
+    background: ${COLORS.EBONY_CLAY};
+    border-color: ${COLORS.EBONY_CLAY};
   }
   padding: 4px 28px;
 `;

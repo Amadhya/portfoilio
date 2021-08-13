@@ -1,6 +1,7 @@
 import { Row as AntdRow, Col as AntdCol } from 'antd';
-import Colors from 'constants/colors';
 import styled, { css } from 'styled-components';
+
+import COLORS from 'constants/colors';
 
 type RowProps = {
   border?: number;
@@ -46,7 +47,7 @@ export const Row = styled(AntdRow)<RowProps>`
   ${({ border }) =>
     border &&
     css`
-      border: 1px solid ${Colors.COLA_LIGHT};
+      border: 1px solid ${COLORS.COLA_LIGHT};
     `};
 `;
 

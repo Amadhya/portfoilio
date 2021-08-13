@@ -6,13 +6,13 @@ import styled from 'styled-components';
 import DetailCard from 'common/detailCard';
 import StyledTitle from 'commonStyles/header';
 import { Separator, Container } from 'commonStyles/layouts';
-import Colors from 'constants/colors';
+import COLORS from 'constants/colors';
 import PROJECTS from 'constants/projects';
 
 const { Text } = Typography;
 
 const StyledUl = styled.ul`
-  color: ${Colors.GRAY};
+  color: ${COLORS.GRAY};
 `;
 
 const StyledTag = styled(Tag)`
@@ -48,7 +48,7 @@ const Projects = () => (
             <StyledTag
               icon={
                 Icon ? (
-                  <Icon size={16} color="white" />
+                  <Icon size={16} color={COLORS.WHITE} />
                 ) : (
                   <img src={image} width={16} height={16} alt={text} />
                 )

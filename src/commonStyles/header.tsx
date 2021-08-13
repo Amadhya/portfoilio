@@ -1,7 +1,7 @@
 import { Typography } from 'antd';
 import styled, { css } from 'styled-components';
 
-import Colors from 'constants/colors';
+import COLORS from 'constants/colors';
 
 type Props = {
   border?: number;
@@ -11,7 +11,7 @@ type Props = {
 };
 
 const StyledTitle = styled(Typography.Title)<Props>`
-  color: ${({ color }) => color || Colors.EBONY_CLAY} !important;
+  color: ${({ color }) => color || COLORS.EBONY_CLAY} !important;
   margin-bottom: 4px !important;
   ${({ align }) =>
     align &&
@@ -27,7 +27,7 @@ const StyledTitle = styled(Typography.Title)<Props>`
     border &&
     css`
       padding-bottom: 4px;
-      border-bottom: 3px solid ${color === 'white' ? 'white' : '#434343'} !important;
+      border-bottom: 3px solid ${color || '#434343'} !important;
     `};
 `;
 

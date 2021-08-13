@@ -1,4 +1,4 @@
-const Colors = {
+const COLORS = {
   ALABASTER: '#fafafa',
   BIG_STONE: '#141E30',
   BLACK: '#000000',
@@ -30,6 +30,7 @@ const Colors = {
   SUNGLOW: '#fbcb2b',
   TERRACOTTA: '#e17852',
   TUNDORA: '#434343',
+  WHITE: 'white',
 };
 
-export default Colors;
+export default COLORS;

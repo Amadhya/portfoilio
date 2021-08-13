@@ -6,7 +6,7 @@ import styled, { css } from 'styled-components';
 import SlideInLeftBox from 'common/framerMotion/slideInLeftBox';
 import SlideInRightBox from 'common/framerMotion/slideInRightBox';
 import { Card } from 'commonStyles/layouts';
-import Colors from 'constants/colors';
+import COLORS from 'constants/colors';
 
 type ColProps = {
   bg?: number;
@@ -20,7 +20,7 @@ const StyledCol = styled(Col)<ColProps>`
   ${({ bg }) =>
     bg === 1 &&
     css`
-      background: linear-gradient(0deg, ${Colors.BIG_STONE}, ${Colors.CLOUD_BURST});
+      background: linear-gradient(0deg, ${COLORS.BIG_STONE}, ${COLORS.CLOUD_BURST});
     `};
   display: flex;
   flex-direction: column;
@@ -40,18 +40,18 @@ const StyledCol = styled(Col)<ColProps>`
 
 const StyledText = styled(Text)`
   display: block;
-  color: white !important;
+  color: ${COLORS.WHITE} !important;
   text-align: center;
 `;
 
 const StyledTitle = styled(Title)`
   margin-top: 0.5em !important;
-  color: white !important;
+  color: ${COLORS.WHITE} !important;
   text-align: center;
 `;
 
 const StyledLink = styled.a`
-  color: white !important;
+  color: ${COLORS.WHITE} !important;
 `;
 
 type Props = {

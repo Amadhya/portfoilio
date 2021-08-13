@@ -10,7 +10,7 @@ import FadeInUpBox from 'common/framerMotion/fadeInUpBox';
 import LazyImage from 'common/image';
 import { Row, Container, Separator } from 'commonStyles/layouts';
 import ABOUT from 'constants/about';
-import Colors from 'constants/colors';
+import COLORS from 'constants/colors';
 
 const { Title, Text } = Typography;
 
@@ -20,7 +20,7 @@ type Props = {
 };
 
 const StyledContainer = styled(Container)`
-  background: linear-gradient(180deg, ${Colors.BLACK}, ${Colors.TUNDORA});
+  background: linear-gradient(180deg, ${COLORS.BLACK}, ${COLORS.TUNDORA});
   padding: 4rem;
   @media (max-width: 1024px) {
     padding: 2rem;
@@ -28,19 +28,19 @@ const StyledContainer = styled(Container)`
 `;
 
 const StyledTitle = styled(Title)`
-  color: white !important;
+  color: ${COLORS.WHITE} !important;
 `;
 
 const StyledText = styled(Text)`
-  color: white !important;
+  color: ${COLORS.WHITE} !important;
 `;
 
 const StyledButton = styled(Button)`
-  background: ${Colors.MINE_SHAFT} !important;
-  border-color: ${Colors.MINE_SHAFT} !important;
+  background: ${COLORS.MINE_SHAFT} !important;
+  border-color: ${COLORS.MINE_SHAFT} !important;
   &: hover {
-    background: ${Colors.MINE_SHAFT};
-    border-color: ${Colors.MINE_SHAFT};
+    background: ${COLORS.MINE_SHAFT};
+    border-color: ${COLORS.MINE_SHAFT};
   }
   padding: 4px 28px;
 `;

@@ -3,7 +3,7 @@ import React, { useState, useCallback } from 'react';
 import LazyLoad from 'react-lazyload';
 import styled, { keyframes, css } from 'styled-components';
 
-import Colors from 'constants/colors';
+import COLORS from 'constants/colors';
 
 type ImageProps = {
   width: number;
@@ -34,13 +34,13 @@ const Container = styled.div<ImageProps>`
 
 const loadingAnimation = keyframes`
   0% {
-    background-color: ${Colors.MINE_SHAFT};
+    background-color: ${COLORS.MINE_SHAFT};
   }
   50% {
-    background-color: ${Colors.COLA_LIGHT};
+    background-color: ${COLORS.COLA_LIGHT};
   }
   100% {
-    background-color: ${Colors.MINE_SHAFT};
+    background-color: ${COLORS.MINE_SHAFT};
   }
 `;
 

@@ -12,20 +12,20 @@ import SlideInRightBox from 'common/framerMotion/slideInRightBox';
 import StyledTitle from 'commonStyles/header';
 import { Separator, Container } from 'commonStyles/layouts';
 import { Timeline, TimelineItem } from 'commonStyles/timeline';
-import Colors from 'constants/colors';
+import COLORS from 'constants/colors';
 import EDUCATION from 'constants/education';
 
 const { Text } = Typography;
 
 const StyledIcon = styled(GraduationCap)`
-  background: linear-gradient(0deg, ${Colors.BIG_STONE}, ${Colors.CLOUD_BURST});
-  color: white;
+  background: linear-gradient(0deg, ${COLORS.BIG_STONE}, ${COLORS.CLOUD_BURST});
+  color: ${COLORS.WHITE};
   border-radius: 50%;
   padding: 6px;
 `;
 
 const StyledContainer = styled(Container)`
-  background: ${Colors.ALABASTER};
+  background: ${COLORS.ALABASTER};
 `;
 
 const Education = () => (

@@ -7,7 +7,7 @@ import { debounce } from 'lodash';
 import styled, { css } from 'styled-components';
 
 import { Row } from 'commonStyles/layouts';
-import Colors from 'constants/colors';
+import COLORS from 'constants/colors';
 
 type ContainerProps = {
   changeBg: number;
@@ -18,14 +18,14 @@ type ButtonProps = {
 };
 
 const StyledButton = styled(Button)<ButtonProps>`
-  color: white !important;
+  color: ${COLORS.WHITE} !important;
   &: hover {
-    color: ${Colors.CERULEAN} !important;
+    color: ${COLORS.CERULEAN} !important;
   }
   ${({ isactive }) =>
     isactive === 'true' &&
     css`
-      border-bottom: 2px solid ${Colors.CERULEAN} !important;
+      border-bottom: 2px solid ${COLORS.CERULEAN} !important;
     `};
 `;
 
@@ -38,7 +38,7 @@ const Container = styled.div<ContainerProps>`
   ${({ changeBg }) =>
     changeBg &&
     css`
-      background: linear-gradient(0deg, ${Colors.BIG_STONE}, ${Colors.CLOUD_BURST});
+      background: linear-gradient(0deg, ${COLORS.BIG_STONE}, ${COLORS.CLOUD_BURST});
       box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
     `};
   @media (max-width: 1024px) {
@@ -57,7 +57,7 @@ const StyledRow = styled(Row)<{ visible: Number }>`
 `;
 
 const StyledNavicon = styled(Navicon)`
-  color: ${Colors.ALABASTER};
+  color: ${COLORS.ALABASTER};
   float: right;
 
   @media (min-width: 767px) {
@@ -66,7 +66,7 @@ const StyledNavicon = styled(Navicon)`
 `;
 
 const CloseOutlineIcon = styled(CloseOutline)`
-  color: ${Colors.ALABASTER};
+  color: ${COLORS.ALABASTER};
   float: right;
 
   @media (min-width: 767px) {

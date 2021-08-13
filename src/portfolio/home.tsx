@@ -9,13 +9,13 @@ import styled from 'styled-components';
 
 import { Separator, Container } from 'commonStyles/layouts';
 import ABOUT from 'constants/about';
-import Colors from 'constants/colors';
+import COLORS from 'constants/colors';
 
 const { Title, Text } = Typography;
 
 const Background = styled.div`
   height: 100vh;
-  background: linear-gradient(0deg, ${Colors.BIG_STONE}, ${Colors.CLOUD_BURST});
+  background: linear-gradient(0deg, ${COLORS.BIG_STONE}, ${COLORS.CLOUD_BURST});
 `;
 
 const StyledContainer = styled(Container)`
@@ -28,14 +28,14 @@ const StyledContainer = styled(Container)`
 `;
 
 const StyledLink = styled.a`
-  color: white;
+  color: ${COLORS.WHITE};
   &: hover {
-    color: ${Colors.CERULEAN};
+    color: ${COLORS.CERULEAN};
   }
 `;
 
 const StyledTitle = styled(Title)`
-  color: white !important;
+  color: ${COLORS.WHITE} !important;
   margin: 12px 0px !important;
 `;
 
@@ -44,7 +44,7 @@ const StyledRow = styled(Row)`
 `;
 
 const StyledText = styled(Text)`
-  color: white !important;
+  color: ${COLORS.WHITE} !important;
   font-size: 16px;
   padding: 0 4px;
   font-weight: 500;

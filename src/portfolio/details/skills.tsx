@@ -6,22 +6,22 @@ import styled from 'styled-components';
 import SlideInBottomBox from 'common/framerMotion/slideInBottomBox';
 import StyledTitle from 'commonStyles/header';
 import { Row, Separator, Container } from 'commonStyles/layouts';
-import Colors from 'constants/colors';
+import COLORS from 'constants/colors';
 import { SKILLS } from 'constants/technologies';
 
 const { Text } = Typography;
 
 const StyledText = styled(Text)`
   text-align: center;
-  color: white;
+  color: ${COLORS.WHITE};
 `;
 
 const StyledContainer = styled(Container)`
-  background: linear-gradient(0deg, ${Colors.BLACK}, ${Colors.TUNDORA});
+  background: linear-gradient(0deg, ${COLORS.BLACK}, ${COLORS.TUNDORA});
 `;
 
 const StyledCol = styled(Col)`
-  background: ${Colors.MINE_SHAFT} !important;
+  background: ${COLORS.MINE_SHAFT} !important;
   border-radius: 8px;
   padding: 12px 16px !important;
   margin: 8px 0px;
@@ -36,14 +36,14 @@ const SkillCol = styled(Col)`
 
 const Skills = () => (
   <StyledContainer id="skill_set">
-    <StyledTitle level={3} border={1} color="white" fontWeight={1}>
+    <StyledTitle level={3} border={1} color={COLORS.WHITE} fontWeight={1}>
       Skills
     </StyledTitle>
     <Separator height={4} />
     <Row gutter={[24, 36]} justify="center">
       {SKILLS.map(({ title, list }) => (
         <SkillCol sm={{ span: 10, offset: 2 }} xs={24} key={title}>
-          <StyledTitle color="white" level={4}>
+          <StyledTitle color={COLORS.WHITE} level={4}>
             {title}
           </StyledTitle>
           <Separator height={1.5} />
@@ -52,7 +52,7 @@ const Skills = () => (
               <SlideInBottomBox key={text}>
                 <StyledCol>
                   {Icon ? (
-                    <Icon size={32} color="white" style={{ margin: 'auto' }} />
+                    <Icon size={32} color={COLORS.WHITE} style={{ margin: 'auto' }} />
                   ) : (
                     <img src={image} width={32} height={32} alt={text} />
                   )}
