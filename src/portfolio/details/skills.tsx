@@ -1,14 +1,12 @@
 import React from 'react';
 
-
-
 import { Git } from '@styled-icons/boxicons-logos/Git';
 import { Figma } from '@styled-icons/fa-brands/Figma';
 import { NodeJs } from '@styled-icons/fa-brands/NodeJs';
 import { Npm } from '@styled-icons/fa-brands/Npm';
 import { Antdesign } from '@styled-icons/simple-icons/Antdesign';
 import { Css3 } from '@styled-icons/simple-icons/Css3';
-import { D3DotJs } from '@styled-icons/simple-icons/D3DotJs';
+import { D3dotjs } from '@styled-icons/simple-icons/D3DotJs';
 import { Django } from '@styled-icons/simple-icons/Django';
 import { Eslint } from '@styled-icons/simple-icons/Eslint';
 import { Firebase } from '@styled-icons/simple-icons/Firebase';
@@ -16,11 +14,12 @@ import { Flask } from '@styled-icons/simple-icons/Flask';
 import { Html5 } from '@styled-icons/simple-icons/Html5';
 import { Java } from '@styled-icons/simple-icons/Java';
 import { Javascript } from '@styled-icons/simple-icons/Javascript';
-import { MaterialUi } from '@styled-icons/simple-icons/MaterialUi';
+import { Materialui } from '@styled-icons/simple-icons/MaterialUi';
 import { Postgresql } from '@styled-icons/simple-icons/Postgresql';
 import { Postman } from '@styled-icons/simple-icons/Postman';
 import { Python } from '@styled-icons/simple-icons/Python';
 import { ReactLogo } from '@styled-icons/simple-icons/ReactLogo';
+import { Redis } from '@styled-icons/simple-icons/Redis';
 import { Redux } from '@styled-icons/simple-icons/Redux';
 import { Typescript } from '@styled-icons/simple-icons/Typescript';
 import { Visualstudiocode } from '@styled-icons/simple-icons/Visualstudiocode';
@@ -81,15 +80,16 @@ const BACKEND_ICONS = [
   { Icon: NodeJs, text: 'NodeJs' },
   { Icon: Firebase, text: 'Firebase' },
   { Icon: Postgresql, text: 'Postgresql' },
+  { Icon: Redis, text: 'Redis' },
 ];
 
 const FRONTEND_ICONS = [
   { Icon: ReactLogo, text: 'React' },
   { Icon: Redux, text: 'Redux' },
-  { Icon: D3DotJs, text: 'D3' },
+  { Icon: D3dotjs, text: 'D3' },
   { Icon: Html5, text: 'Html5' },
   { Icon: Css3, text: 'Css3' },
-  { Icon: MaterialUi, text: 'MaterialUi' },
+  { Icon: Materialui, text: 'MaterialUi' },
   { Icon: Antdesign, text: 'Antd' },
 ];
 
