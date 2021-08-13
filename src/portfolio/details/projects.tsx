@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Typography } from 'antd';
+import { Typography, Tag } from 'antd';
 import styled from 'styled-components';
 
 import DetailCard from 'common/detailCard';
@@ -15,13 +15,19 @@ const StyledUl = styled.ul`
   color: ${Colors.GRAY};
 `;
 
+const StyledTag = styled(Tag)`
+  border-radius: 18px;
+  padding: 2px 8px;
+  margin: 4px;
+`;
+
 const Projects = () => (
   <Container id="projects">
     <StyledTitle level={3} border={1} fontWeight={1}>
       Projects
     </StyledTitle>
     <Separator />
-    {PROJECTS.map(({ title, under, period, desc, link }) => (
+    {PROJECTS.map(({ title, under, period, desc, link, technologies }: any) => (
       <DetailCard title={title} period={period} key={title} link={link}>
         <div>
           <StyledTitle level={4} color="black">
@@ -35,6 +41,21 @@ const Projects = () => (
               </li>
             ))}
           </StyledUl>
+          {technologies.map(({ Icon, color, text, image }: any) => (
+            <StyledTag
+              icon={
+                Icon ? (
+                  <Icon size={16} color="white" />
+                ) : (
+                  <img src={image} width={16} height={16} alt={text} />
+                )
+              }
+              color={color}
+              key={`${text}-${color}`}
+            >
+              &nbsp;{text}
+            </StyledTag>
+          ))}
         </div>
       </DetailCard>
     ))}

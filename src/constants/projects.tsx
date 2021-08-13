@@ -1,3 +1,5 @@
+import { TECHNOLOGIES_ICONS } from 'constants/technologies';
+
 const PROJECTS = [
   {
     period: 'Apr, 2020 - Sep, 2020',
@@ -8,7 +10,14 @@ const PROJECTS = [
       'SwyftCart E-commerce is an e-commerce website.',
       'Users can buy products from various shops near them by adding listed products to their cart. They have an option to pay online or can choose cash on delivery option.',
       "Also, user's can track their orders and cancel them.",
-      'Technologies Used: ReactJS, Redux, Node.js, Express.js, Antd, Firebase.',
+    ],
+    technologies: [
+      TECHNOLOGIES_ICONS.REACT,
+      TECHNOLOGIES_ICONS.REDUX,
+      TECHNOLOGIES_ICONS.NODEJS,
+      TECHNOLOGIES_ICONS.EXPRESS,
+      TECHNOLOGIES_ICONS.FIREBASE,
+      TECHNOLOGIES_ICONS.ANTD,
     ],
   },
   {
@@ -18,7 +27,14 @@ const PROJECTS = [
     desc: [
       'SwyftCart admin is an application for shops to manage their orders and products.',
       'User can view their statistics, view orders, change their status, and manage their inventory.',
-      'Technologies Used: ReactJS, Redux, Node.js, Express.js, Antd, Firebase.',
+    ],
+    technologies: [
+      TECHNOLOGIES_ICONS.REACT,
+      TECHNOLOGIES_ICONS.REDUX,
+      TECHNOLOGIES_ICONS.NODEJS,
+      TECHNOLOGIES_ICONS.EXPRESS,
+      TECHNOLOGIES_ICONS.FIREBASE,
+      TECHNOLOGIES_ICONS.ANTD,
     ],
   },
   {
@@ -31,7 +47,14 @@ const PROJECTS = [
       'Users can create an account or sign in with Google.',
       'Users can view the parking layout to check slot occupancy and can pay parking tickets.',
       'User can edit their profile and view their payment history.',
-      'Technologies Used: DJango, ReactJS, Redux, Kotlin, XML, Material-UI, Cpp.',
+    ],
+    technologies: [
+      TECHNOLOGIES_ICONS.REACT,
+      TECHNOLOGIES_ICONS.REDUX,
+      TECHNOLOGIES_ICONS.DJANGO,
+      TECHNOLOGIES_ICONS.CPP,
+      TECHNOLOGIES_ICONS.KOTLIN,
+      TECHNOLOGIES_ICONS.MATERIAL_UI,
     ],
   },
   {
@@ -42,7 +65,13 @@ const PROJECTS = [
     desc: [
       'Patralaya is a blogging website.',
       'Users can post blogs, add tags to them and categorize them. Further, users can view other user profiles, filter their feed, and share blogs on Facebook, Reddit and Twitter.',
-      'Technologies used: React, Redux, Django, Material-UI, PostgreSQL.',
+    ],
+    technologies: [
+      TECHNOLOGIES_ICONS.REACT,
+      TECHNOLOGIES_ICONS.REDUX,
+      TECHNOLOGIES_ICONS.DJANGO,
+      TECHNOLOGIES_ICONS.POSTGRESQL,
+      TECHNOLOGIES_ICONS.MATERIAL_UI,
     ],
   },
   {
@@ -53,7 +82,12 @@ const PROJECTS = [
     desc: [
       'Worked with in a team to develop chatroom application.',
       'Features supported by application are emoji, users can join room to chat, last activity of user, and timestamp of message.',
-      'Technologies used: React, Redux, Django, Redis.',
+    ],
+    technologies: [
+      TECHNOLOGIES_ICONS.REACT,
+      TECHNOLOGIES_ICONS.REDUX,
+      TECHNOLOGIES_ICONS.DJANGO,
+      TECHNOLOGIES_ICONS.REDIS,
     ],
   },
 ];
