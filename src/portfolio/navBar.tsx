@@ -97,7 +97,7 @@ const links = [
   },
   {
     id: 'skill_set',
-    title: 'Skill Set',
+    title: 'Skills',
   },
   {
     id: 'contact_me',
