@@ -31,7 +31,7 @@ import Colors from 'constants/colors';
 
 export const TECHNOLOGIES_ICONS = {
   ANTD: { Icon: Antdesign, text: 'Antd', color: Colors.CORNFLOWER_BLUE },
-  CPP: { image: CppIcon, text: 'C++', color: Colors.ENDEAVOUR },
+  CPP: { image: CppIcon, text: 'Cpp', color: Colors.ENDEAVOUR },
   CSS: { Icon: Css3, text: 'Css3', color: Colors.CERULEAN },
   D3_JS: { Icon: D3dotjs, text: 'D3', color: Colors.JAFA },
   DJANGO: { Icon: Django, text: 'Django', color: Colors.BUSH },
@@ -43,7 +43,7 @@ export const TECHNOLOGIES_ICONS = {
   GIT: { Icon: Git, text: 'Git', color: Colors.POMEGRANATE },
   HTML: { Icon: Html5, text: 'Html5', color: Colors.BLAZE_ORANGE },
   JAVA: { Icon: Java, text: 'Java', color: Colors.DENIM },
-  JAVASCRIPT: { Icon: Javascript, text: 'Javascript', color: Colors.GOLD },
+  JAVASCRIPT: { Icon: Javascript, text: 'Javascript', color: Colors.SUNGLOW },
   KOTLIN: { Icon: Kotlin, text: 'Kotlin', color: Colors.TERRACOTTA },
   MATERIAL_UI: { Icon: Materialui, text: 'Material-ui', color: Colors.DODGER_BLUE },
   NODEJS: { Icon: NodeJs, text: 'NodeJs', color: Colors.FRUIT_SALAD },

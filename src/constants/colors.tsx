@@ -17,7 +17,6 @@ const Colors = {
   ENDEAVOUR: '#00549D',
   FRUIT_SALAD: '#4CAF50',
   FUCHSIA_BLUE: '#7E57C2',
-  GOLD: '#FFD600',
   GRAY: '#8c8c8c',
   GUARDSMAN_RED: '#D50000',
   JAFA: '#f38c47',
@@ -28,6 +27,7 @@ const Colors = {
   POMEGRANATE: '#F4511E',
   PORTAGE: '#8483f2',
   ROLLING_STONE: '#737B80',
+  SUNGLOW: '#fbcb2b',
   TERRACOTTA: '#e17852',
   TUNDORA: '#434343',
 };

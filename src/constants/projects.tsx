@@ -12,6 +12,7 @@ const PROJECTS = [
       "Also, user's can track their orders and cancel them.",
     ],
     technologies: [
+      TECHNOLOGIES_ICONS.TYPESCRIPT,
       TECHNOLOGIES_ICONS.REACT,
       TECHNOLOGIES_ICONS.REDUX,
       TECHNOLOGIES_ICONS.NODEJS,
@@ -29,6 +30,7 @@ const PROJECTS = [
       'User can view their statistics, view orders, change their status, and manage their inventory.',
     ],
     technologies: [
+      TECHNOLOGIES_ICONS.TYPESCRIPT,
       TECHNOLOGIES_ICONS.REACT,
       TECHNOLOGIES_ICONS.REDUX,
       TECHNOLOGIES_ICONS.NODEJS,
@@ -49,6 +51,7 @@ const PROJECTS = [
       'User can edit their profile and view their payment history.',
     ],
     technologies: [
+      TECHNOLOGIES_ICONS.JAVASCRIPT,
       TECHNOLOGIES_ICONS.REACT,
       TECHNOLOGIES_ICONS.REDUX,
       TECHNOLOGIES_ICONS.DJANGO,
@@ -67,6 +70,7 @@ const PROJECTS = [
       'Users can post blogs, add tags to them and categorize them. Further, users can view other user profiles, filter their feed, and share blogs on Facebook, Reddit and Twitter.',
     ],
     technologies: [
+      TECHNOLOGIES_ICONS.JAVASCRIPT,
       TECHNOLOGIES_ICONS.REACT,
       TECHNOLOGIES_ICONS.REDUX,
       TECHNOLOGIES_ICONS.DJANGO,
@@ -84,6 +88,7 @@ const PROJECTS = [
       'Features supported by application are emoji, users can join room to chat, last activity of user, and timestamp of message.',
     ],
     technologies: [
+      TECHNOLOGIES_ICONS.JAVASCRIPT,
       TECHNOLOGIES_ICONS.REACT,
       TECHNOLOGIES_ICONS.REDUX,
       TECHNOLOGIES_ICONS.DJANGO,

@@ -16,9 +16,12 @@ const StyledUl = styled.ul`
 `;
 
 const StyledTag = styled(Tag)`
+  align-items: center;
   border-radius: 18px;
-  padding: 2px 8px;
+  display: inline-flex;
   margin: 4px;
+  padding: 3px 8px;
+  font-weight: 600;
 `;
 
 const Projects = () => (
