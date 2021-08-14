@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 
 import { Linkedin } from '@styled-icons/boxicons-logos/Linkedin';
 import { Github } from '@styled-icons/fa-brands/Github';
@@ -8,18 +8,22 @@ import { Typography, Tooltip } from 'antd';
 import styled from 'styled-components';
 
 import { Separator, Row, Col } from 'commonStyles/layouts';
-import CodingIcon from 'comps/coding';
 import ABOUT from 'constants/about';
 import COLORS from 'constants/colors';
 
+const CodingIcon = lazy(() => import('comps/coding'));
+
 const { Title, Text } = Typography;
 
-const Background = styled.div`
+const Container = styled.div`
   background: linear-gradient(0deg, ${COLORS.BIG_STONE}, ${COLORS.CLOUD_BURST});
   height: 100%;
   min-height: 100vh;
   padding: 2rem 4rem;
   display: flex;
+  @media (min-width: 1440px) {
+    padding: 2rem 8rem;
+  }
   @media (max-width: 767px) {
     padding: 2rem 0.5rem;
     text-align: center;
@@ -76,9 +80,9 @@ const links = [
 ];
 
 const Home = () => (
-  <Background id="home">
+  <Container id="home">
     <Row align="middle">
-      <Col sm={{ span: 12 }} xs={{ span: 24 }}>
+      <Col sm={{ span: 13 }} xs={{ span: 24 }}>
         <StyledTitle level={4}>Hi!</StyledTitle>
         <StyledTitle level={1}>I&apos;m {ABOUT.name}</StyledTitle>
         <StyledTitle level={2}>{ABOUT.profession.toUpperCase()}</StyledTitle>
@@ -95,11 +99,13 @@ const Home = () => (
           ))}
         </StyledRow>
       </Col>
-      <Col sm={{ span: 12 }} xs={{ span: 24 }}>
-        <CodingIcon />
+      <Col sm={{ span: 11 }} xs={{ span: 24 }}>
+        <Suspense fallback={<div />}>
+          <CodingIcon />
+        </Suspense>
       </Col>
     </Row>
-  </Background>
+  </Container>
 );
 
 export default Home;

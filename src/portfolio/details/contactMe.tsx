@@ -1,6 +1,8 @@
 import React, { useState, useCallback } from 'react';
 
-import { MailOutlined, UserOutlined } from '@ant-design/icons';
+import { UserCircle } from '@styled-icons/fa-solid/UserCircle';
+import { Email } from '@styled-icons/material-rounded/Email';
+import { Subject } from '@styled-icons/material-rounded/Subject';
 import { Card, Col, Typography, Form, message, Input, Button } from 'antd';
 import styled from 'styled-components';
 
@@ -119,7 +121,10 @@ const ContactMe = () => {
                       },
                     ]}
                   >
-                    <Input placeholder="Enter Name" prefix={<UserOutlined />} />
+                    <Input
+                      placeholder="Enter Name"
+                      prefix={<UserCircle color={COLORS.EBONY_CLAY} size={18} />}
+                    />
                   </Form.Item>
                   <Form.Item
                     name="_replyto"
@@ -130,7 +135,11 @@ const ContactMe = () => {
                       },
                     ]}
                   >
-                    <Input type="email" placeholder="Enter email" prefix={<MailOutlined />} />
+                    <Input
+                      type="email"
+                      placeholder="Enter email"
+                      prefix={<Email color={COLORS.EBONY_CLAY} size={18} />}
+                    />
                   </Form.Item>
                   <Form.Item
                     name="_subject"
@@ -141,7 +150,10 @@ const ContactMe = () => {
                       },
                     ]}
                   >
-                    <Input placeholder="Enter Subject" />
+                    <Input
+                      placeholder="Enter Subject"
+                      prefix={<Subject color={COLORS.EBONY_CLAY} size={18} />}
+                    />
                   </Form.Item>
                   <Form.Item
                     name="message"
