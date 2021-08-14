@@ -34,6 +34,12 @@ const SkillCol = styled(Col)`
   padding: 8px 12px;
 `;
 
+const StyledRow = styled(Row)`
+  @media (max-width: 767px) {
+    justify-content: center;
+  }
+`;
+
 const Skills = () => (
   <StyledContainer id="skill_set">
     <StyledTitle level={3} border={1} color={COLORS.WHITE} fontWeight={1}>
@@ -47,7 +53,7 @@ const Skills = () => (
             {title}
           </StyledTitle>
           <Separator height={1.5} />
-          <Row align="middle">
+          <StyledRow align="middle">
             {list.map(({ Icon, image, text }) => (
               <SlideInBottomBox key={text}>
                 <StyledCol>
@@ -61,7 +67,7 @@ const Skills = () => (
                 </StyledCol>
               </SlideInBottomBox>
             ))}
-          </Row>
+          </StyledRow>
         </SkillCol>
       ))}
     </Row>
