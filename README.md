@@ -19,6 +19,7 @@ To view a live example, **[click here](https://amadhya-portfolio.web.app/)**
 - [Antd](https://ant.design/components/overview/)
 - [lodash](https://lodash.com/)
 - [framer-motion](https://www.framer.com/motion/)
+- [lottie](https://lottiefiles.com/)
 
 # To name colors
 
