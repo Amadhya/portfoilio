@@ -48,6 +48,7 @@ const CardContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 24px;
 `;
 
 type FormProp = {
@@ -105,7 +106,7 @@ const ContactMe = () => {
             </StyledTitle>
             <Separator height={3} />
             <Row gutter={[24, 12]}>
-              <Col sm={{ span: 12 }}>
+              <Col sm={{ span: 12 }} xs={{ span: 24 }}>
                 <StyledText>Feel free to contact me</StyledText>
                 <Separator height={3} />
                 <Form onFinish={submitForm} form={form}>
@@ -166,7 +167,7 @@ const ContactMe = () => {
                   </Form.Item>
                 </Form>
               </Col>
-              <Col sm={{ span: 8, offset: 2 }}>
+              <Col sm={{ span: 8, offset: 2 }} xs={{ span: 24 }}>
                 <StyledText>Address</StyledText>
                 <Separator height={0.5} />
                 <Text strong>{ABOUT.address}</Text>
