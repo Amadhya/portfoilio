@@ -3,9 +3,9 @@ import React from 'react';
 import { Typography, Col, Button } from 'antd';
 import styled, { css } from 'styled-components';
 
-import SlideInLeftBox from 'common/framerMotion/slideInLeftBox';
-import SlideInRightBox from 'common/framerMotion/slideInRightBox';
 import { Card } from 'commonStyles/layouts';
+import SlideInLeftBox from 'comps/framerMotion/slideInLeftBox';
+import SlideInRightBox from 'comps/framerMotion/slideInRightBox';
 import COLORS from 'constants/colors';
 
 type ColProps = {

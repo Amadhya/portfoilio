@@ -7,11 +7,11 @@ import { LocationCity } from '@styled-icons/material/LocationCity';
 import { Typography } from 'antd';
 import styled from 'styled-components';
 
-import SlideInLeftBox from 'common/framerMotion/slideInLeftBox';
-import SlideInRightBox from 'common/framerMotion/slideInRightBox';
 import StyledTitle from 'commonStyles/header';
 import { Separator, Container } from 'commonStyles/layouts';
 import { Timeline, TimelineItem } from 'commonStyles/timeline';
+import SlideInLeftBox from 'comps/framerMotion/slideInLeftBox';
+import SlideInRightBox from 'comps/framerMotion/slideInRightBox';
 import COLORS from 'constants/colors';
 import EDUCATION from 'constants/education';
 

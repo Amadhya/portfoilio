@@ -1,10 +1,12 @@
 import React, { useMemo } from 'react';
 
-import AnimatedDiv from 'common/animated-div';
 import { useInView } from 'react-intersection-observer';
+
+import AnimatedDiv from 'comps/animated-div';
 
 type Props = {
   children: React.ReactNode;
+  yOffset: number;
   easing?:
     | [number, number, number, number]
     | 'linear'
@@ -18,10 +20,11 @@ type Props = {
     | 'backOut'
     | 'backInOut'
     | 'anticipate';
+  onHover?: boolean;
 };
 
-const FadeInBox = (props: Props) => {
-  const { children, easing = [0.42, 0, 0.58, 1] } = props;
+const FadeInUpBox = (props: Props) => {
+  const { children, yOffset, easing = [0.42, 0, 0.58, 1], onHover = false } = props;
 
   const [ref, inView] = useInView({
     threshold: 0,
@@ -30,7 +33,7 @@ const FadeInBox = (props: Props) => {
 
   const transition = useMemo(
     () => ({
-      duration: 0.6,
+      duration: 0.4,
       ease: easing,
       delay: 0.15,
     }),
@@ -38,13 +41,10 @@ const FadeInBox = (props: Props) => {
   );
 
   const variants = {
-    hidden: {
-      scale: 0,
-      opacity: 0,
-      transition,
-    },
+    hidden: { y: yOffset, opacity: 0, transition },
     show: {
-      scale: 1,
+      y: 0,
+      x: 0,
       opacity: 1,
       transition,
     },
@@ -55,6 +55,15 @@ const FadeInBox = (props: Props) => {
       <AnimatedDiv
         initial="hidden"
         animate={inView ? 'show' : 'hidden'}
+        whileHover={
+          onHover
+            ? {
+                position: 'relative',
+                top: '-10px',
+                paddingBottom: '10px',
+              }
+            : undefined
+        }
         exit="hidden"
         variants={variants}
       >
@@ -64,4 +73,4 @@ const FadeInBox = (props: Props) => {
   );
 };
 
-export default FadeInBox;
+export default FadeInUpBox;

@@ -5,10 +5,10 @@ import { Typography, Col, Button } from 'antd';
 import styled from 'styled-components';
 
 import Self from 'assets/self.jpg';
-import FadeInBox from 'common/framerMotion/fadeInBox';
-import FadeInUpBox from 'common/framerMotion/fadeInUpBox';
-import LazyImage from 'common/image';
 import { Row, Container, Separator } from 'commonStyles/layouts';
+import FadeInBox from 'comps/framerMotion/fadeInBox';
+import FadeInUpBox from 'comps/framerMotion/fadeInUpBox';
+import LazyImage from 'comps/image';
 import ABOUT from 'constants/about';
 import COLORS from 'constants/colors';
 

@@ -1,7 +1,8 @@
 import React, { useMemo } from 'react';
 
-import AnimatedDiv from 'common/animated-div';
 import { useInView } from 'react-intersection-observer';
+
+import AnimatedDiv from 'comps/animated-div';
 
 type Props = {
   children: React.ReactNode;

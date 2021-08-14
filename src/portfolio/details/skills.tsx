@@ -3,9 +3,9 @@ import React from 'react';
 import { Typography, Col } from 'antd';
 import styled from 'styled-components';
 
-import SlideInBottomBox from 'common/framerMotion/slideInBottomBox';
 import StyledTitle from 'commonStyles/header';
 import { Row, Separator, Container } from 'commonStyles/layouts';
+import SlideInBottomBox from 'comps/framerMotion/slideInBottomBox';
 import COLORS from 'constants/colors';
 import { SKILLS } from 'constants/technologies';
 

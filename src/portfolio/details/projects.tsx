@@ -3,9 +3,9 @@ import React from 'react';
 import { Typography, Tag } from 'antd';
 import styled from 'styled-components';
 
-import DetailCard from 'common/detailCard';
 import StyledTitle from 'commonStyles/header';
 import { Separator, Container } from 'commonStyles/layouts';
+import DetailCard from 'comps/detailCard';
 import COLORS from 'constants/colors';
 import PROJECTS from 'constants/projects';
 

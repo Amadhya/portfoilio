@@ -5,10 +5,10 @@ import { Card, Col, Typography, Form, message, Input, Button } from 'antd';
 import styled from 'styled-components';
 
 import MapIcon from 'assets/map.png';
-import FadeInBox from 'common/framerMotion/fadeInBox';
-import LazyImage from 'common/image';
 import StyledTitle from 'commonStyles/header';
 import { Separator, Container, Row } from 'commonStyles/layouts';
+import FadeInBox from 'comps/framerMotion/fadeInBox';
+import LazyImage from 'comps/image';
 import ABOUT from 'constants/about';
 import COLORS from 'constants/colors';
 

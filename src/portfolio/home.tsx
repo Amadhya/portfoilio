@@ -7,22 +7,21 @@ import { Email } from '@styled-icons/material-rounded/Email';
 import { Typography, Tooltip } from 'antd';
 import styled from 'styled-components';
 
-import CodingIcon from 'assets/coding.svg';
-import { Separator, Container, Row, Col } from 'commonStyles/layouts';
+import { Separator, Row, Col } from 'commonStyles/layouts';
+import CodingIcon from 'comps/coding';
 import ABOUT from 'constants/about';
 import COLORS from 'constants/colors';
 
 const { Title, Text } = Typography;
 
 const Background = styled.div`
-  height: 100vh;
   background: linear-gradient(0deg, ${COLORS.BIG_STONE}, ${COLORS.CLOUD_BURST});
-`;
-
-const StyledContainer = styled(Container)`
   height: 100%;
+  min-height: 100vh;
+  padding: 2rem 4rem;
+  display: flex;
   @media (max-width: 767px) {
-    padding: 0rem 1rem;
+    padding: 2rem 0.5rem;
     text-align: center;
   }
 `;
@@ -53,14 +52,6 @@ const StyledText = styled(Text)`
   font-weight: 500;
 `;
 
-const StyledImg = styled.img`
-  width: 100%;
-  height: auto;
-  @media (max-width: 767px) {
-    width: 320px;
-  }
-`;
-
 const links = [
   {
     title: 'Mail',
@@ -85,35 +76,29 @@ const links = [
 ];
 
 const Home = () => (
-  <Background>
-    <StyledContainer id="home">
-      <Row align="middle" gutter={[24, 24]}>
-        <Col sm={{ span: 12 }} xs={{ span: 24 }}>
-          <StyledTitle level={1}>Hi! I&apos;m {ABOUT.name}</StyledTitle>
-          <StyledTitle level={2}>{ABOUT.profession.toUpperCase()}</StyledTitle>
-          <Separator height={3} />
-          <StyledText>&quot;{ABOUT.quote}&quot;</StyledText>
-          <Separator height={6} />
-          <StyledRow justify="space-between">
-            {links.map(({ title, href, Icon }) => (
-              <Tooltip title={title} key={title}>
-                <StyledLink
-                  href={href}
-                  aria-label={title}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {Icon && <Icon size={36} />}
-                </StyledLink>
-              </Tooltip>
-            ))}
-          </StyledRow>
-        </Col>
-        <Col sm={{ span: 12 }} xs={{ span: 24 }}>
-          <StyledImg src={CodingIcon} alt="coding" />
-        </Col>
-      </Row>
-    </StyledContainer>
+  <Background id="home">
+    <Row align="middle">
+      <Col sm={{ span: 12 }} xs={{ span: 24 }}>
+        <StyledTitle level={4}>Hi!</StyledTitle>
+        <StyledTitle level={1}>I&apos;m {ABOUT.name}</StyledTitle>
+        <StyledTitle level={2}>{ABOUT.profession.toUpperCase()}</StyledTitle>
+        <Separator height={3} />
+        <StyledText>&quot;{ABOUT.quote}&quot;</StyledText>
+        <Separator height={6} />
+        <StyledRow justify="space-between">
+          {links.map(({ title, href, Icon }) => (
+            <Tooltip title={title} key={title}>
+              <StyledLink href={href} aria-label={title} target="_blank" rel="noopener noreferrer">
+                {Icon && <Icon size={36} />}
+              </StyledLink>
+            </Tooltip>
+          ))}
+        </StyledRow>
+      </Col>
+      <Col sm={{ span: 12 }} xs={{ span: 24 }}>
+        <CodingIcon />
+      </Col>
+    </Row>
   </Background>
 );
 

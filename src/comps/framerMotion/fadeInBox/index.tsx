@@ -1,11 +1,11 @@
 import React, { useMemo } from 'react';
 
-import AnimatedDiv from 'common/animated-div';
 import { useInView } from 'react-intersection-observer';
+
+import AnimatedDiv from 'comps/animated-div';
 
 type Props = {
   children: React.ReactNode;
-  xOffset: number;
   easing?:
     | [number, number, number, number]
     | 'linear'
@@ -21,8 +21,8 @@ type Props = {
     | 'anticipate';
 };
 
-const SlideInRightBox = (props: Props) => {
-  const { children, easing = [0.42, 0, 0.58, 1], xOffset } = props;
+const FadeInBox = (props: Props) => {
+  const { children, easing = [0.42, 0, 0.58, 1] } = props;
 
   const [ref, inView] = useInView({
     threshold: 0,
@@ -40,12 +40,12 @@ const SlideInRightBox = (props: Props) => {
 
   const variants = {
     hidden: {
-      x: `${xOffset}%`,
+      scale: 0,
       opacity: 0,
       transition,
     },
     show: {
-      x: 0,
+      scale: 1,
       opacity: 1,
       transition,
     },
@@ -65,4 +65,4 @@ const SlideInRightBox = (props: Props) => {
   );
 };
 
-export default SlideInRightBox;
+export default FadeInBox;
