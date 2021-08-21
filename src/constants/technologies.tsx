@@ -8,6 +8,7 @@ import { Antdesign } from '@styled-icons/simple-icons/Antdesign';
 import { Css3 } from '@styled-icons/simple-icons/Css3';
 import { D3dotjs } from '@styled-icons/simple-icons/D3DotJs';
 import { Django } from '@styled-icons/simple-icons/Django';
+import { Docker } from '@styled-icons/simple-icons/Docker';
 import { Eslint } from '@styled-icons/simple-icons/Eslint';
 import { Express } from '@styled-icons/simple-icons/Express';
 import { Firebase } from '@styled-icons/simple-icons/Firebase';
@@ -35,6 +36,7 @@ export const TECHNOLOGIES_ICONS = {
   CSS: { Icon: Css3, text: 'Css3', color: COLORS.CERULEAN },
   D3_JS: { Icon: D3dotjs, text: 'D3', color: COLORS.JAFA },
   DJANGO: { Icon: Django, text: 'Django', color: COLORS.BUSH },
+  DOCKER: { Icon: Docker, text: 'Docker', color: COLORS.DODGER_BLUE },
   ESLINT: { Icon: Eslint, text: 'Eslint', color: COLORS.PORTAGE },
   EXPRESS: { Icon: Express, text: 'ExpressJS', color: COLORS.ROLLING_STONE },
   FIGMA: { Icon: Figma, text: 'Figma', color: COLORS.BURNING_ORANGE },
@@ -67,6 +69,7 @@ const LANGUAGES_ICONS = [
 ];
 
 const TOOLS_ICONS = [
+  TECHNOLOGIES_ICONS.DOCKER,
   TECHNOLOGIES_ICONS.ESLINT,
   TECHNOLOGIES_ICONS.FIGMA,
   TECHNOLOGIES_ICONS.GIT,
