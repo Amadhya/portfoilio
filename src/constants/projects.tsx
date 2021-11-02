@@ -24,6 +24,7 @@ const PROJECTS = [
   {
     period: 'Jun, 2020 - Oct, 2020',
     title: 'SwyftCart Admin',
+    link: 'https://demoshop.swyftcart.com/',
     under: 'SwyftCart',
     desc: [
       'SwyftCart admin is an application for shops to manage their orders and products.',
