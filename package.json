@@ -41,7 +41,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "yarn install && yarn build && firebase deploy --only hosting --project amadhya-portfolio"
   },
   "eslintConfig": {
     "extends": "react-app"
