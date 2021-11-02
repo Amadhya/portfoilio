@@ -25,6 +25,7 @@ const StyledIcon = styled(CodeWorking)`
 const StyledUl = styled.ul`
   padding-left: 20px;
   list-style: disc;
+  color: ${COLORS.GRAY};
 `;
 
 const StyledLi = styled.li`
@@ -63,7 +64,9 @@ const WorkExp = () => (
             <Separator />
             <StyledUl>
               {desc.map((descItem: string) => (
-                <StyledLi key={descItem}>{descItem}</StyledLi>
+                <StyledLi key={descItem}>
+                  <Text strong>{descItem}</Text>
+                </StyledLi>
               ))}
             </StyledUl>
           </SlideInRightBox>

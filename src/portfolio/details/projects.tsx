@@ -13,6 +13,7 @@ const { Text } = Typography;
 
 const StyledUl = styled.ul`
   color: ${COLORS.GRAY};
+  padding-left: 20px;
 `;
 
 const StyledTag = styled(Tag)`
