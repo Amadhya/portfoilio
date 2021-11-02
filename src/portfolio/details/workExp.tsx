@@ -28,7 +28,7 @@ const StyledUl = styled.ul`
 `;
 
 const StyledLi = styled.li`
-  padding: 4px 0px;
+  padding: 2px 0px;
 `;
 
 const WorkExp = () => (

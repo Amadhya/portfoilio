@@ -1,6 +1,8 @@
 import { Timeline as AntdTimeline } from 'antd';
 import styled, { css } from 'styled-components';
 
+import COLORS, { toRGBA } from 'constants/colors';
+
 const TIMELINE_SECTION = 40;
 
 type Props = {
@@ -17,6 +19,7 @@ export const TimelineItem = styled(AntdTimeline.Item)<Props>`
   }
   .ant-timeline-item-tail {
     left: ${TIMELINE_SECTION}% !important;
+    border: 1px dashed ${toRGBA(COLORS.CLOUD_BURST, 0.5)};
   }
   .ant-timeline-item-head {
     left: ${TIMELINE_SECTION}% !important;
