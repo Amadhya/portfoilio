@@ -20,12 +20,12 @@ type ButtonProps = {
 const StyledButton = styled(Button)<ButtonProps>`
   color: ${COLORS.WHITE} !important;
   &: hover {
-    color: ${COLORS.CERULEAN} !important;
+    color: ${COLORS.DODGER_PURPLE} !important;
   }
   ${({ isactive }) =>
     isactive === 'true' &&
     css`
-      border-bottom: 2px solid ${COLORS.CERULEAN} !important;
+      border-bottom: 2px solid ${COLORS.DODGER_PURPLE} !important;
     `};
 `;
 

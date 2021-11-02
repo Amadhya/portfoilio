@@ -33,7 +33,7 @@ import COLORS from 'constants/colors';
 export const TECHNOLOGIES_ICONS = {
   ANTD: { Icon: Antdesign, text: 'Antd', color: COLORS.CORNFLOWER_BLUE },
   CPP: { image: CppIcon, text: 'Cpp', color: COLORS.ENDEAVOUR },
-  CSS: { Icon: Css3, text: 'Css3', color: COLORS.CERULEAN },
+  CSS: { Icon: Css3, text: 'Css3', color: COLORS.DODGER_PURPLE },
   D3_JS: { Icon: D3dotjs, text: 'D3', color: COLORS.JAFA },
   DJANGO: { Icon: Django, text: 'Django', color: COLORS.BUSH },
   DOCKER: { Icon: Docker, text: 'Docker', color: COLORS.DODGER_BLUE },

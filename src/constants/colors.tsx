@@ -5,7 +5,6 @@ const COLORS = {
   BLAZE_ORANGE: '#FF6D00',
   BURNING_ORANGE: '#FF7043',
   BUSH: '#143c2c',
-  CERULEAN: '#01A5F2',
   CINNABAR: '#E53935',
   CLOUD_BURST: '#243B55',
   COLA_LIGHT: 'rgba(0,0,0,0.1)',
@@ -13,6 +12,7 @@ const COLORS = {
   CRUSTA: '#f9703b',
   DENIM: '#1565C0',
   DODGER_BLUE: '#29B6F6',
+  DODGER_PURPLE: '#407aff',
   EBONY_CLAY: '#282c3f',
   ENDEAVOUR: '#00549D',
   FRUIT_SALAD: '#4CAF50',
@@ -30,7 +30,8 @@ const COLORS = {
   SUNGLOW: '#fbcb2b',
   TERRACOTTA: '#e17852',
   TUNDORA: '#434343',
-  WHITE: 'white',
+  WHITE_LIGHT: 'rgba(255,255,255,0.8)',
+  WHITE: '#fff',
 };
 
 const toRGB = (hex: string) => {

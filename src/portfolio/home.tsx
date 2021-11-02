@@ -33,7 +33,7 @@ const Container = styled.div`
 const StyledLink = styled.a`
   color: ${COLORS.WHITE};
   &: hover {
-    color: ${COLORS.CERULEAN};
+    color: ${COLORS.DODGER_PURPLE};
   }
 `;
 
