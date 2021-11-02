@@ -22,6 +22,15 @@ const StyledIcon = styled(CodeWorking)`
   padding: 6px;
 `;
 
+const StyledUl = styled.ul`
+  padding-left: 20px;
+  list-style: disc;
+`;
+
+const StyledLi = styled.li`
+  padding: 4px 0px;
+`;
+
 const WorkExp = () => (
   <Container id="work_exp">
     <StyledTitle level={3} border={1} fontWeight={1}>
@@ -52,7 +61,11 @@ const WorkExp = () => (
               &nbsp; {location}
             </Text>
             <Separator />
-            <Text strong> {desc}</Text>
+            <StyledUl>
+              {desc.map((descItem: string) => (
+                <StyledLi key={descItem}>{descItem}</StyledLi>
+              ))}
+            </StyledUl>
           </SlideInRightBox>
         </TimelineItem>
       ))}
