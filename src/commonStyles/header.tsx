@@ -12,7 +12,7 @@ type Props = {
 
 const StyledTitle = styled(Typography.Title)<Props>`
   color: ${({ color }) => color || COLORS.EBONY_CLAY} !important;
-  margin-bottom: 4px !important;
+  margin-bottom: 8px !important;
   ${({ align }) =>
     align &&
     css`
@@ -23,11 +23,11 @@ const StyledTitle = styled(Typography.Title)<Props>`
     css`
       font-weight: 700 !important;
     `};
-  ${({ border, color }) =>
+  ${({ border }) =>
     border &&
     css`
       padding-bottom: 4px;
-      border-bottom: 3px solid ${color || '#434343'} !important;
+      border-bottom: 4px solid ${COLORS.DODGER_PURPLE} !important;
     `};
 `;
 
