@@ -9,7 +9,7 @@ import styled from 'styled-components';
 import Map from 'assets/map.png';
 import StyledTitle from 'commonStyles/header';
 import { Separator, Container } from 'commonStyles/layouts';
-import FadeInBox from 'comps/framerMotion/fadeInBox';
+import SlideInLeftBox from 'comps/framerMotion/slideInLeftBox';
 import LazyImage from 'comps/image';
 import COLORS from 'constants/colors';
 
@@ -28,10 +28,9 @@ const StyledCol = styled(Col)`
 `;
 
 const StyledCard = styled(Card)`
-  width: 675px;
   border-radius: 8px;
-  position: relative;
   box-shadow: 0 12px 34px 0 rgba(57, 67, 87, 0.1);
+  width: 675px;
   @media (max-width: 767px) {
     width: 100%;
   }
@@ -48,11 +47,11 @@ const StyledButton = styled(Button)`
 `;
 
 const CardContainer = styled.div`
-  position: absolute;
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: center;
   margin: 24px;
+  position: absolute;
 `;
 
 type FormProp = {
@@ -103,7 +102,7 @@ const ContactMe = () => {
     <StyledContainer id="contact_me">
       <LazyImage src={Map} alt="map" fullHeight fullWidth />
       <CardContainer>
-        <FadeInBox>
+        <SlideInLeftBox xOffset={100}>
           <StyledCard>
             <StyledCol md={{ span: 14 }} xs={{ span: 24 }}>
               <StyledTitle level={3} fontWeight={1}>
@@ -179,9 +178,9 @@ const ContactMe = () => {
                 </Form.Item>
               </Form>
             </StyledCol>
-            <Details />
           </StyledCard>
-        </FadeInBox>
+        </SlideInLeftBox>
+        <Details />
       </CardContainer>
     </StyledContainer>
   );

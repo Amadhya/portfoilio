@@ -9,24 +9,29 @@ import styled, { css } from 'styled-components';
 import ContactUs from 'assets/contact_us.svg';
 import StyledTitle from 'commonStyles/header';
 import { Separator } from 'commonStyles/layouts';
+import SlideInRightBox from 'comps/framerMotion/slideInRightBox';
 import ABOUT from 'constants/about';
 import COLORS from 'constants/colors';
 
 const { Text } = Typography;
 
-const StyledContainer = styled.div`
+const StyledCard = styled.div`
   background: linear-gradient(0deg, ${COLORS.BIG_STONE}, ${COLORS.CLOUD_BURST});
   border-radius: 12px;
+  padding: 24px 32px;
+  height: 100%;
+  @media (max-width: 767px) {
+    display: none;
+  }
+`;
+
+const AbsoluteContainer = styled.div`
   bottom: 0;
   margin: 24px 0px;
-  padding: 24px 32px;
   position: absolute;
   right: 0;
   top: 0;
   transform: translateX(25%);
-  @media (max-width: 767px) {
-    display: none;
-  }
 `;
 
 const StyledImg = styled.img`
@@ -103,16 +108,20 @@ const Detail = ({ title, text, Icon, link }: DetailProps) => (
 );
 
 const Details = () => (
-  <StyledContainer>
-    <StyledTitle level={3} fontWeight={1} color={COLORS.WHITE}>
-      Contact Me
-    </StyledTitle>
-    <Separator />
-    {DETAILS_INFO.map(({ title, text, Icon, link }) => (
-      <Detail key={title} title={title} text={text} link={link} Icon={Icon} />
-    ))}
-    <StyledImg src={ContactUs} alt="contact-us" />
-  </StyledContainer>
+  <AbsoluteContainer>
+    <SlideInRightBox xOffset={100}>
+      <StyledCard>
+        <StyledTitle level={3} fontWeight={1} color={COLORS.WHITE}>
+          Contact Me
+        </StyledTitle>
+        <Separator />
+        {DETAILS_INFO.map(({ title, text, Icon, link }) => (
+          <Detail key={title} title={title} text={text} link={link} Icon={Icon} />
+        ))}
+        <StyledImg src={ContactUs} alt="contact-us" />
+      </StyledCard>
+    </SlideInRightBox>
+  </AbsoluteContainer>
 );
 
 export default Details;

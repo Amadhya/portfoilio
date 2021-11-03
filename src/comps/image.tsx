@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react';
 
 import LazyLoad from 'react-lazyload';
-import styled, { keyframes, css } from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import COLORS from 'constants/colors';
 
@@ -32,25 +32,13 @@ const Container = styled.div<ImageProps>`
     `};
 `;
 
-const loadingAnimation = keyframes`
-  0% {
-    background-color: ${COLORS.MINE_SHAFT};
-  }
-  50% {
-    background-color: ${COLORS.COLA_LIGHT};
-  }
-  100% {
-    background-color: ${COLORS.MINE_SHAFT};
-  }
-`;
-
 const Placeholder = styled.div`
   position: absolute;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
-  animation: ${loadingAnimation} 1s infinite;
+  background-color: ${COLORS.COLA_LIGHT};
 `;
 
 const StyledImage = styled.img<StyledImageProps>`
