@@ -104,7 +104,7 @@ const ContactMe = () => {
       <CardContainer>
         <SlideInLeftBox xOffset={100}>
           <StyledCard>
-            <StyledCol md={{ span: 14 }} xs={{ span: 24 }}>
+            <StyledCol lg={{ span: 14 }} xs={{ span: 24 }}>
               <StyledTitle level={3} fontWeight={1}>
                 Get In Touch
               </StyledTitle>

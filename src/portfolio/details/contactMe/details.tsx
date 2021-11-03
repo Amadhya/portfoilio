@@ -20,9 +20,6 @@ const StyledCard = styled.div`
   border-radius: 12px;
   padding: 24px 32px;
   height: 100%;
-  @media (max-width: 767px) {
-    display: none;
-  }
 `;
 
 const AbsoluteContainer = styled.div`
@@ -32,6 +29,9 @@ const AbsoluteContainer = styled.div`
   right: 0;
   top: 0;
   transform: translateX(25%);
+  @media (max-width: 992px) {
+    display: none;
+  }
 `;
 
 const StyledImg = styled.img`
@@ -109,7 +109,7 @@ const Detail = ({ title, text, Icon, link }: DetailProps) => (
 
 const Details = () => (
   <AbsoluteContainer>
-    <SlideInRightBox xOffset={100}>
+    <SlideInRightBox xOffset={20}>
       <StyledCard>
         <StyledTitle level={3} fontWeight={1} color={COLORS.WHITE}>
           Contact Me
