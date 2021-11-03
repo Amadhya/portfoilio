@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Linkedin } from '@styled-icons/boxicons-logos/Linkedin';
 import { Email } from '@styled-icons/material-rounded/Email';
 import { LocationOn } from '@styled-icons/material-rounded/LocationOn';
 import { Typography, Space } from 'antd';
@@ -49,6 +50,7 @@ const StyledText = styled(Text)<TextProps>`
     css`
       font-size: 16px;
       font-weight: 700;
+      max-width: 225px;
     `};
 `;
 
@@ -67,22 +69,35 @@ const DETAILS_INFO = [
     text: ABOUT.email,
     Icon: Email,
   },
+  {
+    title: 'Linkedin',
+    link: 'https://www.linkedin.com/in/amadhya-anand-1761b8169/',
+    Icon: Linkedin,
+  },
 ];
 
 type DetailProps = {
-  title: string;
-  text: string;
   Icon: React.ElementType;
+  link?: string;
+  text?: string;
+  title: string;
 };
 
-const Detail = ({ title, text, Icon }: DetailProps) => (
+const Detail = ({ title, text, Icon, link }: DetailProps) => (
   <StyledDetail>
     <Space size="large">
       <Icon size={24} color={COLORS.WHITE_LIGHT} />
       <div>
         <StyledText>{title}</StyledText>
         <Separator height={0.5} />
-        <StyledText isTitle>{text}</StyledText>
+        {text && <StyledText isTitle>{text}</StyledText>}
+        {link && (
+          <a href={link} aria-label={title} target="_blank" rel="noopener noreferrer">
+            <StyledText isTitle ellipsis>
+              {link}
+            </StyledText>
+          </a>
+        )}
       </div>
     </Space>
   </StyledDetail>
@@ -94,8 +109,8 @@ const Details = () => (
       Contact Me
     </StyledTitle>
     <Separator />
-    {DETAILS_INFO.map(({ title, text, Icon }) => (
-      <Detail key={title} title={title} text={text} Icon={Icon} />
+    {DETAILS_INFO.map(({ title, text, Icon, link }) => (
+      <Detail key={title} title={title} text={text} link={link} Icon={Icon} />
     ))}
     <StyledImg src={ContactUs} alt="contact-us" />
   </StyledContainer>
