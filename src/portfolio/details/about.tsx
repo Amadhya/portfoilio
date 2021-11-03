@@ -4,6 +4,7 @@ import { Download } from '@styled-icons/fa-solid/Download';
 import { Typography, Col, Button } from 'antd';
 import styled from 'styled-components';
 
+import Graphics from 'assets/graphics.svg';
 import Self from 'assets/self.jpg';
 import { Row, Container, Separator } from 'commonStyles/layouts';
 import FadeInBox from 'comps/framerMotion/fadeInBox';
@@ -20,7 +21,9 @@ type Props = {
 };
 
 const StyledContainer = styled(Container)`
-  background: linear-gradient(180deg, ${COLORS.BLACK}, ${COLORS.TUNDORA});
+  background: url(${Graphics}), linear-gradient(180deg, ${COLORS.BLACK}, ${COLORS.TUNDORA});
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 4rem;
   @media (max-width: 1024px) {
     padding: 2rem;
