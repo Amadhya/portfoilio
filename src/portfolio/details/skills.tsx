@@ -3,6 +3,7 @@ import React from 'react';
 import { Typography, Col } from 'antd';
 import styled from 'styled-components';
 
+import Wave from 'assets/wave.svg';
 import StyledTitle from 'commonStyles/header';
 import { Row, Separator, Container } from 'commonStyles/layouts';
 import SlideInBottomBox from 'comps/framerMotion/slideInBottomBox';
@@ -17,7 +18,10 @@ const StyledText = styled(Text)`
 `;
 
 const StyledContainer = styled(Container)`
-  background: linear-gradient(0deg, ${COLORS.BLACK}, ${COLORS.TUNDORA});
+  background: url(${Wave}), linear-gradient(0deg, ${COLORS.BLACK}, ${COLORS.TUNDORA});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
 `;
 
 const StyledCol = styled(Col)`

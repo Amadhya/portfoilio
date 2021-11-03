@@ -1,5 +1,6 @@
 const COLORS = {
   ALABASTER: '#fafafa',
+  AQUA_HAZE: '#EBF1F4',
   BIG_STONE: '#141E30',
   BLACK: '#000000',
   BLAZE_ORANGE: '#FF6D00',

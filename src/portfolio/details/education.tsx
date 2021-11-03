@@ -25,7 +25,7 @@ const StyledIcon = styled(GraduationCap)`
 `;
 
 const StyledContainer = styled(Container)`
-  background: ${COLORS.ALABASTER};
+  background: ${COLORS.AQUA_HAZE};
 `;
 
 const Education = () => (
