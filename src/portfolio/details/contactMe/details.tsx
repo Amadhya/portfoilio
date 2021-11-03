@@ -9,7 +9,6 @@ import styled, { css } from 'styled-components';
 import ContactUs from 'assets/contact_us.svg';
 import StyledTitle from 'commonStyles/header';
 import { Separator } from 'commonStyles/layouts';
-// import FadeInBox from 'comps/framerMotion/fadeInBox';
 import ABOUT from 'constants/about';
 import COLORS from 'constants/colors';
 

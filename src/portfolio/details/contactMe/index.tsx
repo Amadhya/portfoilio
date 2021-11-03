@@ -10,6 +10,7 @@ import Map from 'assets/map.png';
 import StyledTitle from 'commonStyles/header';
 import { Separator, Container } from 'commonStyles/layouts';
 import FadeInBox from 'comps/framerMotion/fadeInBox';
+import LazyImage from 'comps/image';
 import COLORS from 'constants/colors';
 
 import Details from './details';
@@ -17,12 +18,9 @@ import Details from './details';
 const { Text } = Typography;
 
 const StyledContainer = styled(Container)`
+  min-height: calc(95vh - 50px);
   padding: 0;
   position: relative;
-  min-height: calc(95vh - 50px);
-  background: url(${Map});
-  background-repeat: no-repeat;
-  background-size: cover;
 `;
 
 const StyledCol = styled(Col)`
@@ -103,6 +101,7 @@ const ContactMe = () => {
 
   return (
     <StyledContainer id="contact_me">
+      <LazyImage src={Map} alt="map" fullHeight fullWidth />
       <CardContainer>
         <FadeInBox>
           <StyledCard>
