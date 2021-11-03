@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Download } from '@styled-icons/fa-solid/Download';
 import { Typography, Col, Button } from 'antd';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import Graphics from 'assets/graphics.svg';
 import Self from 'assets/self.jpg';
@@ -11,7 +11,7 @@ import FadeInBox from 'comps/framerMotion/fadeInBox';
 import FadeInUpBox from 'comps/framerMotion/fadeInUpBox';
 import LazyImage from 'comps/image';
 import ABOUT from 'constants/about';
-import COLORS from 'constants/colors';
+import COLORS, { toRGBA } from 'constants/colors';
 
 const { Title, Text } = Typography;
 
@@ -38,14 +38,23 @@ const StyledText = styled(Text)`
   color: ${COLORS.WHITE} !important;
 `;
 
-const StyledButton = styled(Button)`
-  background: ${COLORS.MINE_SHAFT} !important;
-  border-color: ${COLORS.MINE_SHAFT} !important;
-  &: hover {
-    background: ${COLORS.MINE_SHAFT};
-    border-color: ${COLORS.MINE_SHAFT};
-  }
+type ButtonProps = {
+  color: string;
+  opacity?: number;
+};
+
+const StyledButton = styled(Button)<ButtonProps>`
   padding: 4px 28px;
+  ${({ color, opacity = 0.8 }) =>
+    color &&
+    css`
+      background: ${toRGBA(color, opacity)} !important;
+      border-color: ${toRGBA(color, opacity)} !important;
+      &: hover {
+        background: ${toRGBA(color, opacity)};
+        border-color: ${toRGBA(color, opacity)};
+      }
+    `};
 `;
 
 const DownloadIcon = styled(Download)`
@@ -115,10 +124,11 @@ const About = () => (
                     rel="noopener noreferrer"
                   >
                     <StyledButton
-                      type="primary"
-                      shape="round"
-                      icon={<DownloadIcon size={14} />}
                       block
+                      color={COLORS.DODGER_PURPLE}
+                      icon={<DownloadIcon size={14} />}
+                      shape="round"
+                      type="primary"
                     >
                       Download Resume
                     </StyledButton>
@@ -126,9 +136,11 @@ const About = () => (
                 </Col>
                 <Col xl={{ span: 18 }} lg={{ span: 6 }} md={{ span: 10 }} xs={{ span: 24 }}>
                   <StyledButton
-                    type="primary"
-                    shape="round"
                     block
+                    color={COLORS.BLACK}
+                    opacity={0.5}
+                    shape="round"
+                    type="primary"
                     onClick={() => {
                       const scrollY = document.getElementById('contact_me')?.offsetTop;
 
