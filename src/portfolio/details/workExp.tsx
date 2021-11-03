@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { CodeWorking } from '@styled-icons/ionicons-solid/CodeWorking';
-import { LocationCity } from '@styled-icons/material/LocationCity';
+import { LocationOn } from '@styled-icons/material-rounded/LocationOn';
 import { Typography } from 'antd';
 import styled from 'styled-components';
 
@@ -58,7 +58,7 @@ const WorkExp = () => (
               {subTitle}
             </StyledTitle>
             <Text>
-              <LocationCity size={14} />
+              <LocationOn size={14} />
               &nbsp; {location}
             </Text>
             <Separator />

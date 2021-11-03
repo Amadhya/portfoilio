@@ -3,7 +3,7 @@ import React from 'react';
 import { OpenBook } from '@styled-icons/entypo/OpenBook';
 import { GraduationCap } from '@styled-icons/fa-solid/GraduationCap';
 import { Grading } from '@styled-icons/material-rounded/Grading';
-import { LocationCity } from '@styled-icons/material/LocationCity';
+import { LocationOn } from '@styled-icons/material-rounded/LocationOn';
 import { Typography } from 'antd';
 import styled from 'styled-components';
 
@@ -59,7 +59,7 @@ const Education = () => (
             </Text>
             <Separator />
             <Text>
-              <LocationCity size={14} />
+              <LocationOn size={14} />
               &nbsp; {location}
             </Text>
             <Separator />
