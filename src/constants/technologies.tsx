@@ -4,6 +4,7 @@ import { Git } from '@styled-icons/boxicons-logos/Git';
 import { Figma } from '@styled-icons/fa-brands/Figma';
 import { NodeJs } from '@styled-icons/fa-brands/NodeJs';
 import { Npm } from '@styled-icons/fa-brands/Npm';
+import { Amazonaws } from '@styled-icons/simple-icons/Amazonaws';
 import { Antdesign } from '@styled-icons/simple-icons/Antdesign';
 import { Css3 } from '@styled-icons/simple-icons/Css3';
 import { D3dotjs } from '@styled-icons/simple-icons/D3DotJs';
@@ -18,6 +19,7 @@ import { Java } from '@styled-icons/simple-icons/Java';
 import { Javascript } from '@styled-icons/simple-icons/Javascript';
 import { Kotlin } from '@styled-icons/simple-icons/Kotlin';
 import { Materialui } from '@styled-icons/simple-icons/MaterialUi';
+import { Notion } from '@styled-icons/simple-icons/Notion';
 import { Postgresql } from '@styled-icons/simple-icons/Postgresql';
 import { Postman } from '@styled-icons/simple-icons/Postman';
 import { Python } from '@styled-icons/simple-icons/Python';
@@ -32,6 +34,7 @@ import COLORS from 'constants/colors';
 
 export const TECHNOLOGIES_ICONS = {
   ANTD: { Icon: Antdesign, text: 'Antd', color: COLORS.CORNFLOWER_BLUE },
+  AWS_LAMBDA: { Icon: Amazonaws, text: 'AWS Lambda', color: COLORS.TANGO },
   CPP: { image: CppIcon, text: 'Cpp', color: COLORS.ENDEAVOUR },
   CSS: { Icon: Css3, text: 'Css3', color: COLORS.DODGER_PURPLE },
   D3_JS: { Icon: D3dotjs, text: 'D3', color: COLORS.JAFA },
@@ -49,6 +52,7 @@ export const TECHNOLOGIES_ICONS = {
   KOTLIN: { Icon: Kotlin, text: 'Kotlin', color: COLORS.TERRACOTTA },
   MATERIAL_UI: { Icon: Materialui, text: 'Material-ui', color: COLORS.DODGER_BLUE },
   NODEJS: { Icon: NodeJs, text: 'NodeJs', color: COLORS.FRUIT_SALAD },
+  NOTION: { Icon: Notion, text: 'Notion', color: COLORS.BLACK },
   NPM: { Icon: Npm, text: 'Npm', color: COLORS.GUARDSMAN_RED },
   POSTGRESQL: { Icon: Postgresql, text: 'Postgresql', color: COLORS.LOCHMARA },
   POSTMAN: { Icon: Postman, text: 'Postman', color: COLORS.CRUSTA },
@@ -69,10 +73,12 @@ const LANGUAGES_ICONS = [
 ];
 
 const TOOLS_ICONS = [
+  TECHNOLOGIES_ICONS.AWS_LAMBDA,
   TECHNOLOGIES_ICONS.DOCKER,
   TECHNOLOGIES_ICONS.ESLINT,
   TECHNOLOGIES_ICONS.FIGMA,
   TECHNOLOGIES_ICONS.GIT,
+  TECHNOLOGIES_ICONS.NOTION,
   TECHNOLOGIES_ICONS.NPM,
   TECHNOLOGIES_ICONS.POSTMAN,
   TECHNOLOGIES_ICONS.VS_CODE,
